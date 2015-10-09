@@ -1,0 +1,18 @@
+
+/**
+ * La clase inicia la aplicación
+ * 
+ * @author (tu nombre) 
+ * @version (nº versión o fecha)
+ */
+public class AplicacionVideojuego
+{
+        public static void main (String args[])
+        {
+                 InterfazUsuario interfaz = new InterfazUsuario();
+                 interfaz.ejecutar();
+        }
+        
+        
+        
+}

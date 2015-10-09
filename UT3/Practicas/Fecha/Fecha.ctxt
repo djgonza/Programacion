@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=dia\ mes\ anio
+comment0.target=Fecha(int,\ int,\ int)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Fecha\r\n
+comment1.params=
+comment1.target=boolean\ esBisiesto()
+comment1.text=\r\n\ \ devuleve\ true\ si\ es\ bisiesto\r\n
+comment2.params=
+comment2.target=int\ diasMes()
+comment2.text=\r\n\ \ devulve\ dias\ del\ mes\r\n
+comment3.params=
+comment3.target=void\ printCorta()
+comment3.text=\r\n\ \ muestra\ fecha\ corta\r\n
+comment4.params=
+comment4.target=java.lang.String\ printLarga()
+comment4.text=\r\n\ \ muestra\ fecha\ larga\ /3\ de\ Noviembre\ de\ 2005/\r\n
+comment5.params=
+comment5.target=boolean\ esCorrecta()
+comment5.text=\r\n\ \ validacion\ fecha\r\n\ \ \r\n
+comment6.params=dia\ mes\ anio
+comment6.target=boolean\ precedeA(int,\ int,\ int)
+comment6.text=\r\n\ \ comprueva\ fecha\ anterior\r\n
+comment7.params=
+comment7.target=void\ avanzarDia()
+comment7.text=\r\n\ \ avanza\ un\ dia\r\n
+numComments=8

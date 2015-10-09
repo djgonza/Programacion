@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=lecturaAnterior\ lecturaActual
+comment0.target=FacturaLuz(int,\ int)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ FacturaLuz\r\n
+comment1.params=
+comment1.target=int\ obtenerConsumo()
+comment1.text=\r\n\ \ devuelve\ el\ consumo\r\n
+comment2.params=
+comment2.target=double\ obtenerImporteTotal()
+comment2.text=\r\n\ \ devuelve\ la\ factura\r\n
+numComments=3

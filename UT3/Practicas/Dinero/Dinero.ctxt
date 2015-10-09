@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=euros
+comment0.target=Dinero(int)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Dinero\r\n
+comment1.params=euros
+comment1.target=void\ setEuros(int)
+comment1.text=\r\n\ \ setter\ euros\r\n
+comment2.params=
+comment2.target=int\ getEuros()
+comment2.text=\r\n\ \ getter\ euros\r\n
+comment3.params=
+comment3.target=void\ printDescomposicionMonedas()
+comment3.text=\r\n\ \ mostrar\ detalles\r\n
+numComments=4

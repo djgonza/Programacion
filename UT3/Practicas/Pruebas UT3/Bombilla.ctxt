@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=quePotencia
+comment0.target=Bombilla(int)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Bombilla\r\n
+comment1.params=
+comment1.target=int\ getPotencia()
+comment1.text=\r\n\ \ \r\n
+comment2.params=
+comment2.target=boolean\ getEstado()
+comment2.text=\r\n\ \ \r\n
+comment3.params=quePotencia
+comment3.target=void\ setPotencia(int)
+comment3.text=\r\n\ \ \r\n
+comment4.params=
+comment4.target=void\ cambiarEstado()
+comment4.text=\r\n\ \ \r\n
+numComments=5

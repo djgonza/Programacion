@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Cantante()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Cantante\r\n
+comment1.params=
+comment1.target=void\ cantar()
+comment1.text=\r\n\ \ \r\n
+comment2.params=
+comment2.target=boolean\ estaTriste()
+comment2.text=\r\n\ \ \r\n
+comment3.params=
+comment3.target=void\ cambiarEstadoAnimo()
+comment3.text=\r\n\ \ \r\n
+numComments=4

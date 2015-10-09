@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=queCateto1\ queCateto2
+comment0.target=TrianguloRectangulo(int,\ int)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ TrianguloRectangulo\r\n
+comment1.params=
+comment1.target=int\ getCateto1()
+comment1.text=\r\n\ Accesor\ Cateto1\ \ \r\n
+comment2.params=
+comment2.target=int\ getCateto2()
+comment2.text=\r\n\ Accesor\ Cateto2\ \ \r\n
+comment3.params=
+comment3.target=void\ setCateto1()
+comment3.text=\r\n\ \ Mutador\ Cateto1\r\n
+numComments=4

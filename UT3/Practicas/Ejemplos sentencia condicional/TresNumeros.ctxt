@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=n1\ n2\ n3
+comment0.target=TresNumeros(int,\ int,\ int)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ TresNumeros\r\n
+comment1.params=
+comment1.target=int\ getMaximo()
+comment1.text=\r\n\ \ metodo\ que\ devuelve\ el\ valor\ maximo\ de\ los\ tres\ numeros\r\n
+comment2.params=
+comment2.target=int\ getMinimo()
+comment2.text=\r\n\ \ metodo\ que\ devuelve\ el\ valor\ minimo\ de\ los\ tres\ numeros\r\n
+comment3.params=
+comment3.target=boolean\ sonIguales()
+comment3.text=\r\n\ \ metodo\ que\ devuelve\ true\ si\ todos\ los\ numeros\ son\ iguales\r\n
+comment4.params=
+comment4.target=int\ sonPares()
+comment4.text=\r\n\ \ metodo\ que\ devuelve\ en\ numero\ de\ numeros\ pares\ que\ hay\r\n
+comment5.params=
+comment5.target=int\ acabanEn7()
+comment5.text=\r\n\ \ metodo\ que\ comprueba\ cuantos\ numeros\ terminan\ en\ 7\r\n
+comment6.params=
+comment6.target=java.lang.String\ ordenar()
+comment6.text=\r\n\ \ metodo\ que\ ordena\ los\ numeros\ en\ orden\ ascendente\r\n
+numComments=7

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=queRadio
+comment0.target=Circulo(double)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Circulo\r\n
+comment1.params=
+comment1.target=double\ calcArea()
+comment1.text=\r\n\ \ \r\n
+comment2.params=pi
+comment2.target=double\ calcPerimetro(double)
+comment2.text=\r\n\ \ \r\n
+comment3.params=
+comment3.target=double\ areaCuadrado()
+comment3.text=\r\n\ \ \r\n
+numComments=4

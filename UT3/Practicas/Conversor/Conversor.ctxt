@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Conversor()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Conversor\r\n
+comment1.params=grados
+comment1.target=void\ setGrados(double)
+comment1.text=\r\n\ \ setter\ grados\r\n
+comment2.params=
+comment2.target=double\ getGrados()
+comment2.text=\r\n\ \ getter\ grados\r\n
+comment3.params=
+comment3.target=double\ aCentigrados()
+comment3.text=\r\n\ \ conversor\ farenheit\ a\ centigrados\r\n
+comment4.params=
+comment4.target=double\ aFarenheit()
+comment4.text=\r\n\ \ conversor\ centigrados\ a\ farenheit\r\n
+numComments=5

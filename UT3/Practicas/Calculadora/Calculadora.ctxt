@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Calculadora()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Calculadora\r\n\ Inicializamos\ todos\ los\ atributos\ a\ 0\r\n
+comment1.params=
+comment1.target=int\ getCantidad()
+comment1.text=\r\n\ \ Accesor\ de\ Cantidad\r\n
+comment2.params=
+comment2.target=int\ getMaximo()
+comment2.text=\r\n\ \ Accesor\ de\ Maximo\r\n
+comment3.params=
+comment3.target=int\ getMinimo()
+comment3.text=\r\n\ \ Accesor\ de\ Minimo\r\n
+comment4.params=numero
+comment4.target=void\ introducirNumero(int)
+comment4.text=\r\n\ \ Metodo\ Introducir\ numero\r\n\ \ Cambiara\ el\ estado\ de\ la\ calculadora\r\n
+comment5.params=
+comment5.target=double\ getMedia()
+comment5.text=\r\n\ \ Metodo\ que\ calcula\ la\ media\ de\ todos\ los\ numeros\ introducidos\r\n
+numComments=6

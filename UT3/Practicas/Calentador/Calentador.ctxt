@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=minimo\ maximo
+comment0.target=Calentador(int,\ int)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Calentador\r\n
+comment1.params=
+comment1.target=int\ getTemperatura()
+comment1.text=\r\n\ \ accesor\ temperatura\r\n
+comment2.params=incremento
+comment2.target=void\ setIncremento(int)
+comment2.text=\r\n\ \ metodo\ set\ incremento\r\n
+comment3.params=
+comment3.target=void\ calentar()
+comment3.text=\r\n\ \ metodo\ para\ calentar\ 5\u00BA\r\n
+comment4.params=
+comment4.target=void\ enfriar()
+comment4.text=\r\n\ \ metodo\ para\ enfriar\ 5\u00BA\r\n
+numComments=5
