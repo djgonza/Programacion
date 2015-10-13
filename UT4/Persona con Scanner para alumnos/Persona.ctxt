@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Persona()
+comment0.text=\nConstructor\ de\ la\ clase\ Persona\n\n
+comment1.params=nombre\ edad
+comment1.target=Persona(String,\ int)
+comment1.text=\nConstructor\ de\ la\ clase\ Persona\n\n
+comment2.target=String\ getNombre()
+comment2.text=\nAccesor\ para\ el\ nombre\n\n\n
+comment3.params=nombre
+comment3.target=void\ setNombre(String)
+comment3.text=\nMutador\ para\ el\ nombre\n\n\n
+comment4.target=int\ getEdad()
+comment4.text=\nAccesor\ para\ la\ edad\n\n\n
+comment5.params=edad
+comment5.target=void\ setEdad(int)
+comment5.text=\nMutador\ para\ la\ edad\n\n\n
+comment6.target=String\ toString()
+comment6.text=\nRepresentaci\u00F3n\ textual\ de\ un\ objeto\ Persona\n\n\n
+numComments=7

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Cuadrado()
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=x\ y\ lado
+comment1.target=Cuadrado(int,\ int,\ double)
+comment1.text=\r\n\ Constructor\ \ \r\n
+comment2.params=punto\ lado
+comment2.target=Cuadrado(Punto,\ double)
+comment2.text=\r\n\ Constructor\ \ \r\n
+numComments=3

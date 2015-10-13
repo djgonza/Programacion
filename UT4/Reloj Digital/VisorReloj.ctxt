@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=void\ emitirTic()
+comment0.text=\r\n\ Este\ m\u00E9todo\ deber\u00EDa\ llamarse\ una\ vez\ cada\ minuto\ -\ \r\n\ permite\ que\ el\ reloj\ avance\ un\ minuto\r\n
+comment1.params=hora\ minuto
+comment1.target=void\ ponerEnHora(int,\ int)
+comment1.text=\r\n\ Pone\ la\ hora\ en\ el\ visor\ a\ un\ deternminado\ valor\ de\ hora\ y\ minuto\r\n
+comment2.params=
+comment2.target=java.lang.String\ getHora()
+comment2.text=\r\n\ Devuelve\ la\ hora\ actual\ en\ el\ formato\ HH\:MM.\r\n
+comment3.params=
+comment3.target=void\ actualizarReloj()
+comment3.text=\r\n\ Actualiza\ la\ cadena\ interna\ que\ representa\ el\ visor\r\n
+numComments=4

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=void\ init()
+comment0.text=\n\ninit()\ es\ llamado\ por\ el\ navegador\ o\ appletviewer\ para\ informar\ \nde\ que\ el\ applet\ ha\ sido\ cargado.\ Se\ ejecuta\ antes\ que\ el\ m\u00E9todo\ start()\n\n
+comment1.target=void\ start()
+comment1.text=\n\nstart()\ es\ llamado\ por\ el\ navegador\ o\ appletviewer\ para\ informar\ \nde\ que\ el\ applet\ ha\ comenzado\ su\ ejecuci\u00F3n.\ Se\ ejecuta\ despu\u00E9s\ndel\ m\u00E9todo\ init()\ y\ cada\ vez\ que\ el\ applet\ se\ vuelve\ a\ visitar\nen\ una\ p\u00E1gina\ web\n\n
+comment2.target=void\ stop()
+comment2.text=\nstop()\ es\ llamado\ por\ el\ navegador\ o\ appletviewer\ para\ informar\ \nde\ que\ el\ applet\ debe\ parar\ su\ ejecuci\u00F3n.\ Se\ ejecuta\ despu\u00E9s\nde\ que\ la\ p\u00E1gina\ web\ que\ contiene\ el\ applet\ haya\ sido\ reemplazada\ por\ \notra\ y\ justo\ antes\ de\ que\ el\ applet\ sea\ destruido\n\n
+comment3.target=void\ destroy()
+comment3.text=\n\ndestroy()\ es\ llamado\ por\ el\ navegador\ o\ appletviewer\ para\ informar\ \nde\ que\ el\ applet\ debe\ liberar\ los\ recursos\ que\ ha\ utilizado\ y\ ser\ destruido\n\n
+comment4.params=g
+comment4.target=void\ paint(Graphics)
+comment4.text=\nm\u00E9todo\ paint()\ para\ el\ applet\n\n@param\ \ g\ \ \ el\ objeto\ Graphics\n\n
+numComments=5

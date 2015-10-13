@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=radio
+comment0.target=Circulo(double)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=double\ getPerimetro()
+comment1.text=\r\n\ \ \ \ \r\n\ \r\n
+comment2.params=
+comment2.target=int\ getContadorCirculos()
+comment2.text=\r\n\ \ \ \ \r\n\ \r\n
+numComments=3

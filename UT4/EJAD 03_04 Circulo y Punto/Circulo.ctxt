@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Circulo()
+comment0.text=\r\n\ constructor\ para\ los\ objetos\ de\ la\ clase\ Circulo\r\n\ \r\n
+comment1.params=
+comment1.target=double\ getRadio()
+comment1.text=\r\n\ \r\n\ @return\ devuelve\ el\ radio\ del\ c\u00EDrculo\ \ \ \ \r\n
+comment2.params=nuevoRadio
+comment2.target=void\ setRadio(int)
+comment2.text=\r\n\ \r\n\ @param\ \ \ El\ nuevo\ valor\ del\ radio\r\n
+comment3.params=
+comment3.target=double\ calcularArea()
+comment3.text=\r\n\ @return\ devuelve\ el\ \u00E1rea\ del\ c\u00EDrculo\r\n
+comment4.params=
+comment4.target=double\ calcularPer\u00EDmetro()
+comment4.text=\r\n\ @return\ devuelve\ el\ per\u00EDmetro\ del\ c\u00EDrculo\r\n
+numComments=5

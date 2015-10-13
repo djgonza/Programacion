@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=GeneradorSaludos()
+comment0.text=\nConstructor\ de\ objetos\ de\ la\nclase\ GeneradorSaludos\n\n
+comment1.target=void\ emitirSaludo()
+comment1.text=\nEmite\ un\ saludo\ inicial\ al\ usuario\ \ \n\n
+comment2.target=void\ borrarPantalla()
+comment2.text=\nLimpia\ el\ terminal\n\n\n
+numComments=3
