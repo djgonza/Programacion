@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Urna()
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=queColor
+comment1.target=Urna(int)
+comment1.text=\r\n\ Constructor\ \ \r\n
+comment2.params=bola1\ bola2
+comment2.target=Urna(Bola,\ Bola)
+comment2.text=\r\n\ Constructor\ \ \r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ \ \r\n
+numComments=4

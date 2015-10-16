@@ -4,14 +4,14 @@
  */
 public class Rueda  
 {
-    private double  presion;   
+    private double presion;   
     
     /**
      * Constructor
      */
-    public Rueda(double p)
+    public Rueda(double presion)
     {
-        presion = p;
+        this.presion = presion;
     }
 
     /**

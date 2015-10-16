@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Alarma()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Alarma\r\n
+comment1.params=horas\ minutos
+comment1.target=void\ setHora(int,\ int)
+comment1.text=\r\n\ \ \r\n
+comment2.params=
+comment2.target=java.lang.String\ getHora()
+comment2.text=\r\n\ \ \r\n
+numComments=3

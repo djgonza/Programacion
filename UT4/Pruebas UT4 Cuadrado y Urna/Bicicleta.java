@@ -4,14 +4,16 @@
  */
 public class Bicicleta
 {
-     
+    private Rueda delantera;
+    private Rueda trasera;
 
     /**
-     *  el constructor cree las ruedas con una presión inicial de 0.0 
+     *  el constructor crea las ruedas con una presión inicial de 0.0 
      */
     public Bicicleta()
     {
-        
+        this.delantera = new Rueda(0);
+        this.trasera = new Rueda(0);
     }
 
     /**
@@ -20,14 +22,19 @@ public class Bicicleta
      */
     public void verificar( )
     {
+        if (this.delantera.estaDesinflada())
+        {
+            this.delantera.inflar();
+            this.delantera.inflar();
+            this.delantera.inflar();
+        }
         
-        
-        
-        
-        
-        
-        
-        
+        if (this.trasera.estaDesinflada())
+        {
+            this.trasera.inflar();
+            this.trasera.inflar();
+            this.trasera.inflar();
+        }
         
     }
 }

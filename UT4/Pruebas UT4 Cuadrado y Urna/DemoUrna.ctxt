@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DemoUrna()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ DemoUrna\r\n
+comment1.params=
+comment1.target=void\ demo1()
+comment1.text=\r\n\ \ Probar\ el\ primer\ constructor\ de\ Urna\ y\ mostrar\ la\ urna\r\n
+comment2.params=
+comment2.target=void\ demo2()
+comment2.text=\r\n\ \ Probar\ el\ primer\ constructor\ de\ Urna\ y\ mostrar\ la\ urna\r\n
+comment3.params=
+comment3.target=void\ demo3()
+comment3.text=\r\n\ \ Probar\ el\ primer\ constructor\ de\ Urna\ y\ mostrar\ la\ urna\r\n
+numComments=4

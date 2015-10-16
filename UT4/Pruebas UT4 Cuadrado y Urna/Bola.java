@@ -4,26 +4,24 @@
  */
 public class Bola
 {
-    private final String BLANCO = "Blanco";
-    private final String NEGRO = "Negro";
+    private final int NEGRO = 1;
+    private final int BLANCO = 2;
+    
     private int color;
-    
-    
     
     /**
      * 
      */
     public Bola()
     {
-        this.color = 2;
+        this.color = 1;
     }
-
+    
     /**
-     * 
+     *  
      */
     public Bola(int c)
     {
-        
         this.color = c;
     }
 
@@ -32,7 +30,7 @@ public class Bola
      */
     public boolean esNegra()
     {
-
+        return this.color == NEGRO;
     }
 
     /**
@@ -40,7 +38,7 @@ public class Bola
      */
     public int getColor()
     {
-         
+         return this.color;
     }
 
     /**
@@ -48,6 +46,25 @@ public class Bola
      */
     public String  toString()
     {
-
+        String strResul = "Bola";
+        
+        if (this.color == NEGRO)
+        {
+            strResul += "Negra";
+        }
+        else
+        {
+            strResul += "Blanca";
+        }
+        return strResul;
     }
+    
+    /**
+     *  
+     */
+    public boolean mismoColorQue (Bola otra)
+    {
+           return this.color == otra.color;
+    }
+
 }

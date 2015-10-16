@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=horas\ minutos
+comment0.target=RelojAlarma(int,\ int)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ RelojAlarma\r\n
+comment1.params=
+comment1.target=RelojAlarma()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ RelojAlarma\r\n
+comment2.params=
+comment2.target=void\ emitirTic()
+comment2.text=\r\n\ \ \r\n
+comment3.params=
+comment3.target=boolean\ esHoraAlarma()
+comment3.text=\r\n\ \ \r\n
+comment4.params=horas\ minutos
+comment4.target=void\ setAlarma(int,\ int)
+comment4.text=\r\n\ \ \r\n
+comment5.params=
+comment5.target=java.lang.String\ getHora()
+comment5.text=\r\n\ \ \r\n
+comment6.params=
+comment6.target=java.lang.String\ getAlarma()
+comment6.text=\r\n\ \ \r\n
+numComments=7

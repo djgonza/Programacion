@@ -12,14 +12,16 @@ public class VisorReloj
 {
     private VisorNumero horas;
     private VisorNumero minutos;
+    private VisorNumero segundos;
     private String visorString; // simula el visor actual
 
     /**
-     * Constructor de objetos VisorReloj. 
+     * Constructor de objetos VisorReloj. Este constructor crea un nuevo
+     * reloj puesto en hora a las 00:00
      */
-    
     public VisorReloj()
     {
+        this.segundos = new VisorNumero(60);
         this.minutos = new VisorNumero(60);
         this.horas = new VisorNumero(24);
         actualizarReloj();
@@ -29,14 +31,14 @@ public class VisorReloj
      * Constructor de objetos VisorReloj. Este constructor crea un nuevo
      * reloj puesto en hora a las 00:00
      */
-    public VisorReloj(int horas, int minutos)
+    public VisorReloj(int hora, int minuto, int segundo)
     {
+        this.segundos = new VisorNumero(60);
         this.minutos = new VisorNumero(60);
         this.horas = new VisorNumero(24);
-        ponerEnHora(horas, minutos);
+        ponerEnHora(hora, minuto, segundo);
     }
-
- 
+    
     /**
      * Este método debería llamarse una vez cada minuto - 
      * permite que el reloj avance un minuto
@@ -44,11 +46,16 @@ public class VisorReloj
 
     public void emitirTic()
     {
-        minutos.incrementar();
-        if (minutos.getValor() == 0)
-        { // se da la vuelta
-            horas.incrementar();
+        segundos.incrementar();
+        if(segundos.getValor() == 0)
+        {
+            minutos.incrementar();
+            if (minutos.getValor() == 0)
+            { // se da la vuelta
+                horas.incrementar();
+            }
         }
+        
         actualizarReloj();
     }
 
@@ -56,10 +63,11 @@ public class VisorReloj
      * Pone la hora en el visor a un deternminado valor de hora y minuto
      */
 
-    public void ponerEnHora(int hora, int minuto)
+    public void ponerEnHora(int hora, int minuto, int segundo)
     {
         horas.setValor(hora);
         minutos.setValor(minuto);
+        segundos.setValor(segundo);
         actualizarReloj();
     }
 
@@ -76,6 +84,6 @@ public class VisorReloj
      */
     private void actualizarReloj()
     {
-        visorString = horas.getValorVisor() + ":" + minutos.getValorVisor();
+        visorString = horas.getValorVisor() + ":" + minutos.getValorVisor() + ":" + segundos.getValorVisor();
     }
 }
