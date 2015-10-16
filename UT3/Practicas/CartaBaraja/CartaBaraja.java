@@ -30,9 +30,13 @@ public class CartaBaraja
     {   
         switch (this.palo){
             case 1: return "OROS";
+            break;
             case 2: return "COPAS";
+            break;
             case 3: return "ESPADAS";
+            break;
             default: return "BASTOS";
+            break;
         }
     }
     
@@ -43,15 +47,25 @@ public class CartaBaraja
     {   
         switch (this.valor){
             case 1: return "UNO";
+            break;
             case 2: return "DOS";
+            break;
             case 3: return "TRES";
+            break;
             case 4: return "CUATRO";
+            break;
             case 5: return "CINCO";
+            break;
             case 6: return "SEIS";
+            break;
             case 7: return "SIETE";
+            break;
             case 8: return "SOTA";
+            break;
             case 9: return "CABALLO";
+            break;
             default: return "REY";
+            break;
         }
     }
     
