@@ -70,4 +70,13 @@ public class RelojAlarma
     {
         return this.alarma.getHora();
     }
+    
+    /**
+     *  
+     */
+    public void ponerEnHora(int hora, int minutos)
+    {
+        this.reloj.ponerEnHora(hora, minutos);
+    }
+
 }

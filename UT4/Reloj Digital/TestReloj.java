@@ -27,13 +27,51 @@ public class TestReloj
     {
         String devolver = "";
         this.miReloj.setAlarma(18, 35);       
-        this.miReloj.emitirTic();
         devolver += "Hora reloj" +
                     "\n "+ this.miReloj.getHora() +
                     "Hora Alarma" +
                     "\n" + this.miReloj.getAlarma();
         
+        System.out.print(devolver);
+                    
+        this.miReloj.emitirTic();
+        this.miReloj.emitirTic();
+        this.miReloj.emitirTic();
+                    
         return devolver;
         
     }
+    
+    /**
+     *  
+     */
+    public String test2()
+    {
+        String devolver = "";
+        this.tuReloj.setAlarma(7, 00);       
+        devolver += "Hora reloj" +
+                    "\n "+ this.tuReloj.getHora() +
+                    "Hora Alarma" +
+                    "\n" + this.tuReloj.getAlarma();
+        
+        System.out.print(devolver);
+                    
+        this.tuReloj.emitirTic();
+        this.tuReloj.emitirTic();
+        this.tuReloj.emitirTic();
+        this.tuReloj.emitirTic();
+        this.tuReloj.emitirTic();
+                    
+        return devolver;
+        
+    }
+    
+    /**
+     *  
+     */
+    public void test3(int hora, int minutos)
+    {
+        miReloj.ponerEnHora(hora, minutos);
+    }
+
 }
