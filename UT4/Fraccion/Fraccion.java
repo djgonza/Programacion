@@ -25,8 +25,8 @@ public class Fraccion
      */
     public Fraccion(int numerador, int denominador)
     {
-        this.numerador = 0;
-        this.denominador = 0;
+        this.numerador = numerador;
+        this.denominador = denominador;
     }
 
     /**
@@ -122,7 +122,7 @@ public class Fraccion
     public boolean igualQue(Fraccion fraccion) {
        
         double fraccionA = (double) fraccion.getNumerador() / fraccion.getDenominador();
-        double fraccionB = (double)this.numerador / this.denominador;
+        double fraccionB = (double) this.numerador / this.denominador;
         
         return fraccionA == fraccionB;
         
@@ -145,10 +145,8 @@ public class Fraccion
      */
     public Fraccion clonar() {
        
-        Fraccion devolver = new Fraccion(this.numerador, this.denominador);
-        
-        return devolver;
-        
+        return new Fraccion(this.numerador, this.denominador);
+
     }
     
     /**

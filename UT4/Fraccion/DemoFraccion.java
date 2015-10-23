@@ -46,9 +46,29 @@ public class DemoFraccion
     /**
      *  
      */
+    public void demo2()
+    {
+        this.fraccion1.setNumerador(17);
+        this.fraccion1.setDenominador(25);
+        this.fraccion2.setNumerador(16);
+        this.fraccion2.setDenominador(11);
+        
+        boolean igual = this.fraccion1.igualQue(fraccion2);
+        boolean menor = this.fraccion1.menorQue(fraccion2);
+        
+        if(igual) System.out.print("Son iguales \n");
+        if(menor) System.out.print("Es menor \n");
+        
+        this.escribirFraccion("Valor del clon: %s", this.fraccion1.clonar());
+    }
+
+    
+    /**
+     *  
+     */
     private void escribirFraccion(String mensaje, Fraccion fraccion)
     {
-        System.out.printf(mensaje, fraccion.toString());
+        System.out.printf(mensaje+"\n", fraccion.toString());
     }
 
 }
