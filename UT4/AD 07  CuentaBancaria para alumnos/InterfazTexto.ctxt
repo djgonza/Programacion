@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=InterfazTexto()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ InterfazTexto\r\n
+comment1.params=cuenta\ nombre
+comment1.target=void\ iniciar(int,\ java.lang.String)
+comment1.text=\r\n\ \ \r\n
+comment2.params=
+comment2.target=int\ menu()
+comment2.text=\r\n\ \ \r\n
+comment3.params=
+comment3.target=void\ realizarIngreso()
+comment3.text=\r\n\ \ \r\n
+comment4.params=
+comment4.target=void\ realizarReintegro()
+comment4.text=\r\n\ \ \r\n
+comment5.params=
+comment5.target=void\ consultarSaldo()
+comment5.text=\r\n\ \ \r\n
+comment6.params=
+comment6.target=void\ imprimirDatosCuenta()
+comment6.text=\r\n\ \ \r\n
+comment7.params=
+comment7.target=void\ borrarPantalla()
+comment7.text=\r\n\ \ \r\n
+numComments=8
