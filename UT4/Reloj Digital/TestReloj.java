@@ -73,5 +73,14 @@ public class TestReloj
     {
         miReloj.ponerEnHora(hora, minutos);
     }
+    
+    /**
+     *  
+     */
+    public static void main(String[] arg)
+    {
+        System.out.print("prueba");
+    }
+
 
 }
