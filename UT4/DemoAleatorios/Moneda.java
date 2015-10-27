@@ -1,4 +1,4 @@
-
+import java.util.Random;
 /**
  *  
  * Clase que representa a una moneda con una cara
@@ -7,13 +7,15 @@ public class Moneda
 {
      
     private boolean cara;
+    private Random aleatorio;
 
     /**
      * Constructor  
      */
     public Moneda()
     {
-         cara = true;
+         this.cara = true;
+         this.aleatorio = new Random();
     }
 
     /**
@@ -24,7 +26,7 @@ public class Moneda
      */
     public void tirar()
     {
-          
+        this.cara = (this.aleatorio.nextInt(2) == 0);
     }
     
     /**
@@ -32,7 +34,7 @@ public class Moneda
      */
     public  boolean esCara()
     {
-         
+         return cara;
     }
 
 }

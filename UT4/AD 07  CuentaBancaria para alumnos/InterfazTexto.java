@@ -31,11 +31,27 @@ public class InterfazTexto
     public void iniciar(int cuenta, String nombre)
     {
          this.cuenta = new Cuenta(cuenta, nombre);
+         int opcion = menu();
+        while(opcion!= SALIR) {
+            borrarPantalla();
+            switch(opcion)
+             {
 
-                          
+                 case INGRESO: realizarIngreso();
+                 break;
+                 case REINTEGRO: realizarReintegro();
+                 break;
+                 case CONSULTA: consultarSaldo();
+                 break;
+                 case IMPRIMIR: imprimirDatosCuenta();
+                 break;
+             }
+             
+             opcion = menu();
+        }               
          
     }
-    
+ 
     /**
      *  
      */
@@ -57,7 +73,8 @@ public class InterfazTexto
      */
     public void realizarIngreso()
     {
-
+        System.out.print("Cantidad a ingresar en cuenta: ");
+        this.cuenta.ingresar(teclado.nextDouble());
     }
     
     /**
@@ -65,7 +82,8 @@ public class InterfazTexto
      */
     public void realizarReintegro()
     {
-
+        System.out.print("Cantidad a retirar de la cuenta: ");
+        this.cuenta.reintegrar(teclado.nextDouble());
     }
     
     /**
@@ -73,7 +91,7 @@ public class InterfazTexto
      */
     public void consultarSaldo()
     {
-
+        System.out.println("Saldo en la cuenta: " + this.cuenta.getSaldo());
     }
     
     /**
@@ -81,7 +99,7 @@ public class InterfazTexto
      */
     public void imprimirDatosCuenta()
     {
-
+        System.out.println(this.cuenta.toString());
     }
     
     /**
