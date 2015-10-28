@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PanelColor()
+comment0.text=\r\n\ Constructor\r\n
+comment1.params=e
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment1.text=\r\n\ \ \ m\u00E9todo\ que\ se\ ejecuta\ cuando\ se\ produce\ el\ click\ sobre\ el\ bot\u00F3n\r\n\ \ \ Cambia\ el\ color\ de\ fondo\ del\ panel\ y\ le\ da\ un\ color\ aleatorio\r\n
+comment2.params=
+comment2.target=java.awt.Color\ generarColor()
+comment2.text=\r\n\ M\u00E9todo\ privado\ de\ ayuda\r\n\ Se\ hace\ una\ llamada\ interna\ a\ este\ m\u00E9todo\ cuando\ se\ necesita\ generar\ un\ color\ de\ forma\ aleatoria\r\n\ Un\ color\ es\ un\ objeto\ de\ tipo\ Color\ que\ se\ construye\ con\ tres\ par\u00E1metros\ de\ tipo\ int,\r\n\ la\ cantidad\ \ de\ rojo,\ verde\ y\ azul\ (un\ valor\ entre\ 0\ y\ 255\ inclusive)\r\n
+numComments=3

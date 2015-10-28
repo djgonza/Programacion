@@ -1,0 +1,29 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DemoFor()
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=void\ ejemploFor01()
+comment1.text=\r\n\ Saludar\ 10\ veces\ con\ for\r\n
+comment2.params=
+comment2.target=void\ ejemploFor02()
+comment2.text=\r\n\ Tirar\ una\ moneda\ 10\ veces\ con\ for\r\n
+comment3.params=
+comment3.target=void\ ejemploFor03()
+comment3.text=\r\n\ Tirar\ una\ moneda\ 30\ veces\r\n\ contando\ las\ veces\ que\ ha\ salido\ cara\ y\ las\ que\ ha\ salido\ cruz\r\n
+comment4.params=n
+comment4.target=void\ escribirFiguraA(int)
+comment4.text=\r\n\ Ejer\ 4.15\ a)\ de\ la\ UT4\r\n\ Escribe\ la\ siguiente\ figura\ \r\n\ Si\ n\ \=\ 6\ entonces\r\n\ 1\ \ \ 1\ \ \ 1\ \ \ 1\ \ \ 1\ \ \ 1\ \r\n\ 2\ \ \ 2\ \ \ 2\ \ \ 2\ \ \ 2\ \ 2\r\n\ 3\ \ \ 3\ \ \ 3\ \ \ 3\ \ \ 3\ \ 3\r\n\ 4\ \ \ 4\ \ \ 4\ \ \ 4\ \ \ 4\ \ 4\r\n\ 5\ \ \ 5\ \ 5\ \ \ 5\ \ \ 5\ \ \ 5\ \r\n\ 6\ \ \ 6\ \ \ 6\ \ \ 6\ \ \ 6\ \ 6\ \r\n
+comment5.params=n
+comment5.target=void\ escribirFiguraB(int)
+comment5.text=\r\n\ Ejer\ 4.15\ b)\ de\ la\ UT4\r\n\ Escribe\ la\ siguiente\ figura\ \r\n\ \ Si\ n\ \=\ 6\ entonces\r\n\ \ \r\n\ 1\ \ \ \r\n\ 2\ \ \ 2\ \ \ \r\n\ 3\ \ \ 3\ \ \ 3\ \ \ \r\n\ 4\ \ \ 4\ \ \ 4\ \ \ 4\ \ \ \r\n\ 5\ \ \ 5\ \ 5\ \ \ 5\ \ \ 5\ \ \ \r\n\ 6\ \ \ 6\ \ \ 6\ \ \ 6\ \ \ 6\ \ 6\ \r\n
+comment6.params=n
+comment6.target=void\ escribirFiguraC(int)
+comment6.text=\r\n\ Ejer\ 4.15\ c)\ de\ la\ UT4\r\n\ Escribe\ la\ siguiente\ figura\r\n\ \ Si\ n\ \=\ 6\ entonces\r\n\ \ \r\n\ 1\ \ \ \r\n\ 1\ \ 2\r\n\ 1\ \ 2\ \ \ 3\r\n\ 1\ \ 2\ \ \ 3\ \ \ \ 4\r\n\ 1\ \ 2\ \ \ \ 3\ \ \ \ 4\ \ \ 5\ \r\n\ 1\ \ 2\ \ \ 3\ \ \ 4\ \ \ 5\ \ \ 6\ \r\n
+comment7.params=numero
+comment7.target=void\ escribirTablasMultiplicar(int)
+comment7.text=\r\n\ \ Ejer\ 4.15\ d)\ de\ la\ UT4\r\n\ \ \ escribe\ la\ tabla\ de\ multiplicar\ del\ 1,\ del\ 2,\ \r\n\ \ \ del\ 3,\ ....\ hasta\ la\ tabla\ de\ numero\r\n
+comment8.params=milisegundos
+comment8.target=void\ esperar(int)
+comment8.text=\r\n\ El\ programa\ hace\ una\ pausa\ de\ los\ milisegundos\ especificados\r\n
+numComments=9
