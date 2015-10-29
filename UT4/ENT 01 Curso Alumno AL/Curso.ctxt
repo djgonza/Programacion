@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=nombre
+comment0.target=Curso(java.lang.String)
+comment0.text=\r\n\ Constructor\ de\ objetos\ de\ la\ clase\ Curso\r\n\ Crea\ el\ curso\ con\ el\ nombre\ indicado\ e\ inicializa\r\n\ las\ referencias\ a\ los\ alumnos\ con\ valor\ null\r\n
+comment1.params=alumno
+comment1.target=boolean\ addAlumno(Alumno)
+comment1.text=\r\n\ A\u00F1ade\ un\ nuevo\ alumno\ al\ curso\ si\ \u00E9ste\ no\ est\u00E1\ completo\r\n\ \r\n\ Los\ alumnos\ se\ a\u00F1aden\ asignando\ las\ referencias\ en\ orden,\ es\ decir,\r\n\ \ cuando\ no\ hay\ alumnos\ el\ primero\ que\ se\ a\u00F1ade\ ser\u00E1\ el\ alumno1,\ \r\n\ \ si\ hay\ un\ alumno\ el\ segundo\ que\ se\ a\u00F1ade\ ser\u00E1\ alumno2\ \r\n\ \ \r\n\ @param\ \ alumno\ el\ alumno\ a\ a\u00F1adir\r\n\ @return\ \ \ true\ si\ se\ ha\ podido\ a\u00F1adir\r\n\ \ \ \ \ \ \ \ \ \ false\ en\ otro\ caso\r\n\ \ \ \ \ \ \ \ \ \ \r\n\ \ No\ se\ puede\ utilizar\ el\ operador\ &&\ \ \ \ \r\n
+comment2.params=
+comment2.target=int\ getNumeroAlumnos()
+comment2.text=\r\n\ \r\n\ Devuelve\ el\ n\u00BA\ de\ alumnos\ en\ el\ curso\ \ \r\n\ Sin\ utilizar\ el\ operador\ &&\r\n
+comment3.params=
+comment3.target=Curso\ clonar()
+comment3.text=\r\n\ \ Devuelve\ el\ curso\ actual\ clonado\ (copia\ exacta)\r\n\ \ Si\ el\ curso\ tiene\ alumnos\ los\ alumnos\ tambi\u00E9n\ habr\u00E1\r\n\ \ que\ clonarlos\r\n\ \ \ \r\n
+comment4.params=
+comment4.target=void\ printCurso()
+comment4.text=\r\n\ Mostrar\ datos\ de\ los\ alumnos\ \r\n\ Si\ no\ hay\ alumnos\ \ se\ muestra\ el\ correspondiente\ mensaje\r\n\ \r\n
+numComments=5

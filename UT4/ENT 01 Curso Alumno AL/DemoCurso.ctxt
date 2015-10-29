@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DemoCurso()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ DemoCurso\r\n
+comment1.params=
+comment1.target=void\ demo1()
+comment1.text=\r\n\ \ Curso\ sin\ alumnos\r\n
+comment2.params=
+comment2.target=void\ demo2()
+comment2.text=\r\n\ \ Curso\ con\ un\ alumno\r\n
+comment3.params=
+comment3.target=void\ demo3()
+comment3.text=\r\n\ \ Curso\ con\ dos\ alumno\r\n
+comment4.params=
+comment4.target=void\ demo4()
+comment4.text=\r\n\ \ demo\ para\ probar\ el\ m\u00E9todo\ clonar()\ de\ Curso\r\n
+numComments=5
