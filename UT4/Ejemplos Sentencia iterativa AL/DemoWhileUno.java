@@ -133,7 +133,17 @@ public class DemoWhileUno
     public void ejemplo04_3( )
     {
        
-        
+        int suma = 0;
+        int aleatorio = (int) (Math.random() * 51);
+        int total = 0;
+        while ( aleatorio != 0 ){
+            suma += aleatorio;
+            System.out.print(aleatorio + "\t");
+            total++;
+            if(total % 6 == 0)
+                System.out.print("\n");
+            aleatorio = (int) (Math.random() * 51);
+        }
         
     }
 
@@ -145,6 +155,18 @@ public class DemoWhileUno
      */
     public void ejemplo05()
     {
+        boolean cara = false;
+        int tiradas = 0;
+        while (!cara || tiradas <= 30) {
+            
+            if(aleatorio.nextInt(2) == 1){
+                cara = true;
+            }
+            
+            tiradas++;
+            
+        }
+        
         
 
     }
@@ -156,7 +178,18 @@ public class DemoWhileUno
      */
     public  void ejemplo06V1()
     {
- 
+        int numero = 1;
+        int sumaPar = 0;
+        long productoImpar = 1;
+        while(numero <= 100)
+        {
+            productoImpar *= numero;
+            sumaPar += (numero + 1);
+            numero += 2;
+        }
+        
+        System.out.print("La suma total es: " + sumaPar);
+        System.out.print("El producto total es: " + productoImpar);
     }
     
      /**
@@ -166,7 +199,25 @@ public class DemoWhileUno
      */
     public  void ejemplo06V2()
     {
-
+        boolean tocaImpar = true;
+        int numero = 1;
+        int sumaPar = 0;
+        long productoImpar = 1;
+        while(numero <= 100)
+        {
+            if(tocaImpar){
+                 productoImpar *= numero;
+            }else{
+                sumaPar += (numero + 1);
+            }
+            
+            numero++;
+            tocaImpar = !tocaImpar;
+                
+        }
+        
+        System.out.print("La suma total es: " + sumaPar);
+        System.out.print("El producto total es: " + productoImpar);
       
     }
 

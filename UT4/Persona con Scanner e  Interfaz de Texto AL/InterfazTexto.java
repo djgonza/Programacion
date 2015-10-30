@@ -13,6 +13,7 @@ public class InterfazTexto
     private final int EDAD = 3;
     private final int SUELDO = 4;
     private final int ESTADO = 5;
+    private final int SALIR = 6;
     private Persona persona;
     private Scanner teclado;
 
@@ -40,19 +41,26 @@ public class InterfazTexto
         persona.setEstado(leerEstado());
         int opcion = mostrarMenu();
 
-        switch (mostrarMenu()) {
-            case COMPLETO: mostrarDatosCompletos();
-            break;
-            case NOMBRE: mostrarNombre();
-            break;
-            case EDAD: mostrarEdad();
-            break;
-            case SUELDO: mostrarSueldo();
-            break;
-            case ESTADO: mostrarEstadoCivil();
-            break;
+        while (opcion != SALIR){ 
+            
+            borrarPantalla();
+            switch (mostrarMenu()) {
+                case COMPLETO: mostrarDatosCompletos();
+                break;
+                case NOMBRE: mostrarNombre();
+                break;
+                case EDAD: mostrarEdad();
+                break;
+                case SUELDO: mostrarSueldo();
+                break;
+                case ESTADO: mostrarEstadoCivil();
+                break;
+            }
+            
+            opcion = mostrarMenu();
+
         }
-          despedida();
+        despedida();
     }
 
     /**
@@ -97,7 +105,7 @@ public class InterfazTexto
         System.out.print("Dame Estado Civil: ");
         teclado.nextLine();
         char estado = teclado.nextLine().charAt(0);
-        
+
         return estado;
     }
 
@@ -168,17 +176,32 @@ public class InterfazTexto
      */
     private int mostrarMenu()
     {
-        borrarPantalla();
+        
         System.out.println("1. Mostrar datos completos");
         System.out.println("2. Mostrar nombre");
         System.out.println("3. Mostrar edad");
         System.out.println("4. Mostrar sueldo");
         System.out.println("5. Mostrar estado civil");
+        System.out.println("6. Salir");
         System.out.print("Introduce opción: ");
         int opcion = teclado.nextInt();
         // teclado.nextLine();
+        while (!opcionValida(opcion))
+        {
+            System.out.print("Opcion no valida. Introduce otra opción: ");
+            opcion = teclado.nextInt();
+        }
         return opcion;
     }
+    
+    /**
+     *  
+     */
+    private boolean opcionValida(int opcion)
+    {
+        return opcion >= COMPLETO && opcion <= SALIR;
+    }
+
 
     /**
      *  Limpiar la pantalla
@@ -188,5 +211,15 @@ public class InterfazTexto
     {
         System.out.println('\u000C');
     }
+    
+    /**
+     *  
+     */
+    private void hacerPausa()
+    {
+        System.out.print("Pulse una tecla para continuar");
+        teclado.nextInt();
+    }
+
 
 }
