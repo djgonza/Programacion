@@ -10,6 +10,7 @@ import java.util.Random;
 public class DemoWhileUno
 {
 
+    private final char ASTERISCO = '*';
     private Moneda moneda;
     private Random aleatorio;
     /**
@@ -157,7 +158,7 @@ public class DemoWhileUno
     {
         boolean cara = false;
         int tiradas = 0;
-        while (!cara || tiradas <= 30) {
+        while (!cara && tiradas <= 30) {
             
             if(aleatorio.nextInt(2) == 1){
                 cara = true;
@@ -167,7 +168,7 @@ public class DemoWhileUno
             
         }
         
-        
+        System.out.print(tiradas);
 
     }
 
@@ -255,10 +256,24 @@ public class DemoWhileUno
      * Generar 20 nºs aleatorios entre 5 y 10 incluidos
      * y para cada número calcular y escribir su sumatorio
      */
-    public  void bucleAnidado01()
+    public void bucleAnidado01()
     {
+    	int i = 0;
+    	
+    	while (i <= 20){
 
+    		int aleatorio1 = aleatorio.nextInt(11) + 5;
+    		int suma = 0;
+    		while (aleatorio1 >= 0){
+    			suma += aleatorio1;
+    			aleatorio1--;
+    		}
+    		System.out.println("El aleatorio de "+aleatorio1+" es: "+suma);
+
+    		i++;
+    	}
       
+      	//return suma;
 
     }
     
@@ -275,8 +290,74 @@ public class DemoWhileUno
     public  void bucleAnidado02()
     {
 
-       
+       int fila = 1;
+       while(fila <= 6)
+       {
+       		int columna = 1;
+       		while (columna <= 10)
+       		{
+       			System.out.print(fila);
+       			columna++;
+       		}
+       		fila++;
+       }
 
+    }
+
+    /**
+    *
+    *
+    *
+    *
+    */
+    public void bucleAnidado03 () {
+    	int fila = 1;
+       	while(fila <= 9)
+       	{
+       		int columna = 1;
+       		while (columna <= fila)
+       		{
+       			System.out.print(columna);
+       			columna++;
+       		}
+       		System.out.println();
+       		fila++;
+       }
+    }
+
+    /**
+    *
+    *
+    *
+    *
+    */
+    public void bucleAnidado04 (int n) {
+    	int fila = 1;
+       	while(fila <= n)
+       	{
+       		escribirCaracter('*', (n-fila));
+       		int columna = fila;
+       		while(columna >= 1){
+       			System.out.print(columna);
+       			columna--;
+       		}
+       		System.out.println();
+       		fila++;
+       }
+    }
+
+    /**
+    *
+    *
+    *
+    *
+    */
+    public void escribirCaracter (char caracter, int n) {
+    	int i = 1;
+    	while (i <= n) {
+    		System.out.print(caracter);
+    		i++;
+    	}
     }
    
     
@@ -327,5 +408,51 @@ public class DemoWhileUno
             
     }
 
+    public static void main(String[] args) {
+    	System.out.print('\u000C');
+
+    	DemoWhileUno demo = new DemoWhileUno();
+    	demo.tablaMultiplicar(7);
+
+    }
+
+    /**
+    * tabla de multiplicxar de N
+    *
+    */
+    public void tablaMultiplicar(int n)
+    {
+    	int i = 1;
+    	while (i <= 10)
+    	{
+    		System.out.println(n+" x "+i+" = "+(n*i));
+    		i++;
+    	}
+
+    }
+
+    /**
+    * Generar aleatorios entre 0 y 100 (Con Random)
+    * y mostrar por cada aleatorio una linea de *
+    * Parar cuando salga el 0
+    *
+    */
+    public void histograma()
+    {
+    	
+    	int numero = aleatorio.nextInt(101);
+    	while (numero != 0)
+    	{
+    	
+    		while(numero != 0)
+    		{
+    			System.out.print(ASTERISCO);
+    			numero--;
+    		}
+    		System.out.println();
+    		numero = aleatorio.nextInt(101);
+    	}
+
+    }
 
 }

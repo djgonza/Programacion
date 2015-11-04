@@ -48,7 +48,9 @@ public class InterfazTexto
              }
              
              opcion = menu();
-        }               
+        }
+        
+        System.out.println("Adios!!!!");
          
     }
  

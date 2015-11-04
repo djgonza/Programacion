@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DemoDado()
+comment0.text=\r\n\ \ \r\n
+comment1.params=
+comment1.target=void\ test1()
+comment1.text=\r\n\ \ un\ m\u00E9todo\ test1()\ que\ simule\ el\ lanzamiento\ de\ un\ dado\ \r\n\ \ TOTAL\ veces\ (TOTAL\ es\ una\ constante)\r\n\ \ y\ cuente\ y\ visualice\ las\ apariciones\ del\ 1\ y\ del\ 6\ en\ esos\ lanzamientos\r\n
+comment2.params=
+comment2.target=void\ test2()
+comment2.text=\r\n\ \ un\ m\u00E9todo\ test2()\ que\ lance\ el\ dado\ hasta\ que\ salga\ \r\n\ \ el\ 4\ o\ el\ 5\ contando\ las\ veces\ que\ se\ ha\ tirado\r\n\ \ el\ dado.\ Visualiza\ los\ resultados\r\n
+comment3.params=
+comment3.target=void\ test3()
+comment3.text=\r\n\ \ un\ m\u00E9todo\ test3()\ que\ tire\ el\ dado\ mientras\ la\ suma\ de\ \r\n\ \ las\ tiradas\ no\ supere\ el\ valor\ 42.\ Visualiza\r\n\ \ los\ resultados\r\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=\r\n\ \ \r\n\ \ \r\n
+numComments=5

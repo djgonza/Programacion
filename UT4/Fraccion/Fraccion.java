@@ -27,6 +27,7 @@ public class Fraccion
     {
         this.numerador = numerador;
         this.denominador = denominador;
+        this.simplificar();
     }
 
     /**
@@ -80,7 +81,7 @@ public class Fraccion
      */
     public Fraccion resta(Fraccion fraccion)
     {
-    	Fraccion c = new Fraccion();
+        Fraccion c = new Fraccion();
         
         c.setNumerador((this.numerador * fraccion.getDenominador()) - (this.denominador * fraccion.getNumerador()));
         c.setDenominador(this.denominador * fraccion.getDenominador());
@@ -93,7 +94,7 @@ public class Fraccion
      */
     public Fraccion multiplicacion(Fraccion fraccion)
     {
-    	Fraccion c = new Fraccion();
+        Fraccion c = new Fraccion();
         
         c.setNumerador(this.numerador * fraccion.getNumerador());
         c.setDenominador(this.denominador * fraccion.getDenominador());
@@ -107,7 +108,7 @@ public class Fraccion
      */
     public Fraccion division(Fraccion fraccion)
     {
-    	Fraccion c = new Fraccion();
+        Fraccion c = new Fraccion();
         
         c.setNumerador(this.numerador * fraccion.getDenominador());
         c.setDenominador(this.denominador * fraccion.getNumerador());
@@ -161,20 +162,38 @@ public class Fraccion
     /**
      *  
      */
-    public void simplificar()
+    private void simplificar()
     {
-    	int div = 0;
-    	//comprobamos si la fraccion es entera
-    	if(this.numerador % this.denominador == 0)
-    		div = this.numerador / this.denominador;
-    	if(this.denominador % this.numerador == 0)
-    		div = this.denominador / this.numerador;
-    	if(div != 0){
-    		this.numerador = (this.numerador / div);
-    		this.denominador = (this.denominador / div);
-    	}
-    		
-    		
+        int div = mcd(this.numerador, this.denominador);
+        this.numerador /= div; 
+        this.denominador /= div;
+                 
+    }
+    
+    
+    /**
+     *  Metodo para conseguir el 
+     */
+    private int mcd(int num1, int num2)
+    {
+        int resto = num1 % num2;
+        while(resto!= 0)
+        {
+            num1 = num2;
+            num2 = resto;
+            resto = num1 % num2;
+       
+        }
+        return num2;
+    }
+
+    public static void main(String[] args)
+    {
+        System.out.println("\u000c");
+        Fraccion demo = new Fraccion(32, 10);
+        
+        System.out.println(demo.toString());
+
     }
     
 }
