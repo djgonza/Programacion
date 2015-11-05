@@ -95,10 +95,9 @@ public class Numero
     /**
      * @return la cantidad de cifras del nº
      */
-    public int contarCifras()
+    public int contarCifras(int numero)
     {
         int i = 0;
-        int numero = this.numero;
         for(i=0; (numero != 0); i++)
         {
             numero /= 10;
@@ -118,6 +117,7 @@ public class Numero
         return (numero % 10);  
     }
 
+    
     /**
      * Calcula el inverso
      * Hay que hacer uso del método privado ultimaCifra()
@@ -128,11 +128,17 @@ public class Numero
     private int inverso(int numero)
     {
         int nuevoNumero = 0;
-        for(nuevoNumero = 0; numero != 0; nuevoNumero *= 10)
-        {
-            nuevoNumero += numero % 10;
+        int cifras = this.contarCifras(numero);
+        for(int i=1; i<=cifras; i++){
+            nuevoNumero *= 10;
+            nuevoNumero += this.ultimaCifra(numero);
             numero /= 10;
         }
+//         for(nuevoNumero = 0; numero != 0; nuevoNumero *= 10)
+//         {
+//             nuevoNumero += numero % 10;
+//             numero /= 10;
+//         }
         return nuevoNumero;
 
     }
@@ -200,13 +206,14 @@ public class Numero
 
     public static void main (String args[])
     {
+        int numero = 123456;
         Numero demo = new Numero(10);
         System.out.println(demo.factorial());
         demo.escribirFigura();
         System.out.println(demo.esPrimo());
-        System.out.println(demo.inverso(456));
-        System.out.println(demo.contarCifras());
-        System.out.println(demo.ultimaCifra(123));
+        System.out.println(demo.inverso(numero));
+        System.out.println(demo.contarCifras(numero));
+        System.out.println(demo.ultimaCifra(numero));
 
     }
 }

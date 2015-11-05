@@ -1,10 +1,13 @@
 
+import java.util.Random;
+
 /**
  * 
  */
 public class DemoFor
 {
     private Moneda moneda;
+    private Random aleatorio;
 
     /**
      * Constructor  
@@ -12,6 +15,7 @@ public class DemoFor
     public DemoFor()
     {
         moneda = new Moneda();
+        aleatorio = new Random();
     }
 
     /**
@@ -48,7 +52,7 @@ public class DemoFor
      * 2   2   2   2   2  2
      * 3   3   3   3   3  3
      * 4   4   4   4   4  4
-     * 5   5  5   5   5   5 
+     * 5   5   5   5   5   5 
      * 6   6   6   6   6  6 
      */
     public  void escribirFiguraA(int n)
@@ -65,7 +69,7 @@ public class DemoFor
      * 2   2   
      * 3   3   3   
      * 4   4   4   4   
-     * 5   5  5   5   5   
+     * 5   5   5   5   5   
      * 6   6   6   6   6  6 
      */
     public  void escribirFiguraB(int n)
@@ -114,4 +118,54 @@ public class DemoFor
             // ignorar la excepción
         }
     }
+    
+    /**
+     *  Generar 40 aleatorios entre -50 y 20 y calcular
+     *  el numero de veces que aparece el maximo
+     *  escribiremos el maximo y las veces que ha aparecido
+     */
+    public int maximo ()
+    {
+        int max = Integer.MIN_VALUE;
+        int vecesMax = 0;
+        for (int i=1; i<=40; i++){
+            int numeroAleatorio = aleatorio.nextInt(70) - 50;
+            if(numeroAleatorio > max) {
+                max = numeroAleatorio;
+                vecesMax = 1;
+            }else if(numeroAleatorio == max){
+                vecesMax++;
+            }
+        }
+        
+        System.out.print("Maximo: "+max+" : Veces Aparece: "+vecesMax);
+        
+        return 1;
+    }
+    
+    /**
+     *  
+     */
+    public void triangulo()
+    {
+        for(int i=1; i<=9; i++)
+        {
+            for(int j=1; j<=i; j++)
+            {
+                System.out.printf("%4d", (i*j));
+            }
+            System.out.println();
+        }
+    }
+
+    
+    public static void main(String[] args) {
+    	System.out.print('\u000C');
+    	DemoFor demo = new DemoFor();
+    	demo.triangulo();
+
+    }
+    
+    
+
 }
