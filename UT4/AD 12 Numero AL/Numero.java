@@ -117,7 +117,6 @@ public class Numero
         return (numero % 10);  
     }
 
-    
     /**
      * Calcula el inverso
      * Hay que hacer uso del método privado ultimaCifra()
@@ -134,34 +133,33 @@ public class Numero
             nuevoNumero += this.ultimaCifra(numero);
             numero /= 10;
         }
-//         for(nuevoNumero = 0; numero != 0; nuevoNumero *= 10)
-//         {
-//             nuevoNumero += numero % 10;
-//             numero /= 10;
-//         }
         return nuevoNumero;
 
     }
 
-    //     /**
-    //      * @return true si numero es capicúa
-    //      * Hay que usar inverso() y utltimaCifra()
-    //      */
-    //     public boolean esCapicua()
-    //     {
-    //         // a completar    
-    // 
-    //     }
-    // 
-    //     /**
-    //      * Convertir a base 8 
-    //      * @return   el nº convertido
-    //      */
-    //     public int aBase8()
-    //     {
-    //         // a completar    
-    // 
-    //     }
+    /**
+     * @return true si numero es capicúa
+     * Hay que usar inverso()
+     */
+    public boolean esCapicua()
+    {
+        return this.numero == this.inverso(this.numero);
+
+    }
+
+//     /**
+//      * Convertir a base 8 
+//      * @return   el nº convertido
+//      */
+//     public int aBase8()
+//     {
+//         int numero = this.numero
+//         while(numero > 0)
+//         {
+//             
+//         }
+// 
+//     }
     // 
     //     /**
     //      * Detecta si está o no una cifra en el nº

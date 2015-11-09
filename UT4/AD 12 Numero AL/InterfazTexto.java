@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class InterfazTexto
 {
     private final int NUEVO_NUMERO = 1;
@@ -17,9 +19,7 @@ public class InterfazTexto
      */
     public InterfazTexto()
     {
-        // crear el teclado
-         // a completar
-        
+        this.teclado = new Scanner(System.in);
         numero = null;
 
     }
@@ -46,16 +46,16 @@ public class InterfazTexto
                     numero.setNumero(num);
                 break;
                 case FACTORIAL:
-                         // a completar
+                    this.factorial();
                 break;
                 case FIGURA:
-                        // a completar  
+                    this.escribirFigura();
                 break;
                 case CONTAR_CIFRAS:
-                         // a completar
+                    this.contarCifras(numero.getNumero());
                 break;
                 case ES_CAPICUA:
-                           // a completar              
+                    this.esCapicua();              
                 break;
                 case  A_BASE8:
                      // a completar
@@ -79,8 +79,9 @@ public class InterfazTexto
      */
     private int pedirNumero()
     {
-         // a completar
-        
+        this.borrarPantalla();
+        System.out.print("Introduce un numero: ");
+        return teclado.nextInt();
 
     }
 
@@ -94,6 +95,7 @@ public class InterfazTexto
     private int menu()
     {
 
+        this.borrarPantalla();
         System.out.println(" ..........................................................");
         System.out.println(" Elige una opción ......");
         System.out.println(" ..........................................................");
@@ -106,11 +108,16 @@ public class InterfazTexto
         System.out.println(" 7.- Hay cifras repetidas");
         System.out.println(" 8.- A base 2");
         System.out.println(" 9.- Salir");
-        // leer opción y validarla usando leerOpcion() y opcionValida()
-        
-        
+
+        int opcion = this.leerOpcion();
+        while(!this.opcionValida(opcion))
+        {
+            System.out.println("Opcion erronea, selecciona otra: "); 
+            opcion = this.leerOpcion();
+        }
         
         return opcion;
+        
     }
 
     /**
@@ -120,9 +127,7 @@ public class InterfazTexto
      */
     private int leerOpcion( )
     {
-        // a completar
-        
-        
+        return teclado.nextInt();
     }
 
     /**
@@ -131,7 +136,7 @@ public class InterfazTexto
      */
     private boolean opcionValida(int opcion)
     {
-         // a completar
+         return ((opcion >= NUEVO_NUMERO && opcion <= SALIR));
          
     }
 
@@ -141,7 +146,7 @@ public class InterfazTexto
     private void factorial()
     { 
         borrarPantalla();
-        // a completar
+        numero.factorial();
         
         
     }
@@ -152,7 +157,7 @@ public class InterfazTexto
     private void escribirFigura()
     { 
         borrarPantalla();
-         // a completar
+        numero.escribirFigura();
         
         
     }
@@ -163,7 +168,7 @@ public class InterfazTexto
     private void contarCifras()
     { 
         borrarPantalla();
-        // a completar
+        numero.contarCifras(numero.getNumero());
         
         
     }
@@ -174,7 +179,7 @@ public class InterfazTexto
     private void esCapicua()
     { 
         borrarPantalla();
-          // a completar
+        numero.esCapicua();
         
         
     }
