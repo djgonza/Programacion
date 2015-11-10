@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=InterfazJuego()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ InterfazJuego\r\n
+comment1.params=
+comment1.target=void\ jugar()
+comment1.text=\r\n\ \r\n\ Controla\ la\ l\u00F3gica\ del\ juego,\ se\ le\ pregunta\ al\ usuario\ si\ desea\ jugar,\r\n\ si\ es\ as\u00ED\ se\ hace\ una\ presentaci\u00F3n\ del\ juego\ y\ se\ prepara\ \u00E9ste\ para\ empezar\r\n\ a\ jugar.\ Se\ le\ solicitan\ diferentes\ n\u00FAmeros\ al\ usuario\r\n\ hasta\ que\ lo\ adivina\ o\ se\ le\ agotan\ los\ \r\n\ intentos,\ es\ decir,\ hasta\ que\ acaba\ el\ juego\r\n\ Cuando\ el\ juego\ termina\ se\ da\ la\ posibilidad\ de\ jugar\ de\ nuevo.\r\n\ As\u00ED\ hasta\ que\ el\ usuario\ dice\ que\ no\ quiere\ continuar\r\n\ \ \ \ \ \r\n
+comment2.params=
+comment2.target=int\ leerNumero()
+comment2.text=\r\n\ Solicitar\ al\ usuario\ un\ n\u00BA\r\n\ @return\ el\ n\u00FAmero\ tecleado\r\n
+comment3.params=
+comment3.target=void\ presentacionJuego()
+comment3.text=\r\n\ Mensaje\ de\ bienvenida\ al\ juego\r\n
+comment4.params=
+comment4.target=void\ borrarPantalla()
+comment4.text=\r\n\ Borrar\ la\ pantalla\ \ \r\n
+comment5.params=
+comment5.target=char\ seguirJugando()
+comment5.text=\r\n\ Indicar\ al\ usuario\ si\ desea\ jugar\ otra\ vez\r\n\ Devuelve\ la\ respuesta\ del\ usuario\r\n\ @return\ un\ caracter\ solicitado\ al\ usuario\r\n
+numComments=6

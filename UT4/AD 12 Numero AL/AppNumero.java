@@ -9,7 +9,8 @@ public class AppNumero
      */
         public static void main (String args[])
         {
-                 // a completar
+                  new InterfazTexto().iniciar();
+                
                  
                  
         }

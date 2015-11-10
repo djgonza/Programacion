@@ -32,7 +32,7 @@ public class InterfazTexto
     public void iniciar()
     {
         borrarPantalla();
- 
+
         int opcion = menu();
         while (opcion != SALIR)
         {
@@ -46,25 +46,25 @@ public class InterfazTexto
                     numero.setNumero(num);
                 break;
                 case FACTORIAL:
-                    this.factorial();
+                this.factorial();
                 break;
                 case FIGURA:
-                    this.escribirFigura();
+                this.escribirFigura();
                 break;
                 case CONTAR_CIFRAS:
-                    this.contarCifras(numero.getNumero());
+                this.contarCifras();
                 break;
                 case ES_CAPICUA:
-                    this.esCapicua();              
+                this.esCapicua();              
                 break;
                 case  A_BASE8:
-                     // a completar
+                // a completar
                 break; 
                 case  CIFRAS_REPETIDAS:
-                      // a completar
+                // a completar
                 break;
                 case  A_BASE2:
-                          // a completar
+                // a completar
                 break;
             }       
 
@@ -85,7 +85,6 @@ public class InterfazTexto
 
     }
 
-
     /**
      * Presenta un menú en la pantalla
      * para que el usuario pueda elegir su opción
@@ -95,7 +94,6 @@ public class InterfazTexto
     private int menu()
     {
 
-        this.borrarPantalla();
         System.out.println(" ..........................................................");
         System.out.println(" Elige una opción ......");
         System.out.println(" ..........................................................");
@@ -115,9 +113,9 @@ public class InterfazTexto
             System.out.println("Opcion erronea, selecciona otra: "); 
             opcion = this.leerOpcion();
         }
-        
+
         return opcion;
-        
+
     }
 
     /**
@@ -136,8 +134,8 @@ public class InterfazTexto
      */
     private boolean opcionValida(int opcion)
     {
-         return ((opcion >= NUEVO_NUMERO && opcion <= SALIR));
-         
+        return ((opcion >= NUEVO_NUMERO && opcion <= SALIR));
+
     }
 
     /**
@@ -146,11 +144,9 @@ public class InterfazTexto
     private void factorial()
     { 
         borrarPantalla();
-        numero.factorial();
-        
-        
-    }
+        System.out.println("El factorial del numero " + numero.getNumero() + " es: " + numero.factorial());
 
+    }
     /**
      * escribir figura
      */
@@ -158,41 +154,39 @@ public class InterfazTexto
     { 
         borrarPantalla();
         numero.escribirFigura();
-        
-        
-    }
 
+    }
     /**
      * mostrar la cantidad de cifras del número
      */
     private void contarCifras()
     { 
         borrarPantalla();
-        numero.contarCifras(numero.getNumero());
+        System.out.println("El numero " + numero.getNumero() + " tiene: " + 
+        numero.contarCifras(numero.getNumero()) + " cifras");
         
-        
-    }
 
+    }
     /**
      * Mostrar si es o no capicía
      */
     private void esCapicua()
     { 
         borrarPantalla();
-        numero.esCapicua();
-        
-        
-    }
+        if(numero.esCapicua())
+            System.out.println("El numero " + numero.getNumero() + " es capicua");
+        else
+            System.out.println("El numero " + numero.getNumero() + " NO es capicua");
 
+    }
     /**
      * muestra el nº en base 8
      */
     private void aBase8()
     { 
-         borrarPantalla();
-         // a completar
-         
-         
+        // borrarPantalla();
+        // a completar
+
 
     }
 
@@ -201,10 +195,9 @@ public class InterfazTexto
      */
     private void aBase2()
     { 
-        borrarPantalla();
-         // a completar
-        
-        
+        // borrarPantalla();
+        // a completar
+
 
     }
 
@@ -214,9 +207,9 @@ public class InterfazTexto
      */
     public void hayCifrasRepetidas()
     {
-         borrarPantalla();
-          // a completar
-         
+        // borrarPantalla();
+        // a completar
+
     }
 
     /**

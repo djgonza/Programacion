@@ -112,7 +112,7 @@ public class Numero
      * @return la última cifra 
      */
 
-    private int ultimaCifra(int numero)
+    private static int ultimaCifra(int numero)
     {
         return (numero % 10);  
     }
@@ -147,71 +147,109 @@ public class Numero
 
     }
 
+    /**
+     * Convertir a base 8 
+     * @return   el nº convertido
+     */
+    public int aBase8()
+    {
+        int numero = this.numero;
+        int numeroBase = 0;
+        
+        int i = 0;
+        while(numero > 0)
+        {
+            numeroBase += (numero % 8) * Math.pow(10, i);
+            numero /= 8;
+            i++;
+        }
+
+        return numeroBase;
+
+    }
+
+    /**
+     * Detecta si está o no una cifra en el nº
+     * @param  cifra la cifra a localizar
+     * @return   true si está la cifra
+     */
+    private static boolean estaCifra(int numero, int cifra)
+    {
+        while (numero > 0){
+            if(ultimaCifra(numero) == cifra)
+                return true;
+            numero /= 10;
+        }
+        return false;
+
+    }
+
+    /**
+     * Detecta si el nº tiene cifras repetidas
+     * @return   true si las hay
+     */
+    public boolean hayCifrasRepetidas()
+    {
+        int numero = this.numero;
+        int ultimaCifra = 0;
+        while(numero > 0) {
+            ultimaCifra = ultimaCifra(numero);
+            numero /= 10;
+            if(estaCifra(numero, ultimaCifra))
+                return true;
+        }
+        
+        return false;
+
+    }
+
+    /**
+     * Convertir a base 2 
+     * @return   el nº convertido
+     */
+    public long aBase2()
+    {
+        int numero = this.numero;
+        long numeroBase = 0;
+        
+        int i = 0;
+        while(numero > 0)
+        {
+            numeroBase += (numero % 2) * Math.pow(10, i);
+            numero /= 2;
+            i++;
+        }
+
+        return numeroBase;  
+
+    }
+
 //     /**
-//      * Convertir a base 8 
-//      * @return   el nº convertido
+//      * Convertir a base 2 
+//      * @return   la cadena que representa el nº convertido
 //      */
-//     public int aBase8()
+//     public String aBase2V2()
 //     {
-//         int numero = this.numero
-//         while(numero > 0)
-//         {
-//             
-//         }
+//         //return (String) aBase2();    
 // 
 //     }
-    // 
-    //     /**
-    //      * Detecta si está o no una cifra en el nº
-    //      * @param  cifra la cifra a localizar
-    //      * @return   true si está la cifra
-    //      */
-    //     private boolean estaCifra(int numero, int cifra)
-    //     {
-    //         // a completar    
-    // 
-    //     }
-    // 
-    //     /**
-    //      * Detecta si el nº tiene cifras repetidas
-    //      * @return   true si las hay
-    //      */
-    //     public boolean hayCifrasRepetidas()
-    //     {
-    //         // a completar    
-    // 
-    //     }
-    // 
-    //     /**
-    //      * Convertir a base 2 
-    //      * @return   el nº convertido
-    //      */
-    //     public int aBase2()
-    //     {
-    //         // a completar    
-    // 
-    //     }
-    // 
-    //     /**
-    //      * Convertir a base 2 
-    //      * @return   la cadena que representa el nº convertido
-    //      */
-    //     public String aBase2V2()
-    //     {
-    //         // a completar    
-    // 
-    //     }
 
     public static void main (String args[])
     {
+        System.out.print('\u000C');
         int numero = 123456;
-        Numero demo = new Numero(10);
-        System.out.println(demo.factorial());
-        demo.escribirFigura();
-        System.out.println(demo.esPrimo());
-        System.out.println(demo.inverso(numero));
-        System.out.println(demo.contarCifras(numero));
-        System.out.println(demo.ultimaCifra(numero));
+        Numero demo = new Numero(numero);
+//         System.out.println(demo.factorial());
+//         demo.escribirFigura();
+//         System.out.println(demo.esPrimo());
+//         System.out.println(demo.inverso(numero));
+//         System.out.println(demo.contarCifras(numero));
+//         System.out.println(demo.ultimaCifra(numero));
+
+        System.out.println(demo.aBase8());
+        System.out.println(estaCifra(156, 2));
+        System.out.println(demo.hayCifrasRepetidas());
+        System.out.println(demo.aBase2());
 
     }
 }

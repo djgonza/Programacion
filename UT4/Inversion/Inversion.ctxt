@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=cantidadInicial\ tipoInteres
+comment0.target=Inversion(double,\ double)
+comment0.text=\r\n\ \ \r\n
+comment1.params=
+comment1.target=double\ getCantidadInicial()
+comment1.text=\r\n\ \ Accesor\ cantidadInicial\r\n
+comment2.params=
+comment2.target=double\ getTipoInteres()
+comment2.text=\r\n\ \ Accesor\ cantidadInicial\r\n
+comment3.params=a\u00F1os
+comment3.target=double\ despuesDe(int)
+comment3.text=\r\n\ \ Metodo\ que\ devuelve\ la\ cantidad\ total\ despues\ de\ varios\ a\u00F1os\r\n
+comment4.params=importeObjetivo
+comment4.target=int\ a\u00F1osHastaObjetivo(double)
+comment4.text=\r\n\ \ \r\n
+comment5.params=a\u00F1os
+comment5.target=java.lang.String\ tablaDespuesDe(int)
+comment5.text=\r\n\ \ \r\n
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+comment6.text=\r\n\ \ \r\n\ \ \r\n
+numComments=7
