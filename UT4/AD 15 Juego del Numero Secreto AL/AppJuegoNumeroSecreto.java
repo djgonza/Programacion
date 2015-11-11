@@ -11,6 +11,6 @@ public class AppJuegoNumeroSecreto
      */
     public static void main(String[] args)
     {
-         
+         new InterfazJuego().jugar();
     }
 }

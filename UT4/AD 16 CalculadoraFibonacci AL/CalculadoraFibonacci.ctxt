@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CalculadoraFibonacci()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ CalculadoraFibonacci\r\n
+comment1.params=cuantos
+comment1.target=java.lang.String\ generarFibonacci(int)
+comment1.text=\r\n\ @param\ \ cuantos\ \ n\u00BA\ de\ t\u00E9rminos\ de\ la\ serie\ \r\n\ de\ Fibonacci\ a\ generar\ \r\n\ @return\ \ \ una\ representaci\u00F3n\ textual\ de\ la\ serie\ generada\ \ \r\n
+comment2.params=pos
+comment2.target=int\ generarTerminoFibonacci(int)
+comment2.text=\r\n\ @param\ \ pos\ la\ posici\u00F3n\ del\ t\u00E9rmino\ a\ generar\r\n\ @return\ \ el\ t\u00E9rmino\ generado\ \ \ \r\n
+numComments=3

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DemoFibonacci()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ DemoFibonacci\r\n\ Crea\ la\ calculadora\ \r\n
+comment1.params=terminos
+comment1.target=void\ escribirSerieFibonacci(int)
+comment1.text=\r\n\ \ \ \ \r\n
+numComments=2

@@ -3,7 +3,7 @@ import java.util.Scanner;
  * Modela la interfaz con el usuario
  *
  */
- 
+
 public class InterfazJuego
 {
     private Scanner teclado;
@@ -15,10 +15,9 @@ public class InterfazJuego
     public InterfazJuego()
     {
         juego = new JuegoNumeroSecreto();
-        teclado = new Scanner(System.In);
+        teclado = new Scanner(System.in);
     }
 
-    
     /**
      * 
      * Controla la lógica del juego, se le pregunta al usuario si desea jugar,
@@ -32,12 +31,24 @@ public class InterfazJuego
      */
     public void jugar()
     {
-        String cadena = String.format("%20%-5s%-5s%20",
-                                      ,"\nPara jugar piensa un nº entre 1 y 100"
-                                      ,"\nHas de adivinar un nº secreto en 5 intentos");
-        System.out.print(cadena);
-        
-        
+        borrarPantalla();
+        System.out.println("¿Deseas jugar? (s/n)");
+        while(seguirJugando() == 's') {
+            teclado.nextLine(); // ignorar salto
+            juego.resetJuego();
+            presentacionJuego();
+
+            while(!juego.haTerminado()){
+
+                System.out.println("Ingrese un numero:");
+                juego.realizarJugada(leerNumero());
+                System.out.println(juego.getResultado());
+
+            }
+            System.out.println("¿Deseas seguir jugando? (s/n)");
+        }
+
+        System.out.println("Hasta otra!");
 
     }
 
@@ -47,9 +58,7 @@ public class InterfazJuego
      */
     private int leerNumero()
     {
-        
-        
-        
+        return teclado.nextInt();
     }
 
     /**
@@ -80,8 +89,7 @@ public class InterfazJuego
      */
     private char seguirJugando()
     {
-       
-        
-        
+        return teclado.next().charAt(0);
+
     }
 }
