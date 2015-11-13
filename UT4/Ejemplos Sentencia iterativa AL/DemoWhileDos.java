@@ -25,6 +25,7 @@ public class DemoWhileDos
     {
 
     }
+
     /**
      * Ejer 4.14 b)
      * 
@@ -32,13 +33,13 @@ public class DemoWhileDos
      */
     public void mostrarPares()
     { 
-    	int i = 2;
-    	System.out.print(i);
-    	i+=2;
-    	while (i <= 50){
-    		System.out.print(","+i);
-    		i += 2;
-    	}
+        int i = 2;
+        System.out.print(i);
+        i+=2;
+        while (i <= 50){
+            System.out.print(","+i);
+            i += 2;
+        }
     }
 
     /**
@@ -53,7 +54,6 @@ public class DemoWhileDos
     //        
     // 
     //     }
-
 
     /**
      * Ejer 4.14 d)
@@ -77,11 +77,10 @@ public class DemoWhileDos
     /**
      * Ejer 4.14 d) Idem pero formateado como String a 2 decimales
      */
-//     public String sumarSerieV2(int n)
-//     {
-//         
-//     }
-
+    //     public String sumarSerieV2(int n)
+    //     {
+    //         
+    //     }
 
     /**
      * Ejer 4.14 e)
@@ -113,18 +112,18 @@ public class DemoWhileDos
         int contador = 2;
         int suma = 1;
         while (contador <= numero / 2) {
-            
+
             if(numero % contador == 0)
                 suma += contador;
             contador++;
-            
+
         }
-        
+
         suma += numero;
         if(numero == 1)
             return 1;
         return suma;
-        
+
     }
 
     /**
@@ -133,17 +132,16 @@ public class DemoWhileDos
      */
     public int sumarDigitos(int numero)
     {
-         int suma = 0;
-         while(numero != 0)
-         {
-             suma += (numero % 10);
-             numero = (numero / 10);
-         }
-         
-         return suma;
+        int suma = 0;
+        while(numero != 0)
+        {
+            suma += (numero % 10);
+            numero = (numero / 10);
+        }
+
+        return suma;
 
     }
-
 
     /**
      * Ejer 4.14 h)
@@ -154,20 +152,20 @@ public class DemoWhileDos
      * Contamos los divisores de numero con el método 
      * contarDividores() que dado un nº devuelve el total de divisores que tiene
      */
-//     public  boolean esPrimoV1(int numero)
-//     {
-//         if(this.contarDivisores(numero) == 2)
-//             return true;
-//     }
+    //     public  boolean esPrimoV1(int numero)
+    //     {
+    //         if(this.contarDivisores(numero) == 2)
+    //             return true;
+    //     }
 
     /**
      * Cuenta la cantidad de divisores del parámetro recibido
      */
-//     public int contarDivisores(int numero)
-//     {
-//          
-// 
-//     }
+    //     public int contarDivisores(int numero)
+    //     {
+    //          
+    // 
+    //     }
 
     /**
      * Ejer 4.14 h)
@@ -176,37 +174,85 @@ public class DemoWhileDos
      * Si se encuentra alguno sabremos que no es primo, en caso contrario lo será
      * 
      */
-    public  boolean esPrimoV2(int numero)
+    public static  boolean esPrimoV2(int numero)
     {
-         int i = 2;
-         while (i <= numero / 2){
-             if (numero % i == 0)
+        int i = 2;
+        while (i <= numero / 2){
+            if (numero % i == 0)
                 return false;
-             i++;
-         }
-         return true;
-         
+            i++;
+        }
+        return true;
+
     }
-    
+
+    /**
+     *  N primeros primos 
+     */
+    public static void nPrimerosPrimos(int numero)
+    {
+        int i = 1;
+        int j = 1;
+        String cadena = "";
+        while(i <= numero){
+            if(esPrimoV2(j)) {
+                cadena += " "+j;
+                i++;
+            }
+
+            j++;
+        }
+
+        System.out.print(cadena);
+    }
+
+    /**
+     * Factorizar un numero
+     */
+    public static void factorizarUnNumero(int numero)
+    {
+        int i;
+        String cadena = "";
+        while(numero > 1){
+
+            i = 2;
+            boolean j = false;
+            while(numero > i && j == false) {
+                if(esPrimoV2(i) && numero%i==0){
+                    numero /= i;
+                    cadena += " x "+i;
+                    j = true;
+
+                }
+                i++;
+                System.out.println("loop2");
+            }
+            
+            System.out.println(numero);
+
+        }
+
+        System.out.println("Numero = "+cadena);
+    }
+
     /**
      *  Dado un numero, devolver el inverso
      */
 
     public int inverso(int numero)
     {
-         int resto = 0;
-         int inverso = 0;
-         while(numero != 0)
-         {
+        int resto = 0;
+        int inverso = 0;
+        while(numero != 0)
+        {
             int cifra = numero % 10;
             inverso *= 10;
             inverso += cifra;
             numero /= 10;
-         }
-         
-         return inverso;
-    }
+        }
 
+        return inverso;
+    }
 
     /**
      * Devuelve la tabla de multiplicar del parámetro (hasta el 10)
@@ -250,8 +296,11 @@ public class DemoWhileDos
     }
 
     public static void main(String[] args) {
-    	DemoWhileDos demo = new DemoWhileDos();	
-    	demo.mostrarPares();
+        //         DemoWhileDos demo = new DemoWhileDos(); 
+        //         demo.mostrarPares();
+
+        factorizarUnNumero(9);
+        System.out.println("Numero = ");
     }
 
 }
