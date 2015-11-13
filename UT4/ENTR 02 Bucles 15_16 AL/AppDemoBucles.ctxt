@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=numero\ grosor\ mensaje
+comment0.target=int\ validarNumero(int,\ int,\ java.lang.String)
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ \ Punto\ de\ entrada\ a\ la\ aplicaci\u00F3n\r\n\ \ define\ y\ crea\ el\ teclado,\ \r\n\ \ crea\ un\ objeto\ DemoBucles\ y\:\r\n\ \ -\ ejecuta\ el\ m\u00E9todo\ numerosComoSumaPotenciasDe2()\r\n\ \ -\ haz\ una\ pausa\ y\ borra\ la\ pantalla\r\n\ \ -\ pide\ al\ usuario\ un\ valor\ para\ el\ grosor\ de\ la\ H\ -\ Valida\ con\ un\ bucle\ while\ \ que\ este\r\n\ \ \ \ \ \ valor\ es\ positivo\r\n\ \ -\ pide\ al\ usuario\ un\ valor\ para\ la\ anchura\ de\ la\ H.\ Valida\ con\ un\ bucle\ while\ \r\n\ \ \ \ \ \ que\ este\ valor\ es\ positivo\ y\ superior\ al\ grosor\r\n\ \ \ -\ pide\ al\ usuario\ un\ valor\ para\ la\ altura\ de\ la\ H.\ Valida\ con\ un\ bucle\ while\ \r\n\ \ \ \ \ \ que\ este\ valor\ es\ positivo\ y\ superior\ al\ grosor\r\n\ \ \ -\ muestra\ la\ letra\ H\r\n\ \ \r\n
+numComments=2

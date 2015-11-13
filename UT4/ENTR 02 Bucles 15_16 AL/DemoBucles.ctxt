@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DemoBucles()
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=numero
+comment1.target=java.lang.String\ descomponerNumero(int)
+comment1.text=\r\n\ \ \ Descomponer\ numeros\ \ \r\n
+comment2.params=
+comment2.target=void\ numerosComoSumaPotenciasDe2()
+comment2.text=\r\n\ \ Genera\ aleatorios\ (con\ la\ clase\ Random)\ ente\ 0\ y\ 255\ (inclusive)\r\n\ \ y\ escribe\ cada\ aleatorio\ como\ suma\ de\ potencias\ de\ 2.\r\n\ \ OJO\!\ No\ hay\ que\ convertir\ previamente\ el\ n\u00BA\ a\ binario.\r\n\ \ \r\n\ \ Hay\ que\ parar\ el\ proceso\ al\ salir\ un\ 0\ o\ despu\u00E9s\ de\ haber\ generado\ 25\ aleatorios\r\n\ \ Los\ resultados\ se\ muestran\ formateados\ como\ indica\ la\ figura\ (ver\ enunciado)\r\n\ \ \r\n\ \ Cada\ 4\ n\u00FAmeros\ mostrados\ se\ hace\ una\ pausa\ y\ luego\ se\ borra\ la\ pantalla\r\n\ \ \r\n\ \ 255\ \=\ 128\ +\ 64\ +\ 32\ +\ 16\ +\ 8\ +\ 4\ +\ 2\ +\ 1\r\n\ \ 34\ \=\ 32\ +\ 2\r\n\ \ 129\ \=\ 128\ +\ 1\r\n\ \ \r\n\ \ Usa\ solo\ bucles\ while\r\n
+comment3.params=altura\ anchura\ grosor
+comment3.target=void\ escribirLetraL(int,\ int,\ int)
+comment3.text=\r\n\ \ Con\ bucles\ for\r\n\ \ \r\n\ \ alto,\ ancho,\ grosor\ asumimos\ positivos\ y\ correctos\r\n\ \ \r\n\ \ \ \ \ \ Altura\ de\ la\ letra\ L\:\ 9\r\nAnchura\ de\ la\ letra\ L\:\ 5\r\nGrosor\ de\ la\ letra\ L\:\ 3\r\n\ *\ *\r\n\ *\ *\r\n\ *\ *\r\n\ *\ *\r\n\ *\ *\r\n\ *\ *\r\n\ *\ *\ *\ *\r\n\ *\ *\ *\ *\r\n\ *\ *\ *\ *\ \ \ \ \ \ \r\nAltura\ de\ la\ letra\ L\:\ 5\r\nAnchura\ de\ la\ letra\ L\:\ 3\r\nGrosor\ de\ la\ letra\ L\:\ 1\r\n\ \r\n\ \r\n\ \r\n\ \r\n\ *\ *\ \r\n\r\n
+comment4.params=caracter\ n
+comment4.target=void\ escribirCaracter(char,\ int)
+comment4.text=\r\n\ \ escribe\ n\ veces\ el\ caracter\ \ indicado\ (en\ 2\ posiciones)\r\n\ \ en\ la\ misma\ l\u00EDnea\r\n\ \ \r\n\ \ con\ bucles\ for\ \r\n
+numComments=5
