@@ -227,12 +227,73 @@ public class DemoWhileDos
                 i++;
                 System.out.println("loop2");
             }
-            
+
             System.out.println(numero);
 
         }
 
         System.out.println("Numero = "+cadena);
+    }
+
+    /**
+     * Factorizar un numero
+     * AQueda más sencillo con un solo bucle y sin preguntar
+     * continuamente si i es primo
+     */
+    public static void factorizarUnNumeroCorregido(int numero)
+    {
+        long antes = System.nanoTime();
+        int i = 2;
+        String cadena = "";
+
+        while (numero > 1) {
+
+            boolean j = false;
+            while (numero > 1 && !j) {
+                if (esPrimoV2(i) && numero % i == 0){
+                    numero /= i;
+                    cadena += " x " + i;
+
+                }
+                else
+                {
+                    j = true;
+                    i++;
+                }
+                //System.out.println("loop2");
+            }
+
+            // System.out.println(numero);
+
+        }
+        System.out.println(cadena);
+        long despues = System.nanoTime();
+        System.out.println("\nTiempo " +  (despues - antes));
+    }
+
+    /**
+     * Factorizar un numero
+     * AQueda más sencillo con un solo bucle y sin preguntar
+     * continuamente si i es primo
+     */
+    public static void factorizarUnNumeroCorregidoV2(int numero)
+    {
+        long antes = System.nanoTime();
+        int factor = 2;
+
+        while (numero > 1) {
+            if (numero % factor == 0) {
+                System.out.print(factor + "\t");
+                numero /= factor;
+            }
+            else {
+                factor++;
+            }
+
+        }
+        long despues = System.nanoTime();
+        System.out.println("\nTiempo " +  (despues - antes) );
+
     }
 
     /**

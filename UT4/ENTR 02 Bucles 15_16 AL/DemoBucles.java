@@ -67,25 +67,6 @@ public class DemoBucles
                     generador.nextInt(256)
                 )
             );
-
-            /*//generamos el aleatorio
-            aleatorio = generador.nextInt(256);
-
-            //descomponemos el numero
-            int j = 7;
-            int numero = aleatorio;
-            String cadena = String.format("%10d = %3c", numero, SUMATORIO);
-            while (numero > 0){
-                int potencia = (int) Math.pow(2,j);
-                if(potencia <= numero){
-                    cadena += String.format("%4d", potencia);
-                    numero -= potencia;
-                }
-                j--;
-            }
-            
-            //mostrar por pantalla
-            System.out.println(cadena);*/
             
             //ciclos de 4
             if(i%4==0){
@@ -131,9 +112,6 @@ public class DemoBucles
     public void escribirLetraL(int altura, int anchura, int grosor)
     {
        
-        //System.out.println(altura);
-        //System.out.println(anchura);
-        //System.out.println(grosor);
         
         for(int i=1; i<=altura; i++){
 

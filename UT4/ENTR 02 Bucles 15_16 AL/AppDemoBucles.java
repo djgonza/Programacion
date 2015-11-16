@@ -55,7 +55,7 @@ public class AppDemoBucles
 
         //pedimos los numeros
         System.out.println("Dame un nº positivo para el grosor");
-        int grosor = validarNumero (teclado.nextInt(), 1, "Grosor Incorrecto!!");
+        int grosor = validarNumero (teclado.nextInt(), 0, "Grosor Incorrecto!!");
 
         System.out.println("Dame un nº positivo y mayor que el grosor para la anchura");
         int anchura = validarNumero (teclado.nextInt(), grosor, "Anchura Incorrecta!!");
