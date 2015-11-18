@@ -181,41 +181,169 @@ public class LibreriaRecursiva
             else
                 return contarApariciones(n/10, d);
         return 0;
-        
+
     }
-    //     /**
-    //      *  Multiplicar a * b mediante sumas
-    //      *
-    //      * 
-    //      */
-    //     public static int producto(int a, int b)
-    //     {
-    // 
-    //         
-    //     }
-    // 
-    //     /**
-    //      *  Sumar a + b
-    //      *
-    //      * 
-    //      */
-    //     public static int sumar(int a, int b)
-    //     {
-    // 
-    //         
-    //     }
-    // 
-    //     /**
-    //      * 
-    //      * Sumar un intervalo, por ejemplo, sumar(5, 9) es 5 + 6 + 7 + 8 + 9 = 36
-    //      *  Asumimos desde <= hasta 
-    //      */
-    //     public static int sumarIntervalo(int desde, int hasta)
-    //     {
-    //         
-    //         
-    //         
-    //         
-    //     }
-    // 
+
+    /**
+     *  Multiplicar a * b mediante sumas
+     *
+     * 
+     */
+    public static int producto(int a, int b)
+    {
+        if(a==0)
+            return 0;
+        return b + producto(a - 1, b);
+
+    }
+
+    /**
+     *  Sumar a + b
+     *
+     * 
+     */
+    public static int sumar(int a, int b)
+    {
+        if(a==0)
+            return b;
+        return 1 + sumar(a-1, b);
+
+    }
+
+    /**
+     * 
+     * Sumar un intervalo, por ejemplo, sumar(5, 9) es 5 + 6 + 7 + 8 + 9 = 35
+     *  Asumimos desde <= hasta 
+     */
+    public static int sumarIntervalo(int desde, int hasta)
+    {
+        if(desde == hasta)
+            return desde;
+        return desde + sumarIntervalo(desde + 1, hasta);
+
+    }
+
+    /**
+     *  calcula y devuelve el producto de los n primeros pares 
+     *  (2 * 4 * 6 * 8 * ....)
+     */
+    public static long multiplicarPares(int n)
+    {
+        if (n==0)
+            return 1;
+        return 2 * n * multiplicarPares(n - 1);
+    }
+
+    /**
+     *  muestra cada uno de los dígitos binarios de n 
+     *  (Si n = 13 entonces 1101, si n = 9 entonces 101, ...)
+     */
+    public static void printEnBinario(int n)
+    {
+        if(n>0){
+            printEnBinario(n/2);
+            if(n%2!=0){
+                System.out.print("1");
+            }else{
+                System.out.print("0");
+            }
+        }
+
+    }
+
+    /**
+     *  muestra la secuencia 1,  2,    3,   4,   5
+     */
+    public static void secuencia01(int n)
+    {
+        if(n==1)
+            System.out.print(n);
+        if(n>1){
+            secuencia01(n-1);
+            System.out.print(", " + n);
+        }
+    }
+
+    /**
+     *  muestra la secuencia 5,  4,   3,   2,   1
+     */
+    public static void secuencia02(int n)
+    {
+        if(n==1)
+            System.out.print(n);
+        if(n>1){         
+            System.out.print(n + ", ");
+            secuencia02(n-1);
+        }
+    }
+
+    /**
+     *  genera un nº con tantas cifras como indique n, 
+     *  su primera cifra será 1, la segunda 2, .... desde el 1. 
+     *  Ej. si n = 5 entonces se genera 12345, si n = 8 el 12345678, ....
+     */
+    public static int generarNumero(int n)
+    {
+        if(n==1) 
+            return n;
+        return n + (10 * generarNumero(n-1));
+
+    }
+
+    /**
+     *  calcula y devuelve un nº supuesto en base 10 a base 2 
+     *  (Ej. 13 = 1101, 255 = 11111111, 17 = 10001)
+     */
+    public static int aBase2(int n)
+    {
+        if(n>0){
+            if(n%2!=0){
+                return 1 + (10 * aBase2(n/2)); 
+            }else{
+                return (10 * aBase2(n/2)); 
+            }         
+        }else{
+            return 0;
+        }
+
+    }
+
+    /**
+     *  calcula y devuelve un nº supuesto en base 2 a base 10 
+     */
+    public static int aBase10(int n)
+    {
+        if(n==1)
+            return 1;
+        if(n%10==1)
+            return 1 + 2 * aBase10(n/10);
+        return 2 * aBase10(n/10);
+
+    }
+
+    /**
+     *  escribe los  n primeros nºs  de forma que los impares se muestran antes 
+     *  y en orden decreciente y los pares depués y en orden creciente. 
+     *  Por ejemplo,  imparesPares(5)  daría como resultado  5  3  1  2  4  y 
+     *  imparesPares(8)  daría  7  5  3  1  2  4  6  8
+     */
+
+    public static void imparesPares(int n){
+
+        if(n<=0)
+            System.out.print("");
+        else{
+            if(n%2!=0){
+                System.out.print(" "+n);
+                imparesPares(n-1);
+            }
+            if(n%2==0){
+                imparesPares(n-1);
+                System.out.print(" "+n);
+            }
+        }
+
+    }
+
 }
+
