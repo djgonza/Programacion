@@ -319,6 +319,87 @@ public class PracticaBucles
      */
     public void metodo12()
     {
+        int numero = aleatorio.nextInt(3) + 1;
+        int anterior = 0;
+        int longitud = 0;
+        int valor = 0;
+        int longMaxima = 1;
+        int valorMaximo = numero;
+        int i = 0;
+        while(numero != 0){
+
+            numero = aleatorio.nextInt(3) + 1;
+            if(i%10==0){
+                System.out.println();
+            }
+            if(i==30){
+                numero = 0;
+            }
+            i++;
+            System.out.print (" "+numero);
+
+            if(numero == anterior){
+                longitud++;
+                valor=numero;
+            }else if(longitud > longMaxima){
+                longMaxima = longitud;
+                valorMaximo = valor;
+                longitud = 1;
+            }
+
+            //numero = aleatorio.nextInt(100);
+            anterior = numero;
+        }
+
+        System.out.println();
+        System.out.println("El numero "+valorMaximo+" se repite "+longMaxima+" veces.");
+    }
+
+    /**
+     *  
+     */
+    public void metodo121()
+    {
+        int numero = aleatorio.nextInt(3) + 1;
+        int anterior = 0;
+        int longitud = 0;
+        int valor = 0;
+        int longMaxima = 1;
+        int valorMaximo = numero;
+        int i = 0;
+        while(numero != 0){
+            
+            numero = aleatorio.nextInt(3) + 1;
+            if(i%10==0){
+                System.out.println();
+            }
+            if(i==30){
+                numero = 0;
+            }
+            i++;
+            System.out.print (" "+numero);
+            
+            while(numero == anterior){
+                longitud++;
+                numero = aleatorio.nextInt(100); 
+            }
+            if(longitud > longMaxima)
+                longMaxima = longitud;
+            valorMaximo = numero;
+            longitud = 0;
+            numero = aleatorio.nextInt(100);
+
+        }
+        
+        System.out.println();
+        System.out.println("El numero "+valorMaximo+" se repite "+longMaxima+" veces.");
+    }
+
+    /**
+     *  compara con numero anterior
+     */
+    public void compararAnterior(int numero, int anterior)
+    {
 
     }
 
@@ -389,7 +470,8 @@ public class PracticaBucles
         //demo.metodo07();
         //demo.metodo09(6);
         //demo.metodo10();
-        demo.metodo11(3,8);
+        //demo.metodo11(3,8);
+        demo.metodo121();
     }
 
 }
