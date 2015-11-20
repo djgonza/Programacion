@@ -320,15 +320,29 @@ public class PracticaBucles
     public void metodo12()
     {
         int numero = aleatorio.nextInt(3) + 1;
-        int anterior = 0;
+        int anterior = numero;
         int longitud = 0;
-        int valor = 0;
         int longMaxima = 1;
         int valorMaximo = numero;
         int i = 0;
         while(numero != 0){
 
+            System.out.print (" "+numero);
+
+            if(numero == anterior){
+                longitud++;
+            }else{
+                if(longitud > longMaxima){
+                    longMaxima = longitud;
+                    valorMaximo = anterior;
+                }
+                anterior=numero;
+                longitud=1;
+            }
+
             numero = aleatorio.nextInt(3) + 1;
+            //numero = aleatorio.nextInt(100);
+
             if(i%10==0){
                 System.out.println();
             }
@@ -336,19 +350,6 @@ public class PracticaBucles
                 numero = 0;
             }
             i++;
-            System.out.print (" "+numero);
-
-            if(numero == anterior){
-                longitud++;
-                valor=numero;
-            }else if(longitud > longMaxima){
-                longMaxima = longitud;
-                valorMaximo = valor;
-                longitud = 1;
-            }
-
-            //numero = aleatorio.nextInt(100);
-            anterior = numero;
         }
 
         System.out.println();
@@ -368,7 +369,7 @@ public class PracticaBucles
         int valorMaximo = numero;
         int i = 0;
         while(numero != 0){
-            
+
             numero = aleatorio.nextInt(3) + 1;
             if(i%10==0){
                 System.out.println();
@@ -378,7 +379,7 @@ public class PracticaBucles
             }
             i++;
             System.out.print (" "+numero);
-            
+
             while(numero == anterior){
                 longitud++;
                 numero = aleatorio.nextInt(100); 
@@ -390,17 +391,9 @@ public class PracticaBucles
             numero = aleatorio.nextInt(100);
 
         }
-        
+
         System.out.println();
         System.out.println("El numero "+valorMaximo+" se repite "+longMaxima+" veces.");
-    }
-
-    /**
-     *  compara con numero anterior
-     */
-    public void compararAnterior(int numero, int anterior)
-    {
-
     }
 
     /**
@@ -419,8 +412,15 @@ public class PracticaBucles
      */
     public String metodo13(int n)
     {
-
-        return "";
+        int i = 1;
+        String devolver = String.format("Para n = %d se devuelve el valor ", n);
+        double valor = 0; 
+        while(i<=n){
+            valor += (double) 1/i;
+            i++;
+        }
+        devolver+=String.format(" %1.4f", valor);
+        return devolver; 
     }
 
     /**
@@ -433,7 +433,18 @@ public class PracticaBucles
      */
     public void metodo14(int n)
     {
+        String cadena = String.format("Si n = %d entonces", n);
+        int divisor = 2;
+        while(n>1){
 
+            if(n%divisor!=0){
+                divisor++;
+            }
+
+            cadena+=String.format(" %d ", divisor);
+            n/=divisor;
+        }
+        System.out.println(cadena);
     }
 
     /**
@@ -460,18 +471,24 @@ public class PracticaBucles
     {
         PracticaBucles demo = new PracticaBucles();
         System.out.print('\u000C');
-        //demo.metodo01();
-        //demo.metodo02(5);
-        //System.out.print(demo.esPrimo(5)+" "+demo.esPrimo(6));
-        //System.out.print(demo.metodo03(12));
-        //demo.metodo04(7);
-        //demo.metodo05();
-        //demo.metodo06();
-        //demo.metodo07();
-        //demo.metodo09(6);
-        //demo.metodo10();
-        //demo.metodo11(3,8);
-        demo.metodo121();
+        demo.metodo01();
+        demo.metodo02(5);
+        System.out.print(demo.esPrimo(5)+" "+demo.esPrimo(6));
+        System.out.print(demo.metodo03(12));
+        demo.metodo04(7);
+        demo.metodo05();
+        demo.metodo06();
+        demo.metodo07();
+        demo.metodo09(6);
+        demo.metodo10();
+        demo.metodo11(3,8);
+        demo.metodo12();
+        System.out.println(demo.metodo13(3));
+        System.out.println(demo.metodo13(5));
+        System.out.println(demo.metodo13(6));
+        demo.metodo14(9);
+        demo.metodo14(18);
+        demo.metodo14(24);
     }
 
 }
