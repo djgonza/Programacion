@@ -1,17 +1,25 @@
 #BlueJ package file
+dependency1.from=AppUT5EjerArrays
+dependency1.to=UT5EjerArrays
+dependency1.type=UsesDependency
 objectbench.height=100
 objectbench.width=1232
-package.editor.height=804
+package.editor.height=548
 package.editor.width=1152
 package.editor.x=-8
 package.editor.y=-8
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=2
 package.showExtends=true
 package.showUses=true
 project.charset=UTF-8
+target1.editor.height=700
+target1.editor.width=900
+target1.editor.x=149
+target1.editor.y=256
 target1.height=50
 target1.name=AppUT5EjerArrays
+target1.naviview.expanded=false
 target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=

@@ -4,15 +4,17 @@
  */
 public class UT5EjerArrays
 {
+   
 
     /**
      * Constructor  
      */
     public UT5EjerArrays()
     {
-
+         
     }
-
+    
+    
     /**
      * Ejer 5.4 
      */
@@ -26,28 +28,28 @@ public class UT5EjerArrays
         }
 
     }
-
-    /**
+    
+     /**
      * Ejer 5.5 
      * diaSemana ha de ser un valor entre 1 y 7
      * devolver el nombre del día de la 
      * semana  correspondiente   al   parámetro   que  se  pasa  al   método
-     * Si  el  valor  del parámetro es incorrecto se devolverá la cadena "Día incorrecto";
+     * Si  el  valor  del parámetro es incorrecto se devolverá la cadena “Día incorrecto”;
      */ 
     public String  encontrarNombreDia(int diaSemana)
     {
         // declarar e inicializar un array con los nombres de los días de la semana
         String[ ] nombres = {"Lunes", "Martes", "Miércoles", "Jueves",
                 "Viernes", "Sabado", "Domingo"};
-        if(nombre[diaSemana - 1] != '\Uoooo')
+
+        if(diaSemana <1 || diaSemana >7)
         {
-            return "Dia Incorrecto";  
-        }else{
-             return nombre[diaSemana - 1];
+            return "Día incorrecto";
         }
         
-
+        return nombres[diaSemana -1];
     }
+
     /**
      *  
      * Ejer 5.6 - Calcular la media de los valores del
@@ -56,21 +58,34 @@ public class UT5EjerArrays
      */
     public double calcularMedia(double[] notas)
     {
-
-        return 0;
+         double suma = 0;
+         for(int i = 0; i < notas.length; i++)
+         {
+             suma += notas[i];
+            }
+         return suma / notas.length;
     }
-
-    /**
+    
+     /**
      *  
      * Ejer 5.7 - Calcular y devolver el máximo
      *  
      */
     public int maximo(int[] enteros)
     { 
-
-        return 0;
+        int max = enteros[0];
+        for(int i=1; i < enteros.length; i++)
+        {
+            
+            if (enteros[i] > max)
+            {
+                max = enteros[i];
+            }
+            
+        }
+         return max;
     }
-
+    
     /**
      *  
      * Ejer 5.8 -  devolver otro 
@@ -80,11 +95,11 @@ public class UT5EjerArrays
      */
     public int[] paresV1(int[] enteros)
     {
-
-        return null;
+     
+         return null;
     }
-
-    /**
+    
+      /**
      *  
      * Ejer 5.8 -  devolver otro 
      * array con los valores pares encontrados en el original
@@ -94,11 +109,13 @@ public class UT5EjerArrays
      */
     public int[] paresV2(int[] enteros)
     {
-
-        return null;
-
+        
+         return null;
+          
     }
-
+    
+    
+    
     /**
      *  
      * Ejer 5.9 -  rotar una posición a la derecha el array numeros
@@ -106,19 +123,23 @@ public class UT5EjerArrays
      */
     public int[] rotarDerechaV1(int[] enteros)
     {
-
-        return null;
+          
+           return null;
     }
-
-    /**
+    
+     /**
      *  
      * Ejer 5.9 -  rotar una posición a la derecha el array numeros
      *  Rotar sobre el mismo array array
      */
     public void rotarDerechaV2(int[] enteros)
     {
-
+         
+        
+           
     }
+    
+    
 
     /**
      *  Ejer 5.10 
@@ -129,11 +150,11 @@ public class UT5EjerArrays
      */
     public int[]  expandir(int[] numeros)
     {
-
+        
         return null;
     }
-
-    /**
+    
+      /**
      *  
      * Ejer 5.11 -  generar 100  aleatorios entre 1 y 9 y devolver la frecuencia de aparición del valor 1, del 
      * valor 2, del valor 3, …
@@ -141,8 +162,8 @@ public class UT5EjerArrays
      */
     public int[] calcularFrecuencias( )
     {
-
-        return null;
-
+       
+         return null;
+           
     }
 }
