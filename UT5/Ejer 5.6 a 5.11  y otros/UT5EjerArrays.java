@@ -1,20 +1,19 @@
-
+import java.util.Random;
 /**
  *  
  */
 public class UT5EjerArrays
 {
-   
-
+    
+    private Random generador;
     /**
      * Constructor  
      */
     public UT5EjerArrays()
     {
-         
+        this.generador = new Random();
     }
-    
-    
+
     /**
      * Ejer 5.4 
      */
@@ -28,8 +27,8 @@ public class UT5EjerArrays
         }
 
     }
-    
-     /**
+
+    /**
      * Ejer 5.5 
      * diaSemana ha de ser un valor entre 1 y 7
      * devolver el nombre del día de la 
@@ -46,7 +45,7 @@ public class UT5EjerArrays
         {
             return "Día incorrecto";
         }
-        
+
         return nombres[diaSemana -1];
     }
 
@@ -58,15 +57,15 @@ public class UT5EjerArrays
      */
     public double calcularMedia(double[] notas)
     {
-         double suma = 0;
-         for(int i = 0; i < notas.length; i++)
-         {
-             suma += notas[i];
-            }
-         return suma / notas.length;
+        double suma = 0;
+        for(int i = 0; i < notas.length; i++)
+        {
+            suma += notas[i];
+        }
+        return suma / notas.length;
     }
-    
-     /**
+
+    /**
      *  
      * Ejer 5.7 - Calcular y devolver el máximo
      *  
@@ -76,16 +75,16 @@ public class UT5EjerArrays
         int max = enteros[0];
         for(int i=1; i < enteros.length; i++)
         {
-            
+
             if (enteros[i] > max)
             {
                 max = enteros[i];
             }
-            
+
         }
-         return max;
+        return max;
     }
-    
+
     /**
      *  
      * Ejer 5.8 -  devolver otro 
@@ -95,11 +94,37 @@ public class UT5EjerArrays
      */
     public int[] paresV1(int[] enteros)
     {
-     
-         return null;
+        //Creamos un contador para almacenar el numero de pares que hay
+        int contador = 0;
+        //recorremos el array
+        for(int i=0; i < enteros.length; i++)
+        {
+            //si el numero es par sumamos uno
+            if (enteros[i]%2 == 0)
+            {
+                contador++;
+            }
+        }
+
+        //creamos un nuevo array con la longitud del contador
+        int[] pares = new int[contador];
+
+        //reseteamos el contador
+        contador = 0;
+        //volvemos a recorrer el array original
+        for(int i=0; i < enteros.length; i++)
+        {
+            //asigamos al nuevo array los valores pares encontrados
+            if (enteros[i]%2 == 0)
+            {
+                pares[contador] = enteros[i];
+                contador++;
+            }
+        }
+        return pares;
     }
-    
-      /**
+
+    /**
      *  
      * Ejer 5.8 -  devolver otro 
      * array con los valores pares encontrados en el original
@@ -109,13 +134,11 @@ public class UT5EjerArrays
      */
     public int[] paresV2(int[] enteros)
     {
-        
-         return null;
-          
+
+        return null;
+
     }
-    
-    
-    
+
     /**
      *  
      * Ejer 5.9 -  rotar una posición a la derecha el array numeros
@@ -123,23 +146,29 @@ public class UT5EjerArrays
      */
     public int[] rotarDerechaV1(int[] enteros)
     {
-          
-           return null;
+        int[] nuevoArray = new int[enteros.length];
+        nuevoArray[0] = enteros[enteros.length-1];
+        for(int i=0; i<enteros.length-1; i++){
+
+            nuevoArray[i+1] = enteros[i];
+
+        }
+        return nuevoArray;
     }
-    
-     /**
+
+    /**
      *  
      * Ejer 5.9 -  rotar una posición a la derecha el array numeros
      *  Rotar sobre el mismo array array
      */
     public void rotarDerechaV2(int[] enteros)
     {
-         
+        int aux = enteros[enteros.length];
+        for(int i = 0; i < enteros.length; i++){
+            //enteros[]
+        }
         
-           
     }
-    
-    
 
     /**
      *  Ejer 5.10 
@@ -150,11 +179,11 @@ public class UT5EjerArrays
      */
     public int[]  expandir(int[] numeros)
     {
-        
+
         return null;
     }
-    
-      /**
+
+    /**
      *  
      * Ejer 5.11 -  generar 100  aleatorios entre 1 y 9 y devolver la frecuencia de aparición del valor 1, del 
      * valor 2, del valor 3, …
@@ -162,8 +191,17 @@ public class UT5EjerArrays
      */
     public int[] calcularFrecuencias( )
     {
-       
-         return null;
-           
+        int[] frecuencia = new int[9];
+        int j = 0;
+        for (int i = 0; i < 100; i++){
+            int aleatorio = generador.nextInt(9) + 1;
+            System.out.printf("%2d", aleatorio);
+            frecuencia[aleatorio-1]++;
+            if(j%10==0)
+                System.out.println();
+            j++;
+        }
+        return frecuencia;
+
     }
 }
