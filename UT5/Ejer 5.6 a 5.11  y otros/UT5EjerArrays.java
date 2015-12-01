@@ -163,11 +163,14 @@ public class UT5EjerArrays
      */
     public void rotarDerechaV2(int[] enteros)
     {
-        int aux = enteros[enteros.length];
-        for(int i = 0; i < enteros.length; i++){
-            //enteros[]
-        }
+        int aux = enteros[enteros.length - 1];
         
+
+        for(int i = enteros.length - 2; i >= 0 ; i--)
+        {
+            enteros[i + 1] = enteros [i];
+        }
+        enteros [0] = aux;
     }
 
     /**
@@ -179,8 +182,15 @@ public class UT5EjerArrays
      */
     public int[]  expandir(int[] numeros)
     {
+        int[] nuevoArray = new int[(numeros.length * 2)];
+        //nuevoArray[0] = numeros[numeros.length * 2];
+        for(int i=0; i < numeros.length; i++){
 
-        return null;
+            nuevoArray[i*2] = numeros[i];
+            nuevoArray[i*2+1] = numeros[i];
+
+        }
+        return nuevoArray;
     }
 
     /**

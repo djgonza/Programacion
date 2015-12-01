@@ -18,18 +18,18 @@ public class AppUT5EjerArrays
         
         //metodo
             int max = demo.maximo(Enteros);
-            //System.out.print(max);
+            System.out.println(max);
         
         //metodo  
             //asigamos el resultado del metodo a una variable
             int[] result = demo.paresV1(Enteros);
             //si intentamos mostrar el array directamente salen cosas raras
-                //System.out.println(Arrays.toString(result));
+                System.out.println(Arrays.toString(result));
             //recorremos el array resultante
             for(int i=0; i < result.length; i++)
             {
                 //mostramos los valores
-                //System.out.println(result[i]);
+                System.out.println(result[i]);
             }
         
         //metodo    
@@ -37,6 +37,8 @@ public class AppUT5EjerArrays
             
         //metodo
             System.out.println(Arrays.toString(demo.calcularFrecuencias()));
+        //metodo
+            System.out.println(Arrays.toString(demo.expandir(Enteros)));
 
     }
 }
