@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=EstadisticaLuzSolar()
+comment0.text=\r\n\ crea\ e\ inicializa\ el\ array\ horas\r\n
+comment1.params=
+comment1.target=double\ getMediaSol()
+comment1.text=\r\n\ Calcula\ la\ media\ de\ horas\ de\ sol\r\n\r\n\ @return\ la\ media\ de\ horas\ de\ sol\r\n
+comment2.params=
+comment2.target=java.lang.String\ mesMasSoleado()
+comment2.text=\r\n\ devuelve\ el\ nombre\ del\ mes\ con\ m\u00E1s\ horas\ de\ sol\r\n\r\n\ @return\ el\ nombre\ del\ mes\r\n
+comment3.params=
+comment3.target=java.lang.String\ mesMenosSoleado()
+comment3.text=\r\n\ mes\ con\ menos\ horas\ de\ sol\r\n\r\n\ @return\ el\ nombre\ del\ mes\r\n
+numComments=4
