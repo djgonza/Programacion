@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=castellano\ ingles
+comment0.target=Palabra(java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Palabra\r\n
+comment1.params=
+comment1.target=java.lang.String\ getCastellano()
+comment1.text=\r\n\ \ \r\n\ @return\ la\ palaba\ en\ castellano\ \ \ \ \r\n
+comment2.params=castellano
+comment2.target=void\ setCastellano(java.lang.String)
+comment2.text=\r\n\ \ \r\n\ set\ la\ palaba\ en\ castellano\ \ \ \ \r\n
+comment3.params=
+comment3.target=java.lang.String\ getIngles()
+comment3.text=\r\n\ \ \r\n\ @return\ la\ palaba\ en\ ingl\u00E9s\ \ \ \ \r\n
+comment4.params=ingles
+comment4.target=void\ setIngles(java.lang.String)
+comment4.text=\r\n\ \ \r\n\ set\ la\ palaba\ en\ ingl\u00E9s\ \ \ \ \r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ \ \r\n\ @return\ la\ representaci\u00F3n\ textual\r\n\ de\ la\ palabra\r\n
+numComments=6
