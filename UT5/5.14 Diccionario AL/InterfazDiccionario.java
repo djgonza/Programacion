@@ -32,9 +32,9 @@ public class InterfazDiccionario
     public void iniciar()
     {
         borrarPantalla();
-        int opcion = menu();
-        while (opcion !=4)
-        {
+        int opcion = 0;
+        
+        do {
             opcion = menu();
             
             if(opcion == 1)
@@ -43,7 +43,7 @@ public class InterfazDiccionario
                 mostrarDiccionario();
             if(opcion == 3)
                 traducirPalabra();
-        }
+        } while (opcion !=4);
     }
 
     /**
@@ -104,7 +104,7 @@ public class InterfazDiccionario
     private void mostrarDiccionario()
     {
         borrarPantalla();
-        diccionario.toString();
+        System.out.println(diccionario.toString());
     }
 
     /**
@@ -115,7 +115,7 @@ public class InterfazDiccionario
         borrarPantalla();
         teclado.nextLine(); //limpiar el buffer
         System.out.println("Dame posición de palabra");
-        diccionario.traducirPalabra(teclado.nextInt());
+        System.out.println(diccionario.traducirPalabra(teclado.nextInt()));
     }
 
     /**

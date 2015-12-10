@@ -40,7 +40,7 @@ public class Diccionario
             listaPalabras[pos] = nuevaPalabra;
             pos++;
         }else{
-            JOptionPane. showMessageDialog(null, "Error");
+            JOptionPane. showMessageDialog(null, "Diccionario lleno");
         }
 
     }
@@ -60,7 +60,7 @@ public class Diccionario
      */
     public Palabra obtenerPalabra(int posicion)
     {
-        if(posicion > 0 && posicion < pos)
+        if(posicion >= 0 && posicion < pos)
         {
             return listaPalabras[posicion];
         }
