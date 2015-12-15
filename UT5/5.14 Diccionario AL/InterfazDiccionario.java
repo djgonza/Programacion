@@ -37,13 +37,13 @@ public class InterfazDiccionario
         do {
             opcion = menu();
             
-            if(opcion == 1)
+            if(opcion == AÑADIR)
                 añadirPalabra();
-            if(opcion == 2)
+            if(opcion == MOSTRAR)
                 mostrarDiccionario();
-            if(opcion == 3)
+            if(opcion == TRADUCIR)
                 traducirPalabra();
-        } while (opcion !=4);
+        } while (opcion !=SALIR);
     }
 
     /**
@@ -63,10 +63,10 @@ public class InterfazDiccionario
         System.out.print("Teclea opción: ");
         int opcion = teclado.nextInt();
         // validar opción
-        if(opcionValida (opcion))
-            return opcion;
-        else
-            return 0;
+        while (!opcionValida (opcion)){
+            opcion = teclado.nextInt();
+        }
+        return opcion;
     }
 
     /**
