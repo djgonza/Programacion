@@ -44,6 +44,7 @@ public class DemoCalculadora
         }
         tuCalculadora.escribirNumeros();
         System.out.println(tuCalculadora.getTotal());
+        System.out.println(tuCalculadora.contarMayoresQue(6));
         tuCalculadora.borrarUltimoElemento();
         tuCalculadora.borrarUltimoElemento();
         tuCalculadora.borrarUltimoElemento();
@@ -51,8 +52,6 @@ public class DemoCalculadora
         tuCalculadora.vaciar();
         System.out.println(tuCalculadora.getTotal());
         tuCalculadora.escribirNumeros();
-        
-        tuCalculadora[i];
     }
 
     public void testTres()
@@ -62,11 +61,9 @@ public class DemoCalculadora
         miCalculadora.insertarEnPosicion(2, 2);
         miCalculadora.insertarEnPosicion(33, 33);
         miCalculadora.escribirNumeros();
-        
+
     }
 }
-
-
 
 
 
