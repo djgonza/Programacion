@@ -89,6 +89,7 @@ public class Array2D
 
         return cadena;
     }
+
     /**
      *  
      * Escribir la matriz bidimensional en pantalla
@@ -195,7 +196,7 @@ public class Array2D
         return resul; 
 
     }
-    
+
     /**
      *   1  22  3   44
      *   3  7   5   11
@@ -209,7 +210,7 @@ public class Array2D
     public  int[][] traspuesta()
     {
         int[][] aux = new int[matriz[0].length][matriz.length];
-        
+
         for(int filas = 0; filas < matriz.length; filas++)
         {
             for(int col = 0; col < matriz[filas].length; col++)
@@ -217,9 +218,9 @@ public class Array2D
                 aux[filas][col]= matriz[col][filas];
             }
         }
-        
+
         return aux;
-        
+
     }
 
     /**
@@ -229,14 +230,16 @@ public class Array2D
     public  int columnaSumaMaxima()
     {
         int suma = 0;
+        int devuelve = 0;
         for(int i= 0; i < matriz.length; i++)
         {
-           int sumaColumna = sumarColumna(i);
+            int sumaColumna = sumarColumna(i);
             if(sumaColumna > suma)
-            suma = sumaColumna; 
+                suma = sumaColumna;
+                devuelve = i;
         }
-        
-        return suma;
+
+        return suma;//devuelve;
     }
 
     /**
@@ -245,101 +248,149 @@ public class Array2D
      */
     public  void intercambiar()
     {
-        
+        int aux = columnaSumaMaxima();
+        int[] aux2 = sumarColumnas();
+        if(aux != aux2[0]) {
+            int[] aux3 = new int[matriz.length];
+            for(int j = 0; j < matriz.length; j++){
+                aux3[j] = matriz[j][0];
+            }
+            for(int j = 1; j < aux2.length; j++){
+                if(aux2[j] == aux){
+                    for (int i = 0; i < matriz.length; i++){
+                        matriz[i][0] = matriz[i][j];
+                        matriz[i][j] = aux3[i];
+                    }
+                }
+            }
+
+        }
+
+    }
+    
+    /**
+     *  Devuelve un ragged array donde la 1ª fila contiene el primer elemento de la 1ª fila de matriz,
+     *  la 2ª fila los 2 primeros elementos de la 2ª fila de matriz, la 3ª fila los 3 primeros elementos de la 3ª fila de matriz, ...
+     *  1    2   3   4   
+     *  14   5   26  7   
+     *  17   8   19  10  
+     *  10   11  12  13  
+     *  Resultado
+     *  [1]
+     *  [14, 5]
+     *  [17, 8, 19]
+     *  [10, 11, 12, 13]
+     *  
+     */
+    public int[][] arrayRagged()
+    {
+        int[][] devuelve = new int [matriz.length][matriz[0].length];
+        for(int i = 0; i < matriz.length; i++) {
+            for(int j = 0; j <= i; j++){
+                devuelve[i][j] = matriz[i][j];
+            }
+        }
+        return devuelve;
+    }
+
+    /**
+     *  Muestra el array pero de la forma indicada. Cada nº formateado a 5 posiciones.
+     *  Usa las constantes definidas en la clase
+     *  
+     *  {   {    1,     2,     3,     4    }
+     *      {   14,     5,    26,     7    }
+     *      {   17,     8,    19,    10    }
+     *      {   10,    11,    12,    13    }    }
+
+     */
+    public void escribirConLlaves()
+    {
+        String resul = LLAVE_APERTURA + "";
+        for(int i = 0; i < matriz.length; i++){
+            resul += String.format("%5c", LLAVE_APERTURA);
+            for(int j = 0; j < matriz[0].length; j++){
+                resul += String.format("%5d,", matriz[i][j]);
+            }
+            resul += String.format("%5c\n", LLAVE_CIERRE);
+        }
+        resul += LLAVE_CIERRE;
+        System.out.println(resul);
         
         
     }
 
-    //     /**
-    //      *  Devuelve un ragged array donde la 1ª fila contiene el primer elemento de la 1ª fila de matriz,
-    //      *  la 2ª fila los 2 primeros elementos de la 2ª fila de matriz, la 3ª fila los 3 primeros elementos de la 3ª fila de matriz, ...
-    //      *  1    2   3   4   
-    //      *  14   5   26  7   
-    //      *  17   8   19  10  
-    //      *  10   11  12  13  
-    //      *  Resultado
-    //      *  [1]
-    //      *  [14, 5]
-    //      *  [17, 8, 19]
-    //      *  [10, 11, 12, 13]
-    //      *  
-    //      */
-    //     public int[][] arrayRagged()
-    //     {
-    //         
-    //         
-    //         
-    //     }
-    // 
-    //     /**
-    //      *  Muestra el array pero de la forma indicada. Cada nº formateado a 5 posiciones.
-    //      *  Usa las constantes definidas en la clase
-    //      *  
-    //      *  {   {    1,     2,     3,     4    }
-    //      *      {   14,     5,    26,     7    }
-    //      *      {   17,     8,    19,    10    }
-    //      *      {   10,    11,    12,    13    }    }
-    // 
-    //      */
-    //     public void escribirConLlaves()
-    //     {
-    //         
-    //         
-    //         
-    //     }
-    // 
-    //     /**
-    //      *  Calcula y devuelve el total de impares en el array
-    //      *  Hay que hacer uso del método contarImpares(int[], int n)
-    //      *
-    //      */
-    //     public int contarImpares()
-    //     {
-    //         
-    //         
-    //         
-    //     }
-    // 
-    //     /**
-    //      *  Cuenta los impares en el array unidimensional array de tamaño n
-    //      *  y lo hace de forma recursiva
-    //      *
-    //      */
-    //     private int contarImpares(int[] array, int n)
-    //     {
-    //        
-    // 
-    //     }
-    // 
-    //     /**
-    //      *  Devuelve el subarray obtenido a partir de matriz entre las filas fila1 y fila2
-    //      *  y columnas col1 y col2 (ambas inclusive)
-    //      *  Asumimos todos los valores correctos
-    //      *  13   20  30  25  16  
-    //      *  12   27  24  17  27  
-    //      *  3    12  11  28  29  
-    //      *  21   11  20  25  8   
-    // 
-    //      *  Subarray desde filas  1 a  3 y columnas 2 a 3
-    //      *  [24, 17]
-    //      *  [11, 28]
-    //      *  [20, 25]
-    //      *  
-    //      *
-    //      */
-    //     public  int [][] obtenerSubArray(int fila1, int fila2, int col1, int col2)
-    //     {
-    //         
-    //         
-    //         
-    //     } 
+    /**
+     *  Calcula y devuelve el total de impares en el array
+     *  Hay que hacer uso del método contarImpares(int[], int n)
+     *
+     */
+    public int contarImpares()
+    {
+        int suma = 0;
+        for(int i = 0; i < matriz.length; i++){
+            suma += contarImpares(matriz[i], matriz[i].length);
+        }
+        
+        
+        
+        return suma;
+        
+        
+    }
+
+    /**
+     *  Cuenta los impares en el array unidimensional array de tamaño n
+     *  y lo hace de forma recursiva
+     *
+     */
+    private int contarImpares(int[] array, int n)
+    {
+       if (n == 0)
+       return 0;
+       if (array[n - 1] %2 != 0)
+       return 1 + contarImpares(array, n - 1);
+       return contarImpares(array, n - 1);
+
+    }
+
+    /**
+     *  Devuelve el subarray obtenido a partir de matriz entre las filas fila1 y fila2
+     *  y columnas col1 y col2 (ambas inclusive)
+     *  Asumimos todos los valores correctos
+     *  13   20  30  25  16  
+     *  12   27  24  17  27  
+     *  3    12  11  28  29  
+     *  21   11  20  25  8   
+
+     *  Subarray desde filas  1 a  3 y columnas 2 a 3
+     *  [24, 17]
+     *  [11, 28]
+     *  [20, 25]
+     *  
+     *
+     */
+    public  int [][] obtenerSubArray(int fila1, int fila2, int col1, int col2)
+    {
+        int filas = 0;
+        int columnas = 0;
+        int [][] sub = new int[fila2 - fila1 + 1][col2 - col1 + 1];
+        for(int i= fila1; i <= fila2; i++){
+            for(int j= col1; j <= col2; j++){
+                sub[filas][columnas] = matriz[i][j] ;
+                columnas++;
+            }
+            columnas = 0;
+            filas++;
+        }
+        return sub;
+    } 
 
     /**
      *  
      */
     public static void main(String[] args)
     {
-        Array2D demo = new Array2D(4,4);
+        Array2D demo = new Array2D(8,8);
         demo.escribir();
         System.out.println(demo.sumarFila(2));
         System.out.println(demo.sumarColumna(2));
@@ -356,10 +407,25 @@ public class Array2D
         int [][] aux = demo.traspuesta();
         for(int i= 0; i < aux.length; i++)
         {
-           System.out.println(Arrays.toString(aux[i])); 
+        System.out.println(Arrays.toString(aux[i])); 
         }
         System.out.println(demo.columnaSumaMaxima());
-
+        demo.intercambiar();
+        demo.escribir();
+        aux = demo.arrayRagged();
+        for(int i= 0; i < aux.length; i++)
+        {
+            System.out.println(Arrays.toString(aux[i])); 
+        }
+        
+        demo.escribirConLlaves();
+        System.out.println(demo.contarImpares());
+        
+        int [][] sub = demo.obtenerSubArray(2, 4, 3, 6);
+        for(int i= 0; i < sub.length; i++)
+        {
+            System.out.println(Arrays.toString(sub[i])); 
+        }
     }
 
 }
