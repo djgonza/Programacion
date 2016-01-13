@@ -6,6 +6,7 @@
  */
 public class Cadena
 {
+    public static final String ESPACIO = " ";
     public static final String SEPARADOR = ":";
     private String cadena; // atributo que representa una cadena de caracteres
 
@@ -55,7 +56,7 @@ public class Cadena
      */
     public int longitud()
     { 
-         
+        return cadena.length();
     }
 
     /**
@@ -64,7 +65,7 @@ public class Cadena
      */
     public char primerCaracter()
     { 
-        
+        return cadena.charAt(0);  
     }
 
     /**
@@ -73,7 +74,7 @@ public class Cadena
      */
     public char ultimoCaracter()
     { 
-         
+        return cadena.charAt(longitud() - 1); 
     }
 
     /**
@@ -83,7 +84,9 @@ public class Cadena
      */
     public char caracterDePosicion(int p)
     { 
-         
+        //if(p<0 || p>longitud())
+        // trow new StringIndexOutOfBoundsException("Error!");
+        return cadena.charAt(p);
     }
 
     /**
@@ -92,7 +95,7 @@ public class Cadena
      */
     public  Cadena concatenarCon(Cadena otra)
     {
-        
+        return new Cadena(this.cadena + otra.getCadena());
     }
 
     /**
@@ -101,8 +104,7 @@ public class Cadena
      */
     public void aMayusculas()
     { 
-         
-
+        this.cadena = cadena.toUpperCase();
     }
 
     /**
@@ -111,8 +113,7 @@ public class Cadena
      */
     public void aMinusculas()
     { 
-         
-
+        this.cadena = cadena.toLowerCase();
     }
 
     /**
@@ -121,7 +122,7 @@ public class Cadena
      */
     public boolean igualQue(String cadena)
     { 
-        
+        return this.cadena.equals(cadena);
     }
 
     /**
@@ -131,7 +132,11 @@ public class Cadena
      */
     public boolean mayorQue(String cadena)
     { 
-        
+        int aux = this.cadena.compareTo(cadena);
+        if(aux > 0)
+            return true;
+        else
+            return false;
     }
 
     /**
@@ -142,10 +147,8 @@ public class Cadena
      */
     public boolean empiezaPor(String str)
     { 
-        
-
+        return this.cadena.toLowerCase().startsWith(str.toLowerCase());
     }
-
 
     /**
      * devuelve true si la cadena del objeto contiene a la recibida como parámetro
@@ -153,8 +156,7 @@ public class Cadena
      */
     public boolean contiene(String str)
     { 
-        
-
+        return this.cadena.toLowerCase().contains(str.toLowerCase());
     }
 
     /**
@@ -164,7 +166,10 @@ public class Cadena
      */
     public String cadenaApartirDe(String str)
     {
-         
+        int pos = this.cadena.lastIndexOf(str);
+        if(pos == -1)
+            return null;
+        return this.cadena.substring(pos);
     }
 
     /**
@@ -172,15 +177,40 @@ public class Cadena
      */
     public  int cuantasA()
     {
-        
+        int veces = 0;
+        for (int i = 0; i < this.longitud(); i++){
+            if(this.cadena.charAt(i) == 'A')
+                veces++;
+        }
+        return veces;
     }
 
     /**
      * Devuelve un objeto Cadena con la cadena actual invertida
      */
-    public  Cadena invertir()
+    public Cadena invertir()
     {
-        
+        String retorna = "";
+        for(int i=this.longitud(); i>0; i--){
+            retorna += this.cadena.charAt(i);
+        }
+        return new Cadena(retorna);
+    }
+
+    /**
+     * llama a invertirRecursivo
+     */
+    public Cadena invertirV2()
+    {
+
+    }
+
+    /**
+     * invertirRecursivo
+     */
+    private String invertirRecursivo(String str)
+    {
+
     }
 
     /**
@@ -189,7 +219,11 @@ public class Cadena
      */
     public  boolean esPalindromaIterativa()
     {
-        
+        for(int i=0; i<this.longitud()/2; i++){
+            if(this.cadena.charAt(i) != this.cadena.charAt(this.longitud()-i-1))
+                return false;
+        }
+        return true;
     }
 
     /**
@@ -207,9 +241,12 @@ public class Cadena
      */
     private boolean esPalindromaRecursiva(String cadena)
     {
-        
+        if(cadena.length() == 0 || cadena.length() == 1)
+            return true;
+        if(cadena.charAt(0) == cadena.charAt(cadena.length()-1))
+            return esPalindromaRecursiva(cadena.substring(1, cadena.length() - 1));
+        return false;
     }
-
 
     /**
      * Devuelve los tres últimos caracteres de la cadena
@@ -217,7 +254,6 @@ public class Cadena
     public String tresUltimosCaracteres()
     {
 
-         
     }
 
     /**
@@ -235,7 +271,7 @@ public class Cadena
      */
     public  void visualizarEnTrozos()
     {
-        
+
     }
 
     /**
@@ -253,7 +289,6 @@ public class Cadena
      */
     public  void visualizarEnDiagonal()
     {
-        
 
     }
 
@@ -264,7 +299,7 @@ public class Cadena
      */
     public  boolean  empiezaYterminaIgualQue(Cadena otra)
     {
-        
+
     }
 
     /**
@@ -274,7 +309,7 @@ public class Cadena
      */
     public  void reemplazarPor(char objetivo, char nuevo)
     {
-        
+
     }
 
     /**
@@ -284,7 +319,7 @@ public class Cadena
      */
     public int numeroPalabras()
     {
-        
+
     }
 
     /**
@@ -294,21 +329,16 @@ public class Cadena
      */
     public int aparicionesDe(String str)
     {
-        
-        
-        
+
     }
-    
-      /**
+
+    /**
      *  Cuenta las apariciones de str en cadena
      *  Sin diferenciar mayúculas de minúsculas
      *  Usar solo indexOf()  
      */
     public int aparicionesDeV2(String str)
     {
-        
-        
-        
-    }
 
+    }
 }
