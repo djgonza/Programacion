@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=nombreCurso
-comment0.target=CursoDaw(java.lang.String)
+comment0.params=nombreCurso\ maximo
+comment0.target=CursoDaw(java.lang.String,\ int)
 comment0.text=\r\n\ Constructor\ de\ la\ clase\ CursoDai\r\n
 comment1.params=nombre\ nota
 comment1.target=void\ addAlumno(java.lang.String,\ int)

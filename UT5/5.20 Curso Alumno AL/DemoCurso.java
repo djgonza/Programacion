@@ -12,7 +12,12 @@ public class DemoCurso
      */
     public static void main(String[] args)
     {
-        CursoDaw curso = new CursoDaw("DAW Aplicaciones web");
+        if(args.length != 1){
+            System.out.println("Error en el numero de parametros");
+            return;
+        }
+        
+        CursoDaw curso = new CursoDaw("DAW Aplicaciones web", Integer.parseInt(args[0]));
         // añadir varias alumnos al  curso
         curso.addAlumno("Ana", 3);
         curso.addAlumno("Luis", 5);

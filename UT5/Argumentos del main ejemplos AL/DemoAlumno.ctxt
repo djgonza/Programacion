@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment0.text=\r\n\ \ \r\n\ \ Aceptar\ como\ argumentos\ del\ main\ el\ nombre\ y\ la\ nota\ de\ un\ alumno\r\n\ \ crear\ un\ objeto\ Alumno\ y\ mostrar\ su\ representaci\u00F3n\r\n
+numComments=1

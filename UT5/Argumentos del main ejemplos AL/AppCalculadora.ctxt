@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment0.text=\r\n\ \ \r\n\ \ \ \ /**\r\n\ \ si\ no\ se\ pasan\ argumentos\ al\ main\ mostrar\ error,\r\n\ \ sino\ aceptar\ los\ argumentos,\ crear\ un\ array\ de\ enteros\ con\ ellos\r\n\ \ crear\ la\ calculadora\ a\ partir\ de\ los\ valores\ de\ ese\ array\ y\ mostrar\ la\ calculadora\r\n\ \ \r\n
+numComments=1

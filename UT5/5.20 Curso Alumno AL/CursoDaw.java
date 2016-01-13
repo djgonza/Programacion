@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class CursoDaw
 {
 
-    private static final int MAX_ALUMNOS = 10;
+    //private static final int MAX_ALUMNOS = 10;
 
     private String nombreCurso;
     private Alumno[] alumnos;
@@ -16,11 +16,11 @@ public class CursoDaw
     /**
      * Constructor de la clase CursoDai
      */
-    public CursoDaw(String nombreCurso)
+    public CursoDaw(String nombreCurso, int maximo)
     {
         this.nombreCurso = nombreCurso;
         total = 0;
-        alumnos = new Alumno[MAX_ALUMNOS];
+        alumnos = new Alumno[maximo];
 
     }
 
@@ -29,7 +29,7 @@ public class CursoDaw
      */
     public void addAlumno(String nombre, int nota)
     {
-        if (total < MAX_ALUMNOS)
+        if (total < alumnos.length)
         {
             alumnos[total] = new Alumno(nombre, nota);
             total++;
@@ -43,7 +43,7 @@ public class CursoDaw
      */
     public void addAlumno(Alumno alumno)
     {
-        if (total < MAX_ALUMNOS)
+        if (total < alumnos.length)
         {
             alumnos[total] = alumno;
             total++;
