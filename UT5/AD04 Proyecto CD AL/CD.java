@@ -33,7 +33,7 @@ public class CD
      */
     public void addCancion(Cancion c)
     {
-        if(estaCompleto()){
+        if(!estaCompleto()){
             canciones[pos] = c;
             pos++;
         }
@@ -48,7 +48,7 @@ public class CD
      */
     public void addCancion(String titulo, double duracion)
     {
-        if(estaCompleto()){
+        if(!estaCompleto()){
             Cancion aux = new Cancion(titulo, duracion);
             canciones[pos] = aux;
             pos++;
@@ -60,7 +60,7 @@ public class CD
      */
     public  boolean estaCompleto()
     {
-        return canciones.length != pos;
+        return canciones.length == pos;
     }
 
     /**
@@ -125,6 +125,8 @@ public class CD
      */
     public String[] borrarCancionesQueEmpiezan(String str)
     {
+        if(pos == 0) 
+            return null;
         String[] titulosCanciones = new String[pos];
         int cont = 0;
         int i = 0;
@@ -137,7 +139,7 @@ public class CD
             }
             i++;
         }
-        return titulosCanciones;
+        return Arrays.copyOf(titulosCanciones,cont);
     }
 
     /**
@@ -145,7 +147,7 @@ public class CD
      */
     private void borrarCancion(int p)
     {
-        while(p<pos){
+        while(p<pos-1){
             canciones[p] = canciones[p+1];
             p++;
         }
