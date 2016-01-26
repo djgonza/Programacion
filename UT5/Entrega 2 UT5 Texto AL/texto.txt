@@ -1,0 +1,8 @@
+esto es un ejemplo
+ de texto
+con varias 
+frases. Nos sirve para 
+ practicar
+  con arrays y con los
+  metodos de la
+ clase String.
