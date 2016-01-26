@@ -65,8 +65,7 @@ public class Texto
      *  posición correcta del array (p está en el rango
      *  de posiciones en los que hay algún valor)
      */
-    public boolean posicionCorrecta(int p)
-    {
+    public boolean posicionCorrecta(int p) {
         return p > 0 && p < pos;
     }
 
@@ -78,8 +77,7 @@ public class Texto
      *  
      *  Usar únicamente indexOf() y substring() de la clase String
      */
-    public int  palabrasDeFrase(int p)
-    {
+    public int palabrasDeFrase(int p) {
         String aux = frases[p];
         int cont = 0;
         while(aux.indexOf(ESPACIO) >= 0){
@@ -96,26 +94,33 @@ public class Texto
      *  Borra del texto las frases que tienen menos de n
      *  palabras. Devuelve la cantidad de frases borradas
      */
-    public int borrarFrases(int n)
-    {
+    public int borrarFrases(int n) {
         int cont = 0;
         for(int i = 0; i < pos; i++){
-            String[] aux = frases[i].split(String.valueOf(ESPACIO));
-            for(int j = 0; j<aux.length; j++){
-                
+            if(palabrasDeFrase(i) < n){
+                borraFrase(i);
+                cont++;
             }
         }
     }
+
+    /**
+     *  Borra del texto las frases que tienen menos de n
+     *  palabras. Devuelve la cantidad de frases borradas
+     */
+    public void borraFrase(int posicion) {
+        System.arraycopy(frases, posicion+1, frases, posicion, *longitud*);
+        pos--;
+    }
+
 
     /**
      *  Calcula y devuelve la frecuencia de aparición de cada una de las letras
      *  del alfabeto (mayúsculas) en el texto
      *   
      */
-    public int[] frecuenciaCaracteres()
-    {
+    public int[] frecuenciaCaracteres() {
         int[] aux = new int[ALFABETO.length()];
-
         for (int i=0; i<pos; i++) {
             for (int j=0; j<frases[i].length(); j++) {
                 int aux2 = frases[i].toUpperCase().charAt(j);
@@ -125,7 +130,6 @@ public class Texto
 
             }
         }
-
         return aux;
     }
 
@@ -134,16 +138,14 @@ public class Texto
      *  tal como pide el enunciado
      *  Usar StringBuilder
      */
-    public String toString()
-    {
+    /*public String toString() {
 
     }
 
     /**
      *  
      */
-    public void printTexto()
-    {
+    public void printTexto() {
         System.out.println(this.toString());
 
     }
@@ -169,8 +171,7 @@ public class Texto
      *  
      *  Se permite utilizar split()
      */
-    public char[][] toArray2D(int p)
-    {
+    public char[][] toArray2D(int p) {
 
     }
 
@@ -186,8 +187,7 @@ public class Texto
      *  
      *  Se puede hacer usando como objeto de apoyo StringBuilder
      */
-    public String encriptar(int p)
-    {
+    public String encriptar(int p) {
 
     }
 
@@ -196,8 +196,7 @@ public class Texto
      * de frases con ayuda de un objeto de la 
      * clase Scanner y los almacena en el array
      */
-    public void leerDeFichero() 
-    {
+    public void leerDeFichero() {
         try
         {
             Scanner sc = new Scanner(new File("texto.txt"));
@@ -215,8 +214,7 @@ public class Texto
      *  Punto de entrada a la aplicación
      *  Código para probar los métodos de la clase Texto
      */
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         if (args.length != 1)
         {
             System.out.println("Error en nº argumentos, Sintaxis: java Texto <tam>");

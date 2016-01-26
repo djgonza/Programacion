@@ -128,6 +128,31 @@ public class TextoPrueba
 
     }
     
+    
+    /**
+     *  Borra del texto las frases que tienen menos de n
+     *  palabras. Devuelve la cantidad de frases borradas
+     */
+    public int borrarFrases(int n) {
+        int cont = 0;
+        for(int i = 0; i < pos; i++){
+            if(palabrasDeFrase(i) < n){
+                borraFrase(i);
+                cont++;
+            }
+        }
+        return cont;
+    }
+
+    /**
+     *  Borra del texto las frases que tienen menos de n
+     *  palabras. Devuelve la cantidad de frases borradas
+     */
+    public void borraFrase(int posicion) {
+        System.arraycopy(frases, posicion+1, frases, posicion, 1);
+        pos--;
+    }
+
     public int[] frecuenciaCaracteres()
     {
         int[] aux = new int[ALFABETO.length()];
@@ -153,12 +178,13 @@ public class TextoPrueba
         
         //System.out.print(demo.palabrasDeFrase(1));
         
-        int[] aux = demo.frecuenciaCaracteres();
+        /*int[] aux = demo.frecuenciaCaracteres();
         
         System.out.println(ALFABETO);
         for(int i=0; i<aux.length; i++){
             System.out.print(aux[i]);
-        }
+        }*/
+        
         
         
     }
