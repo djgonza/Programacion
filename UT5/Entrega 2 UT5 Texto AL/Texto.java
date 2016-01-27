@@ -42,6 +42,7 @@ public class Texto
      */
     public void addFrase(String frase) {
         if (!textoCompleto()){
+            
             frases[pos] = frase.trim();
             pos++;
         }
