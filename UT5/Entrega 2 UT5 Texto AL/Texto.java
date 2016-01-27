@@ -157,8 +157,10 @@ public class Texto
                 
                 int aux2 = frases[i].toUpperCase().charAt(j);
                 
-                if (ALFABETO.indexOf(aux2) >= 0) {
-                    aux[ALFABETO.indexOf(aux2)]++;
+                int alfIndexOf = ALFABETO.indexOf(aux2);
+
+                if (alfIndexOf >= 0) {
+                    aux[alfIndexOf]++;
                 }
 
             }
@@ -260,10 +262,12 @@ public class Texto
                     frases[p].toUpperCase().charAt(i)
                 ) + 4;
 
-            if(aux > ALFABETO.length()){
+            int alfLength = ALFABETO.length();
+
+            if(aux > alfLength){
                 aux = 
                     Math.abs(
-                        (ALFABETO.length() - aux) - ALFABETO.length()
+                        (alfLength - aux) - alfLength
                     );
             }
 
@@ -300,17 +304,13 @@ public class Texto
      *  Código para probar los métodos de la clase Texto
      */
     public static void main(String[] args) {
-        /*if (args.length != 1)
+        if (args.length != 1)
         {
             System.out.println("Error en nº argumentos, Sintaxis: java Texto <tam>");
             return;
-        }*/
+        }
 
-        //Texto texto = new Texto(Integer.parseInt(args[0]));
-
-        /* Borrar */
-        Texto texto = new Texto(15);
-
+        Texto texto = new Texto(Integer.parseInt(args[0]));
 
         texto.leerDeFichero();
         texto.printTexto();
