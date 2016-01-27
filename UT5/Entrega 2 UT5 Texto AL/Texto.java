@@ -42,7 +42,7 @@ public class Texto
      */
     public void addFrase(String frase) {
         if (!textoCompleto()){
-            frases[pos] = frase;
+            frases[pos] = frase.trim();
             pos++;
         }
     }
@@ -96,9 +96,9 @@ public class Texto
         }
 
         if(cont == 0) 
-            return -1;
+            return 1;
         else
-            return cont;
+            return cont + 1;
 
     }
 
@@ -315,7 +315,7 @@ public class Texto
         texto.printTexto();
         System.out.println("Total palabras en el texto " + texto.getNumeroFrases());
         System.out.println("--------------------------");
-        int p = 3;
+        int p = 4;
         int pal = texto.palabrasDeFrase(p);       
         if (pal != -1)
         {
