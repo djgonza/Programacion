@@ -42,7 +42,7 @@ public class Texto
      */
     public void addFrase(String frase) {
         if (!textoCompleto()){
-            
+
             frases[pos] = frase.trim();
             pos++;
         }
@@ -80,7 +80,7 @@ public class Texto
      *  Usar únicamente indexOf() y substring() de la clase String
      */
     public int palabrasDeFrase(int p) {
-        
+
         if(!posicionCorrecta(p)){
             return -1;
         }
@@ -90,9 +90,9 @@ public class Texto
 
         while(aux.indexOf(ESPACIO) >= 0){
             aux = 
-                aux.substring(
-                    aux.indexOf(ESPACIO) + 1
-                );
+            aux.substring(
+                aux.indexOf(ESPACIO) + 1
+            );
             cont++;
         }
 
@@ -129,18 +129,17 @@ public class Texto
      *  palabras. Devuelve la cantidad de frases borradas
      */
     public void borraFrase(int posicion) {
-        
+
         System.arraycopy(
-                frases,
-                posicion + 1,
-                frases, 
-                posicion, 
-                frases.length - posicion - 1
+            frases,
+            posicion + 1,
+            frases, 
+            posicion, 
+            frases.length - posicion - 1
         );
 
         pos--;
     }
-
 
     /**
      *  Calcula y devuelve la frecuencia de aparición de cada una de las letras
@@ -148,15 +147,15 @@ public class Texto
      *   
      */
     public int[] frecuenciaCaracteres() {
-        
+
         int[] aux = new int[ALFABETO.length()];
-        
+
         for (int i=0; i<pos; i++) {
-            
+
             for (int j=0; j<frases[i].length(); j++) {
-                
+
                 int aux2 = frases[i].toUpperCase().charAt(j);
-                
+
                 int alfIndexOf = ALFABETO.indexOf(aux2);
 
                 if (alfIndexOf >= 0) {
@@ -175,7 +174,7 @@ public class Texto
      *  Usar StringBuilder
      */
     public String toString() {
-        
+
         StringBuilder aux = new StringBuilder();
 
         for (int i=0; i<pos; i++) {
@@ -228,7 +227,7 @@ public class Texto
             aRetornar[i] = new char[aux[i].length()];
 
             for (int j = 0; j < aux[i].length(); j++) {
-                
+
                 aRetornar[i][j] = aux[i].charAt(j);
 
             }
@@ -256,24 +255,30 @@ public class Texto
         StringBuilder sb = new StringBuilder();
 
         for(int i = 0; i < frases[p].length(); i++){
-            
-            int aux = 
-                ALFABETO.indexOf(
-                    frases[p].toUpperCase().charAt(i)
-                ) + 4;
+            char fraseChar = frases[p].toUpperCase().charAt(i);
+            if(ALFABETO.indexOf(fraseChar) < 0){
+                
+                sb.append(fraseChar);
+            }else{
 
-            int alfLength = ALFABETO.length();
+                int aux = 
+                    ALFABETO.indexOf(
+                        fraseChar
+                    ) + 4;
 
-            if(aux > alfLength){
-                aux = 
+                int alfLength = ALFABETO.length();
+
+                if(aux > alfLength){
+                    aux = 
                     Math.abs(
                         (alfLength - aux) - alfLength
                     );
-            }
+                }
 
-            sb.append(
-                ALFABETO.charAt(aux)
-            );
+                sb.append(
+                    ALFABETO.charAt(aux)
+                );
+            }
         }
 
         return sb.toString();
@@ -307,10 +312,11 @@ public class Texto
         if (args.length != 1)
         {
             System.out.println("Error en nº argumentos, Sintaxis: java Texto <tam>");
-            return;
+            //return;
         }
 
-        Texto texto = new Texto(Integer.parseInt(args[0]));
+        //Texto texto = new Texto(Integer.parseInt(args[0]));
+        Texto texto = new Texto(15);
 
         texto.leerDeFichero();
         texto.printTexto();
