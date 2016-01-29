@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=nombre\ nota
+comment0.target=Estudiante(java.lang.String,\ int)
+comment0.text=\r\n\ constructor\ para\ los\ objetos\ de\ la\ clase\ Estudiante\r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ Accesor\ para\ el\ nombre\ \ \ \r\n
+comment2.params=
+comment2.target=int\ getNota()
+comment2.text=\r\n\ Accesor\ para\ la\ nota\ \r\n
+comment3.params=nota
+comment3.target=void\ setNota(int)
+comment3.text=\r\n\ Mutador\ para\ la\ nota\ \r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ Representaci\u00F3n\ textual\ del\ estudiante\r\n
+numComments=5
