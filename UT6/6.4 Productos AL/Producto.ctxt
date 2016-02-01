@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=id\ nombre
+comment0.target=Producto(int,\ String)
+comment0.text=\nConstructor\nEl\ stock\ inicial\ es\ 0\n@param\ id\ \ n\u00BA\ que\ identifica\ al\ producto\n@param\ nombre\ \ Nombre\ del\ producto\n\n
+comment1.target=int\ getID()
+comment1.text=\n@return\ El\ id\ del\ producto\n\n
+comment2.target=String\ getNombre()
+comment2.text=\n@return\ El\ nombre\ del\ producto\n\n
+comment3.target=int\ getCantidad()
+comment3.text=\n@return\ La\ cantidad\ en\ stock\n\n
+comment4.target=String\ toString()
+comment4.text=\n@return\ Id,\ nombre\ y\ cantidad\ como\ String\n\n
+comment5.params=cuanto
+comment5.target=void\ incrementarCantidad(int)
+comment5.text=\nModificar\ el\ stock\ con\ la\ cantidad\ dada\n@param\ cantidad\ Cantidad\ de\ nuevos\ art\u00EDculos\ que\ se\ a\u00F1aden\ al\ stock\nLa\ cantidad\ actual\ se\ incrementa\ en\ cantidad.\n\n
+comment6.target=void\ venderUno()
+comment6.text=\nVender\ uno\ de\ los\ productos\nSe\ genera\ un\ error\ si\ no\ hay\ stock\n\n
+numComments=7

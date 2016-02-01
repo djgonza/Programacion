@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=nombre\ mes\ a\u00F1o
+comment0.target=Miembro(String,\ int,\ int)
+comment0.text=\nConstructor\ de\ la\ clase\ Miembro\n@param\ nombre\ El\ nombre\ del\ miembro\n@param\ mes\ El\ mes\ en\ el\ que\ el\ miembro\ se\ inscribi\u00F3\ al\ club\ (1-12)\n@param\ a\u00F1o\ El\ a\u00F1o\ en\ el\ que\ el\ miembro\ se\ inscribi\u00F3\ al\ club\n\n
+comment1.target=String\ getNombre()
+comment1.text=\n@return\ El\ nombre\ del\ miembro\n\n
+comment2.target=int\ getMes()
+comment2.text=\n@return\ El\ mes\ en\ el\ que\ el\ miembro\ se\ inscribi\u00F3\ al\ club\nUn\ valor\ entre\ 1..12\n\n
+comment3.target=int\ getA\u00F1o()
+comment3.text=\n@return\ El\ a\u00F1o\ en\ el\ que\ el\ miembro\ se\ inscribi\u00F3\ al\ club\n\n
+comment4.target=String\ toString()
+comment4.text=\n@return\ Un\ string\ que\ representa\ al\ miembro\n\n
+numComments=5

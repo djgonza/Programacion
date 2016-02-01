@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=StockDemo()
+comment0.text=\nCrea\ el\ gestor\ y\ a\u00F1ade\ algunos\ productos\n\n
+comment1.target=void\ demo()
+comment1.text=\nDemostraci\u00F3n\ de\ c\u00F3mo\ el\ gestor\ puede\ ser\ usado\n\n
+comment2.params=id
+comment2.target=void\ mostrarDetalles(int)
+comment2.text=\nMostrar\ detalles\ de\ un\ producto.\ \n@param\ id\ ISD\ del\ producto\ a\ buscar\n\n
+comment3.params=id
+comment3.target=void\ venderProducto(int)
+comment3.text=\nVnedr\ un\ art\u00EDculo\ de\ un\ producto\nMostra\ el\ estado\ del\ producto\ antes\ y\ despu\u00E9s\ de\ la\ venta\n@param\ id\ El\ id\ del\ producto\ vendido\n\n
+comment4.params=id
+comment4.target=Producto\ getProducto(int)
+comment4.text=\nObtener\ el\ producto\ de\ id\ dado\ desde\ el\ gestor.\n\n@param\ id\ El\ ID\ del\ producto\n@return\ El\ producto\ o\ null\ si\ no\ se\ encuentra\n\n
+comment5.target=GestorStock\ getGestor()
+comment5.text=\n@return\ El\ gestor\ de\ stock\n\n
+numComments=6

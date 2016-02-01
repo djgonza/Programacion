@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Club()
+comment0.text=\r\n\ Constructor\ para\ los\ objetos\ de\ la\ clase\ Club\r\n
+comment1.params=miembro
+comment1.target=void\ a\u00F1adir(Miembro)
+comment1.text=\r\n\ A\u00F1adir\ un\ nuevo\ miembro\ a\ la\ lista\ de\ miembros\r\n\ @param\ miembro\ \ El\ objeto\ Miembro\ a\ a\u00F1adir\r\n
+comment2.params=
+comment2.target=int\ numeroMiembros()
+comment2.text=\r\n\ @return\ El\ n\u00BA\ de\ miembros\ del\ club\r\n
+comment3.params=mes
+comment3.target=int\ incorporadoEnMes(int)
+comment3.text=\r\n\ Devuelve\r\n\ el\ n\u00BA\ de\ miembros\ que\ se\ incorporaron\ al\ club\ en\ el\ mes\ que\ se\ especifica\ como\r\n\ par\u00E1metro.\ Si\ el\ mes\ est\u00E1\ fuera\ de\ rango\ escribe\ un\ mensaje\ de\ error\ y\ devuelve\ -1.\r\n
+comment4.params=mes\ a\u00F1o
+comment4.target=java.util.ArrayList\ borrar(int,\ int)
+comment4.text=\r\n\ \ \r\n
+comment5.params=mes\ a\u00F1o
+comment5.target=java.util.ArrayList\ borrarConWhile(int,\ int)
+comment5.text=\r\n\ \ \r\n
+comment6.params=mes\ a\u00F1o
+comment6.target=java.util.ArrayList\ borrarConFor(int,\ int)
+comment6.text=\r\n\ \ \r\n
+comment7.params=
+comment7.target=void\ listarClub()
+comment7.text=\r\n\ \ \r\n
+numComments=8
