@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=array2d
+comment0.target=void\ reemplazarDiagonalPorSuma(int[][])
+comment0.text=\r\n\ \ Asumiendo\ que\ array2d\ es\ un\ array\ cuadrado\ (mismas\r\n\ \ filas\ que\ columnas)\ el\ m\u00E9todo\ reemplaza\ \ cada\ valor\ de\ la\ diagonal\r\n\ \ principal\ por\ la\ suma\ de\ los\ valores\ que\ est\u00E1n\ por\ \ debajo\ de\ \u00E9l\r\n\ \ en\ la\ misma\ columna\r\n\ \ (ver\ resultados)\r\n\ \ \ \r\n
+comment1.params=cadena\ n
+comment1.target=void\ escribirCaracteres(java.lang.String,\ int)
+comment1.text=\r\n\ \ Muestra\ \ \ cadena\ de\ n\ en\ n\ caracteres\ en\ cada\ l\u00EDnea\r\n\ \ Asumimos\ que\ la\ longitud\ de\ la\ cadena\ es\ multiplo\ de\ 4\r\n\ \ \r\n\ \ No\ se\ puede\ utilizar\ charAt()\r\n
+comment2.params=args
+comment2.target=void\ main(java.lang.String[])
+comment2.text=\r\n\ \ \ \r\n\r\n
+numComments=3

@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=nombre\ size
+comment0.target=Fichero(java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ \r\n\ @param\ nombre\ \ el\ nombre\ del\ fichero\r\n\ @param\ size\ \ el\ tama\u00F1o\ del\ fichero\r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ \r\n\ @return\ devuelve\ el\ nombre\ completo\ del\ dichero\ con\ extensi\u00F3n\r\n
+comment2.params=
+comment2.target=java.lang.String\ getNombreSinExtension()
+comment2.text=\r\n\ \r\n\ \ devuelve\ el\ nombre\ sin\ extensi\u00F3n\r\n\ \ Si\ el\ fichero\ se\ denomina\ "ejemplo.java"\ devuelve\ "ejemplo"\r\n\ \ \r\n\ \ No\ se\ puede\ utilizar\ split()\r\n
+comment3.params=
+comment3.target=java.lang.String\ getExtension()
+comment3.text=\r\n\ \r\n\ @return\ devuelve\ la\ extensi\u00F3n\ (sin\ incluir\ el\ punto)\r\n\ \r\n\ \ Si\ el\ fichero\ se\ denomina\ "ejemplo.java"\ devuelve\ "java"\r\n\ \ No\ se\ puede\ utilizar\ split()\r\n
+comment4.params=nombre
+comment4.target=void\ setNombre(java.lang.String)
+comment4.text=\r\n\ mutador\ para\ el\ nombre\r\n\ se\ cambia\ el\ nombre\ completo\r\n\ @param\ nombre\ el\ nombre\ nuevo\r\n
+comment5.params=
+comment5.target=int\ getSize()
+comment5.text=\r\n\ accesor\ para\ el\ tama\u00F1o\ del\ fichero\r\n\ @return\ el\ tama\u00F1oo\ del\ fichero\r\n
+comment6.params=size
+comment6.target=void\ setSize(int)
+comment6.text=\r\n\ mutador\ para\ el\ tama\u00F1o\ del\ fichero\r\n\ @param\ size\ el\ tama\u00F1o\ del\ fichero\r\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\r\n\ representaci\u00F3n\ textual\ del\ fichero\r\n
+numComments=8

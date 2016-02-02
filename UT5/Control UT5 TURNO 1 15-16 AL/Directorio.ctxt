@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=nombre\ n
+comment0.target=Directorio(java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ de\ un\ directorio\r\n\ @param\ nombre\ el\ nombre\ del\ directorio\ \ \ \ \ \r\n\ @param\ n\ el\ tama\u00F1o\ m\u00E1ximo\ del\ directorio\ (n\u00BA\ m\u00E1ximo\ de\ ficheros\ que\ va\ a\ contener)\r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ \ Accesor\ para\ el\ nombre\ del\ directorio\ \ \ \ \ \r\n
+comment2.params=nombre\ size
+comment2.target=void\ addFichero(java.lang.String,\ int)
+comment2.text=\r\n\ a\u00F1ade\ un\ nuevo\ fichero\ al\ directorio\ \ \ \ \ \r\n\ \r\n\ Si\ ya\ hay\ otro\ fichero\ con\ el\ mismo\ nombre\ se\ sobreescribe\r\n\ con\ el\ nuevo\ fichero\r\n\ \r\n\ Solo\ puede\ a\u00F1adirse\ si\ hay\ sitio\ en\ el\ directorio\r\n\ \r\n\ El\ fichero\ se\ a\u00F1ade\ siempre\ al\ final\ \ \ \ \ \ \ \r\n\ \r\n\ @param\ nombre\ el\ nombre\ del\ fichero\ a\ a\u00F1adir\r\n\ @param\ size\ el\ tama\u00F1o\ del\ fichero\ a\ a\u00F1adir\r\n
+comment3.params=
+comment3.target=boolean\ estaLleno()
+comment3.text=\r\n\ @return\ devuelve\ true\ si\ directorio\ lleno\r\n\ \r\n
+comment4.params=nombre
+comment4.target=int\ existeFichero(java.lang.String)
+comment4.text=\r\n\ detecta\ a\ partir\ un\ nombre\ si\ un\ fichero\ est\u00E1\ o\ no\ en\ un\ directorio\r\n\ Indiferente\ may\u00FAsculas\ /\ min\u00FAsculas\r\n\ \r\n\ @param\ el\ nombre\ completo\ del\ fichero\ a\ buscar\r\n\ @return\ devuelve\ -1\ si\ no\ est\u00E1\ o\ la\ posici\u00F3n\ \r\n\ \ \ \ \ en\ la\ que\ se\ encuentra\r\n
+comment5.params=
+comment5.target=int\ getSizeDirectorio()
+comment5.text=\r\n\ @return\ devuelve\ el\ tama\u00F1o\ total\ en\ Kbytes\ ocupados\ por\ los\r\n\ ficheros\ del\ directorio\r\n\ \r\n
+comment6.params=extension
+comment6.target=int\ borrarDeExtension(java.lang.String)
+comment6.text=\r\n\ Borra\ del\ directorio\ todos\ los\ ficheros\ con\ la\ extensi\u00F3n\ \r\n\ indicada\ en\ el\ par\u00E1metro.\ Se\ devuelve\ el\ n\u00BA\ de\ ficheros\ borrados\r\n
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment7.text=\r\n\ \ Repesentaci\u00F3n\ textual\ del\ directorio\r\n\ \ Se\ har\u00E1\ de\ la\ forma\ m\u00E1s\ eficiente\ teniendo\ en\ cuenta\r\n\ \ que\ habr\u00E1\ m\u00FAltiples\ concatenaciones\r\n
+numComments=8

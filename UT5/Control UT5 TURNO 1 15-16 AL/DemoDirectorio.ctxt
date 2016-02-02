@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=nombre\ n
+comment0.target=DemoDirectorio(java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=void\ demoAddFichero()
+comment1.text=\r\n\ \ \r\n
+comment2.params=
+comment2.target=void\ demoSizeDirectorio()
+comment2.text=\r\n\ \ \r\n
+comment3.params=extension
+comment3.target=void\ demoBorrarDeExtension(java.lang.String)
+comment3.text=\r\n\ \ \r\n\r\n
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+comment4.text=\r\n\ \ Recibe\ dos\ argumentos\ desde\ l\u00EDnea\ de\ comandos,\ el\ nombre\ del\ directorio\ y\ su\ tama\u00F1o\ m\u00E1ximo\r\n\ \ Si\ hay\ alg\u00FAn\ error\ se\ muestra\ el\ mensaje\ correspondiente\ y\ se\ acaba\ la\ aplicaci\u00F3n\r\n\ \ Si\ todo\ va\ bien\ \ crea\ un\ objeto\ DemoDirectorio\ \ e\ invoca\ a\ cada\ uno\ de\ los\ m\u00E9todos\ de\ la\ clase\ \r\n\ \ DemoDirectorio\r\n\ \ \r\n
+numComments=5
