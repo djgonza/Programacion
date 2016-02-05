@@ -29,7 +29,7 @@ public class StockDemo
     {
         // Muestra detalles de todos los productos
         
-        
+        gestor.escribirDetallesProductos();
         // Llegada de 5 artículos de un producto
        
         

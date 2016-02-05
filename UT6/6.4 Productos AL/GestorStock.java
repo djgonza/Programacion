@@ -20,7 +20,7 @@ public class GestorStock
     public GestorStock()
     {
         listaProductos = new ArrayList<>();
-        
+
     }
 
     /**
@@ -30,10 +30,27 @@ public class GestorStock
     public void añadirProducto(Producto queProducto)
     {
         listaProductos.add(queProducto);
-            
-            
+
     }
-    
+
+    /**
+     *  
+     */
+    public void añadirProductoV2(Producto queProducto)
+    {
+        for(Producto aux : listaProductos)
+        {
+            if(aux.getID() == queProducto.getID())
+            {
+                System.out.println("Ese id ya existe");
+            }
+            else
+                listaProductos.add(queProducto);
+        }
+
+
+    }
+
     /**
      * Recibir una entrega de un producto particular
      * Incrementar la cantidad del producto en la cantidad indicada.
@@ -44,7 +61,7 @@ public class GestorStock
     {
         listaProductos.get(id).incrementarCantidad(cuanto);
     }
-    
+
     /**
      * Intenta encontrar el producto con el id dado
      * @param id  El identificador del producto a buscar
@@ -56,12 +73,8 @@ public class GestorStock
         if(id < 0 || id > listaProductos.size())
             return null;
         return listaProductos.get(id);
-      
-            
-            
+
     }
-    
-    
     /**
      * Intenta encontrar el producto a partir de su nombre
      * @param nombre  El nombre del producto a buscar
@@ -70,17 +83,17 @@ public class GestorStock
      */
     public Producto localizarProducto(String nombre)
     {
-       for(Producto aux : listaProductos)
-       {
-           if(aux.getNombre() == nombre)
-           {
-               return aux;
-           }
-       }
-       return null;     
-            
+        for(Producto aux : listaProductos)
+        {
+            if(aux.getNombre() == nombre)
+            {
+                return aux;
+            }
+        }
+        return null;     
+
     }
-    
+
     /**
      * Localiza un producto de id dado, y devuelve cuanto hay en stock. 
      * Si el id no existe devuelve 0
@@ -89,11 +102,10 @@ public class GestorStock
      */
     public int cantidadEnStock(int id)
     {
-       if(localizarProducto(id) == null)
-        return 0;
+        if(localizarProducto(id) == null)
+            return 0;
         return localizarProducto(id).getCantidad();
-            
-            
+
     }
 
     /**
@@ -101,38 +113,40 @@ public class GestorStock
      */
     public void escribirDetallesProductos()
     {
-       for(Producto aux : listaProductos)
-       {
-           System.out.println(aux.toString());
-       }
-            
-            
+        for(Producto aux : listaProductos)
+        {
+            System.out.println(aux.toString());
+        }
+
     }
-    
+
     /**
      * Escribir detalles del producto
      */
     public void escribirDetallesProductosV1()
     {
-       Iterator<Producto> it = listaProductos.iterator();
+        Iterator<Producto> it = listaProductos.iterator();
         while(it.hasNext())
-       {
-           System.out.println(it.next().toString());
-       }
-            
-            
+        {
+            System.out.println(it.next().toString());
+        }
+
     }
-    
+
     /**
      * Escribir productos cuyo stock está
      * por debajo de un cierto nivel que se 
      * pasa como parámetro
      */
-     public void escribirMenorQue(int valor)
+    public void escribirMenorQue(int valor)
     {
-       
-            
-            
-    }
+          Iterator<Producto> it = listaProductos.iterator();
+        while(it.hasNext())
+        {
+            Producto aux = it.next();
+            if(aux.getCantidad() < valor)
+                System.out.println(aux.toString());
+        }
 
+    }
 }

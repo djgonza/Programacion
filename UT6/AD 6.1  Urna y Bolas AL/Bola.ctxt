@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Bola()
+comment0.text=\r\n\ Constructor\ \r\n
+comment1.params=
+comment1.target=Color\ getColor()
+comment1.text=\r\n\ Accesor\ para\ el\ color\ de\ la\ bola\r\n
+comment2.params=
+comment2.target=boolean\ esBlanca()
+comment2.text=\r\n\ \r\n\ @return\ \ true\ si\ es\ blanca\ \ \ \r\n
+comment3.params=
+comment3.target=boolean\ esNegra()
+comment3.text=\r\n\ \r\n\ @return\ \ true\ si\ es\ negra\ \ \ \r\n
+comment4.params=
+comment4.target=java.lang.String\ getColorString()
+comment4.text=\r\n\ return\ el\ color\ de\ la\ bola\ en\ formato\ String\r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ Representaci\u00F3n\ textual\ de\ una\ bola\r\n
+numComments=6
