@@ -23,19 +23,18 @@ public class Urna
     }
 
     /**
-     * Añade una nueva bola a la urna
-     * @param b la bola a añadir
+     * Anade una nueva bola a la urna
+     * @param b la bola a anadir
      */
     public void meterBola(Bola b)
     {
         urna.add(b);
-
     }
 
     /**
      * Saca una bola de la urna
      * @return la bola sacada
-     * @throws RuntimeException si la urna está vacía
+     * @throws RuntimeException si la urna esta vacia
      */
     public Bola sacarBola()
     {
@@ -49,16 +48,14 @@ public class Urna
     }
 
     /**
-     * @return un valor que representa una posición
+     * @return un valor que representa una posicion
      *          en la urna
-     * @param hasta el límite hasta el que generar valores
+     * @param hasta el limite hasta el que generar valores
      *              aleatorios
      */
     private int obtenerPosicionAleatoria(int hasta)
     {
         return (int) Math.random() * (hasta + 1);
-        
-
     }
 
     /**
@@ -67,7 +64,12 @@ public class Urna
      */
     public int cuantasBlancas()
     {
-
+        int cont = 0;
+        for(Bola bola : urna){
+            if(bola.esBlanca())
+                cont++;
+        }
+        return cont;
     }
     /**
      *  
@@ -75,7 +77,12 @@ public class Urna
      */
     public int cuantasNegras()
     {
-
+        int cont = 0;
+        for(int i = 0; i < urna.size(); i++){
+            if(urna.get(i).esNegra())
+                cont++;
+        }
+        return cont;
     }
     /**
      * Muestra la urna
@@ -83,7 +90,11 @@ public class Urna
      */
     public void mostrarUrna()
     { 
-
+        Iterator<Bola> it = urna.iterator();
+        while(it.hasNext())
+        {
+            System.out.println(it.next().toString());
+        } 
     }
 
     /**
@@ -92,11 +103,11 @@ public class Urna
      */
     public void borrarBlancas()
     { 
-
-    }
-
-        
-        
-        
-        
+        Iterator<Bola> it = urna.iterator();
+        while(it.hasNext())
+        {
+            if(it.next().esBlanca())
+                it.remove();
+        }
+    }    
 }

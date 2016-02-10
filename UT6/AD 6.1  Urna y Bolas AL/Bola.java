@@ -15,13 +15,14 @@ public class Bola
     public Bola()
     {
 
-        int aleatorio = (int) Math.random() * 2; 
+        int aleatorio = (int) Math.floor(Math.random() * 2);
+        
         if(aleatorio == 0)
             color = Color.BLANCO; 
         else
             color = Color.NEGRO;
 
-        //             aleatorio == 0 ? color = Color.Blanco :  color= Color.Negro;
+        //aleatorio == 0 ? color = Color.BLANCO :  color= Color.NEGRO;
 
     }
 
@@ -60,19 +61,16 @@ public class Bola
     public String getColorString()
     {
         if(esBlanca())
-        return "Es blanca";
+            return "Es blanca";
         return "Es negra";
-        
-        //esBlanca() ? return "Es Blanca" : return "Es Negra"; 
-
     }
 
     /**
-     * Representación textual de una bola
+     * Representacion textual de una bola
      */
     public String toString()
     {
-        return "Bola de color " + getColorString();
+        return "Bola de color: " + getColorString();
     }
 
 }
