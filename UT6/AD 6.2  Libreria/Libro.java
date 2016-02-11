@@ -1,5 +1,5 @@
-import java.util.Calendar;
-import java.util.GregorianCalendar;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 /**
  * Describe un libro de la biblioteca
  *
@@ -10,7 +10,7 @@ public class Libro
     private String titulo;
     private String autor;
     private int paginas;  
-    private Estado estado;
+    private Estado  estado;
     private String fechaPrestamo;
 
     /**
@@ -25,7 +25,8 @@ public class Libro
         this.autor = autor;
         this.paginas = paginas;
         estado = Estado.NOPRESTADO;
-        fechaPrestamo = "";
+        fechaPrestamo = ""; 
+
     }
 
     /**
@@ -67,16 +68,16 @@ public class Libro
     /**
      * Indica si está prestado
      */
-    public boolean estaPrestado()
+    public boolean  estaPrestado()
     {        
-        return this.getEstado() == Estado.PRESTADO;
+        return estado == Estado.PRESTADO;
     }
 
     /**
      * Mutador para prestar el libro
      * Sólo se puede prestar un libro 
      * no prestado anteriormente. Utiliza el método privado
-     * obtenerFechaPrestamo()n para obtener la fecha de hoy
+     * obtenerFechaPrestamo()n para obtener la fecha de hory
      * 
      * Al prestar un libro cambia su estado
      * y la fecha en la que se prestó
@@ -85,8 +86,9 @@ public class Libro
     {        
         if(!estaPrestado())
         {
+            estado = Estado.PRESTADO; 
             fechaPrestamo = obtenerFechaPrestamo();
-            estado = Estado.PRESTADO;
+
         }
     }
 
@@ -102,22 +104,22 @@ public class Libro
     {        
         if(estaPrestado())
         {
-            fechaPrestamo = "";
-            estado = Estado.NOPRESTADO;
+            estado = Estado.NOPRESTADO;  
+            fechaPrestamo = ""; 
         }
-    }
 
+    }
+    
     /**
      * @return la fecha de préstamo que es la fecha actual
      *          en formato String
      */
     private String obtenerFechaPrestamo()
     {
-        Calendar fecha = new GregorianCalendar();
-        String fechaPrestado = fecha.get(Calendar.DAY_OF_MONTH) + "/" + 
-                               fecha.get(Calendar.MONTH) + "/" + 
-                               fecha.get(Calendar.YEAR);
-        return fechaPrestado;
+        LocalDate hoy = LocalDate.now();
+        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("dd:MMM:yyyy");
+        String fechaPrestamo = hoy.format(formateador);
+        return fechaPrestamo;
     }
 
     /**

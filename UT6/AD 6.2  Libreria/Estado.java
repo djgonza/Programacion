@@ -7,5 +7,8 @@
  */
 public enum Estado
 {
-    PRESTADO, NOPRESTADO;
+    NOPRESTADO,
+    PRESTADO;
+
+  
 }

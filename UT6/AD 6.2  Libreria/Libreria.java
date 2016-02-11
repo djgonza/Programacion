@@ -1,3 +1,4 @@
+
 /**
  * Modela una clase Libreria 
  * 
@@ -17,8 +18,9 @@ public class Libreria
     {
         libros = new ArrayList<>();
         this.nombre = nombre;
-    }
 
+    }
+    
     /**
      * Accesor para el nombre
      * 
@@ -32,11 +34,12 @@ public class Libreria
      * @return la cantidad de libros en la librería
      * 
      */
-    public int numeroLibros()
+    public int  numeroLibros()
     {
         return libros.size();
+
     }
-    
+
     /**
      * Añade un nuevo libro
      * @param l el libro a añadir
@@ -44,6 +47,7 @@ public class Libreria
     public void addLibro(Libro l)
     {
         libros.add(l);
+
     }
 
     /**
@@ -53,12 +57,15 @@ public class Libreria
      */
     public Libro localizarLibro(String titulo)
     {
-        for(Libro libro: libros)
+        for(Libro aux: libros)
         {
-            if(libro.getTitulo().equalsIgnoreCase(titulo))
-                return libro;
+            if(aux.getTitulo().equalsIgnoreCase(titulo))
+            {
+                return aux;
+            }
         }
         return null;
+
     }
 
     /**
@@ -68,29 +75,32 @@ public class Libreria
      */    
     public boolean hayLibrosDe(String autor)
     {
-        for(Libro libro: libros)
+        for(Libro aux: libros)
         {
-            if(libro.getAutor().equalsIgnoreCase(autor))
+            if(aux.getAutor().equalsIgnoreCase(autor))
+            {
                 return true;
+            }
         }
         return false;
-    }
 
+    }
+    
     /**
      * Borrar los libros de un determinado autor
      * @param autor el autor cuyos libros se borrarán
      */
     public void borrarLibrosDe(String autor)
     {
-        Iterator it = libros.iterator();
+        Iterator<Libro> it = libros.iterator();
+
         while(it.hasNext())
         {
-            Libro borrar = (Libro)it.next();
-            if(borrar.getAutor().equalsIgnoreCase(autor))
+            if(it.next().getAutor().equalsIgnoreCase(autor))
                 it.remove();
         }
-    }
 
+    }
     /**
      * Mostar libros prestados
      *   
@@ -98,12 +108,16 @@ public class Libreria
     public void listarPrestados()
     {
         StringBuilder sb = new StringBuilder();
-        for(Libro libro: libros)
+        for(Libro aux: libros)
         {
-            if(libro.estaPrestado())
-                sb.append(libro.toString());
+            if(aux.estaPrestado())
+            {
+                sb.append(aux.toString());
+                sb.append("\n");
+            }
         }
         System.out.println(sb.toString());
+
     }
     
     /**
@@ -111,10 +125,16 @@ public class Libreria
      */
     public void prestarTitulo(String titulo)
     {
-        for(Libro libro: libros)
+        
+        for(Libro aux: libros)
         {
-            if(libro.getTitulo().equalsIgnoreCase(titulo))
-                libro.prestar();
+            if(aux.getTitulo().compareToIgnoreCase(titulo) < 0)
+                System.out.println("Este libro no existe ");   
+            else if(aux.estaPrestado())
+                System.out.println("Este libro está prestado");
+            else
+                aux.prestar();
         }
     }
+
 }
