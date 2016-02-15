@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Club()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Club\r\n
+comment1.params=nombre\ hob
+comment1.target=void\ addPersona(java.lang.String,\ java.util.HashSet)
+comment1.text=\r\n\ @param\ nombre\ el\ nombre\ de\ la\ persona\ que\ se\ a\u00F1ade\r\n\ @param\ hob\ el\ conjunto\ de\ hobbies\ de\ la\ persona\ a\ a\u00F1adir\r\n
+comment2.params=cual
+comment2.target=int\ personasConHobbie(java.lang.String)
+comment2.text=\r\n\ \r\n\ @param\ \ cual\ el\ hobbie\ a\ comprobar\r\n\ @return\ \ el\ n\u00BA\ de\ personas\ del\ club\ que\ tienen\ ese\ hobbie\ \ \ \r\n
+comment3.params=
+comment3.target=void\ printClub()
+comment3.text=\r\n\ visualiza\ la\ lista\ de\ personas\r\n
+comment4.params=cual
+comment4.target=java.util.HashSet\ borrarPersonasConHobbie(java.lang.String)
+comment4.text=\r\n\ Borra\ de\ la\ lista\ las\ persona\ con\ un\ determinado\ hobbie\r\n\ y\ las\ a\u00F1ade\ en\ el\ conjunto\ a\ devolver\r\n\ Usa\ un\ iterador\r\n\ \r\n\ @param\ \ cual\ el\ hobbie\ a\ comprobar\r\n\ @return\ el\ conjunto\ de\ nombres\ de\ personas\ con\ ese\ hobbie\r\n
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

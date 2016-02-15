@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=nombre
+comment0.target=Persona(java.lang.String)
+comment0.text=\r\n\ constructor\ para\ los\ objetos\ de\ la\ clase\ Persona\r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ Accesor\ para\ el\ nombre\ \ \ \r\n
+comment2.params=h
+comment2.target=void\ addHobbie(java.lang.String)
+comment2.text=\r\n\ @param\ h\ a\u00F1ade\ el\ nuevo\ hobbie\r\n\ en\ min\u00FAsculas\r\n
+comment3.params=h
+comment3.target=boolean\ tieneHobbie(java.lang.String)
+comment3.text=\r\n\ @param\ h\ el\ nombre\ del\ hobbie\ a\ comprobar\r\n\ @return\ true\ si\ tiene\ ese\ hobbie\r\n
+comment4.params=
+comment4.target=java.lang.String\ hobbiesToString()
+comment4.text=\ \r\n\ Devuelve\ el\ conjunto\ de\ hobbies\ como\ un\ String\r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\ \r\n\ Devuelve\ una\ representaci\u00F3n\ de\ la\ persona\r\n\ Su\ nombre\ y\ su\ conjunto\ de\ hobbies\ como\ un\ String\r\n
+numComments=6
