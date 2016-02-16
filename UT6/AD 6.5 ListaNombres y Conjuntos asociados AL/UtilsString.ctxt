@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=cadena
+comment0.target=java.util.TreeSet\ getConjuntoCaracteres(java.lang.String)
+comment0.text=\r\n\ \ Dada\ una\ cadena\ obtiene\ y\ devuelve\ su\ conjunto\ de\ caracteres\r\n\ \ Importa\ el\ orden\ en\ el\ conjunto\r\n\r\n
+comment1.params=cadena
+comment1.target=java.util.HashSet\ getConjuntoDigitos(java.lang.String)
+comment1.text=\r\n\ \ Dada\ una\ cadena\ obtiene\ su\ conjunto\ de\ caracteres\ num\u00E9ricos\r\n\ \ No\ importa\ el\ orden\ en\ el\ conjunto\r\n\ \ \r\n\ \ Usa\ alg\u00FAn\ m\u00E9todo\ de\ la\ clase\ Character\ \ para\ comprobar\ si\ un\ caracter\ es\ \ \r\n\ \ num\u00E9rico\ o\ no\r\n\r\n
+comment2.params=cadena
+comment2.target=java.util.LinkedHashSet\ getConjuntoMayusculas(java.lang.String)
+comment2.text=\r\n\ \ Dada\ una\ cadena\ obtiene\ su\ conjunto\ de\ letras\ may\u00FAsculas\r\n\ \ en\ el\ orden\ en\ el\ que\ aparecen\ \ \ en\ la\ cadena\r\n\ \ \ \r\n\r\n
+numComments=3
