@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=MultiMapColores()
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=nombre\ color
+comment1.target=void\ addPersona(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ \ \ A\u00F1ade\ una\ nueva\ persona\ al\ map\ con\ su\ color\ favorito\r\n\ \ \ Si\ la\ persona\ (clave)\ no\ existe\ se\ crea\ una\ nueva\ entrada\ con\r\n\ \ \ un\ conjunto\ vac\u00EDo\ y\ se\ a\u00F1ade\ el\ color\ al\ conjunto\r\n\ \ \ Si\ la\ personas\ (clave)\ existe\ se\ a\u00F1ade\ el\ color\r\n\ \r\n
+comment2.params=nombre\ color
+comment2.target=void\ addPersonaV2(java.lang.String,\ java.lang.String)
+comment2.text=\r\n\ \ \ A\u00F1ade\ una\ nueva\ persona\ al\ map\ con\ su\ color\ favorito\r\n\ \ \ Si\ la\ persona\ (clave)\ no\ exite\ se\ crea\ una\ nueva\ entrada\ con\r\n\ \ \ un\ conjunto\ vac\u00EDo\ y\ se\ a\u00F1ade\ el\ color\ al\ conjunto\r\n\ \ \ Si\ la\ personas\ (clave)\ existe\ se\ a\u00F1ade\ el\ color\r\n\ \r\n
+comment3.params=
+comment3.target=void\ escribirPersonasColores()
+comment3.text=\r\n\ Muestra\ el\ nombre\ de\ cada\ persona\ y\ sus\ colores\ favoritos\r\n\ Con\ el\ conjunto\ de\ claves\ y\ un\ for\ mejorado\r\n
+comment4.params=color
+comment4.target=int\ personasLesGustaColor(java.lang.String)
+comment4.text=\r\n\ devuelve\ el\ n\u00BA\ de\ personas\ a\ las\ que\ les\ gusta\ el\ color\ pasado\ como\ par\u00E1metro\r\n\ Con\ el\ conjunto\ de\ entradas\ y\ un\ iterador\r\n
+comment5.params=color
+comment5.target=java.util.TreeSet\ conjuntoPersonasLesGustaColor(java.lang.String)
+comment5.text=\r\n\ devuelve\ un\ conjunto\ ordenado\ con\ los\ nombres\ de\ las\ personas\ a\ las\ que\ les\ gusta\ \r\n\ el\ color\ pasado\ como\ par\u00E1metro\r\n\ Con\ el\ conjunto\ de\ claves\ y\ un\ for\r\n
+comment6.params=persona\ color
+comment6.target=void\ borrarColor(java.lang.String,\ java.lang.String)
+comment6.text=\r\n\ \ Borrar\ el\ color\ que\ le\ gusta\ a\ la\ persona\ indicada\r\n\r\n
+numComments=7
