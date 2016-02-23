@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=FrecuenciaNumeros()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ FrecuenciaNumeros\r\n
+comment1.params=numero
+comment1.target=void\ a\u00F1adirNumero(int)
+comment1.text=\r\n\ \r\n\r\n\ @param\ \ el\ n\u00BA\ a\ a\u00F1adir\ \ \ \ \r\n
+comment2.params=
+comment2.target=void\ cargarDeFichero()
+comment2.text=\r\n\ lee\ los\ n\u00FAmeros\ de\ un\ fichero\ de\ texto\ \r\n\ Este\ m\u00E9todo\ no\ hay\ que\ modificarlo\r\n\ \ \ \ \ \ \r\n
+comment3.params=
+comment3.target=void\ listarFrecuencias()
+comment3.text=\r\n\ \r\n\ Listar\ cada\ n\u00FAmero\ aparecido\ y\ su\ frecuencia\r\n\ Se\ utiliza\ Map.Entry\r\n
+comment4.params=
+comment4.target=void\ listarNumeros()
+comment4.text=\r\n\ \r\n\ Muestra\ cu\u00E1ntos\ n\u00FAmeros\ diferentes\ han\ aparecido\r\n\ y\ la\ relaci\u00F3n\ de\ todos\ ellos\r\n\ \r\n\ Se\ utiliza\ la\ "vista"\ sobre\ las\ claves\r\n\ y\ un\ for\ each\r\n
+numComments=5
