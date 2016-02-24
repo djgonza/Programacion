@@ -28,6 +28,7 @@ public class MapPaises
     public void addPais(String pais, String capital)
     {
         mapPaises.put(pais, capital);
+        mapPaises.
     }
 
     /**

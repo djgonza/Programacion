@@ -19,6 +19,7 @@ public class Urna
     public Urna()
     {
         urna = new ArrayList<Bola>();
+        
 
     }
 

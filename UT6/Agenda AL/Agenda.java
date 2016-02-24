@@ -168,6 +168,42 @@ public class Agenda
         return resul;
 
     }
+    
+    public void duplicarNotas(){
+        ArrayList<String> aux = new ArrayList<>();
+        
+        for(String nota : notas){
+            aux.add(nota);
+            aux.add(nota);
+        }
+        
+        notas = aux;
+    }
+    
+    public void invertirV1(){
+        ArrayList<String> aux = new ArrayList<>();
+        
+        for(String nota : notas){
+            aux.add(0,nota);
+        }
+        
+        notas = aux;
+    }
+    
+    public void invertirV2() {
+        Collections.reverse(notas);
+    }
+    
+    public void borrarRepetidas() {
+        Iterator it = notas.iterator();
+        while(it.hasNext()){
+            notas.remove(notas.indexOf(it.next()));
+        }
+    }
+    
+    public void reorganizar(){
+        Collections.shuffle(notas);
+    }
 }
 
 
