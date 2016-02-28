@@ -1,42 +1,62 @@
 
 /**
  * Un objeto de esta clase mantiene una 
- * colección map de equipos de baloncesto.
- * Las claves son los nombres de los equipos (siempre en mayúsculas). Para cada clave
- * se asocia la relación (una colección ArrayList) de jugadores de ese equipo
+ * coleccion map de equipos de baloncesto.
+ * Las claves son los nombres de los equipos (siempre en mayusculas). Para cada clave
+ * se asocia la relacion (una coleccion ArrayList) de jugadores de ese equipo
  * 
- * Las claves se recuperarán en orden alfabético
+ * Las claves se recuperaran en orden alfabetico
  */
 
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.TreeMap;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.Iterator;
 
 public class MapEquipos
 {
 
-    private        mapEquipos;
+    private TreeMap<String, ArrayList<Jugador>> mapEquipos;
 
     /**
      * Constructor de la clase MapEquipos
      */
     public MapEquipos()
     {
-        mapEquipos =  
+        mapEquipos = new TreeMap<>(); 
     }
 
     /**
-     * añadir un  Jugador a la lista de Jugadores del equipo
-     * @param equipo el equipo en que se añade el Jugador
-     * @param j el Jugador a añadir
+     * anadir un  Jugador a la lista de Jugadores del equipo
+     * @param equipo el equipo en que se anade el Jugador
+     * @param j el Jugador a anadir
      *  
-     * Si el equipo no existe se creará una nueva entrada asociando ese equipo junto con el jugado
-     * Si  el equipo existe únicamente se añade un  Jugador más que  juega en él
+     * Si el equipo no existe se creara una nueva entrada asociando ese equipo 
+     * junto con el jugado
+     * Si  el equipo existe unicamente se anade un  Jugador mas que  juega en el
      * 
-     * Los equipos siempre se añaden en mayúsculas
+     * Los equipos siempre se anaden en mayusculas
      */
     public void addJugador(String equipo, Jugador j)
     {
-       
+        equipo = equipo.toUpperCase();
+
+        //sacamos la lista de jugadores
+        ArrayList<Jugador> listaJugadores = mapEquipos.get(equipo);
+        //si no existe la entrada la creamos
+        if(listaJugadores == null){
+            listaJugadores = new ArrayList<>();
+            mapEquipos.put(equipo, listaJugadores);
+        }
+        //anadimos el jugador
+        listaJugadores.add(j);
+        
     }
 
     /**
@@ -46,20 +66,38 @@ public class MapEquipos
      */
     public int jugadoresEn(String equipo)
     {
-        
+        equipo = equipo.toUpperCase();
+
+        ArrayList<Jugador> listaJugadores = mapEquipos.get(equipo);
+
+        if(listaJugadores == null)
+            return -1;
+
+        return listaJugadores.size();
     }
 
     /**
      * 
      * @return una lista LinkedList de String con los
-     * nombres de los jugadores que actúan como aleros en sus equipos
-     * Cada vez que se añade a la lista se hace al principio
+     * nombres de los jugadores que actuan como aleros en sus equipos
+     * Cada vez que se anade a la lista se hace al principio
      * 
      * Usa el conjunto de entradas y un for mejorado
      */
     public LinkedList<String> obtenerAleros()
     {
-        
+        LinkedList<String> aleros = new LinkedList<>();
+        Set<Map.Entry<String, ArrayList<Jugador>>> entradas = mapEquipos.entrySet();
+
+        for(Map.Entry<String, ArrayList<Jugador>> entrada : entradas){
+            for(Jugador jugador : entrada.getValue()){
+                if(jugador.getPosicion() == Posicion.ALERO){
+                    aleros.add(jugador.getNombre());
+                }
+            }
+        }
+
+        return aleros;
     }
     
      /**
@@ -69,7 +107,13 @@ public class MapEquipos
      */
     public double alturaMedia(String equipo)
     {
-       
+        equipo = equipo.toUpperCase();
+
+        double altura = 0;
+        for(Jugador jugador : mapEquipos.get(equipo)){
+            altura += jugador.getAltura();
+        }
+        return altura / mapEquipos.get(equipo).size();
         
     }
 
@@ -81,24 +125,44 @@ public class MapEquipos
      * 
      * Usa para recorrer el map el conjunto de entradas y un iterador.
      */
-    public .................. borrarMenoresDe(int edad)
+    public HashSet<String> borrarMenoresDe(int edad)
     {
-        
-        
-        
+        HashSet<String> jugadores = new HashSet<String>();
+        Set<Map.Entry<String, ArrayList<Jugador>>> entradas = mapEquipos.entrySet();
+        Iterator itMapa = entradas.iterator();
+
+        while(itMapa.hasNext()){
+            
+            //System.out.println(itMapa.next());
+            
+            Entry<String,ArrayList<Jugador>> entrada = itMapa.next();
+
+            /*Iterator itLista = itMapa.next().getValue().iterator();
+            while(itLista.hasNext()){
+                Jugador jugador = itLista.next();
+                if(jugador.getEdad() < edad){
+                    jugadores.add(jugador.getNombre());
+                    jugador.remove();
+                }
+
+            }*/
+
+        }
+
+        return jugadores;
     }
 
       /**
-     * Representación textual del map, cada equipo junto con los jugadores
+     * Representacion textual del map, cada equipo junto con los jugadores
      *  
      * Con el conjunto de claves y for mejorado
-     * De forma eficiente ya que habrá muchas concatenaciones
+     * De forma eficiente ya que habra muchas concatenaciones
      */
 
     public String  toString()
     {
        
-        
+        return "";
         
     }
     
@@ -115,19 +179,19 @@ public class MapEquipos
      */
     private Jugador obtenerJugador(String[] datosJugador)
     {
-        
+        return new Jugador("MARC GASOL", 1, 1, 1991, 2.02, Posicion.ALERO);
         
     }
 
     /**
-     *  Lee de un fichero líneas de datos con la información de cada Jugador 
-     *  Hace uso de los métodos parsearLinea() y addJugador()
+     *  Lee de un fichero lineas de datos con la informacion de cada Jugador 
+     *  Hace uso de los metodos parsearLinea() y addJugador()
      */
     public void leerDeFichero()
     {
          
             Scanner sc = new Scanner(this.getClass().getResourceAsStream("/equipos.txt"));
-            while (sc.hasNext())  // mientras haya líneas en el fichero
+            while (sc.hasNext())  // mientras haya lineas en el fichero
             {
                 String linea = sc.nextLine();
                 String[] datos = linea.split(":");
@@ -140,10 +204,21 @@ public class MapEquipos
 
   
     /**
-     * Mostra la lista
+     * Muestra la lista
      */
-    public  void escribir()
+    public void escribir()
     {
         System.out.println(this.toString());
     }
+
+    public static void main(String[] args) {
+        MapEquipos demo = new MapEquipos();
+        demo.addJugador("Prueba", new Jugador("MARC GASOL", 1, 1, 1991, 2.02, Posicion.ALERO));
+        demo.addJugador("Prueba", new Jugador("MARC GASOL", 1, 1, 1991, 2.52, Posicion.ALERO));
+        System.out.println(demo.jugadoresEn("Prueba"));
+        System.out.println(demo.obtenerAleros().toString());
+        System.out.println(demo.alturaMedia("Prueba"));
+        demo.borrarMenoresDe(10);
+    }
+
 }

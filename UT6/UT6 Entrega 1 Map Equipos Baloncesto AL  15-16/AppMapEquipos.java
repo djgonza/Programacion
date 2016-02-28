@@ -1,6 +1,6 @@
 
 /**
- *  Punto de entrada a la aplicación 
+ *  Punto de entrada a la aplicacion 
  *  
  *  
  */

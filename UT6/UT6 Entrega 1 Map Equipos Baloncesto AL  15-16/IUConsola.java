@@ -31,7 +31,7 @@ public class IUConsola
     }
 
     /**
-     *  Incluye la lógica de la aplicación
+     *  Incluye la logica de la aplicacion
      *  
      */
     public void iniciar()
@@ -61,8 +61,8 @@ public class IUConsola
     }
 
     /**
-     * Presenta el menú 
-     * @return  la opción seleccionada
+     * Presenta el menu 
+     * @return  la opcion seleccionada
      */
     private int menu()
     {
@@ -72,16 +72,16 @@ public class IUConsola
         System.out.println("******************************************");
         System.out.println("1. Mostrar equipos");
         System.out.println("2. Jugadores en equipo");
-        System.out.println("3. Relación de aleros");
+        System.out.println("3. Relacion de aleros");
         System.out.println("4. Altura media jugadores de un equipo");
         System.out.println("5. Borrar jugadores de edad menor");
         System.out.println("6. Salir");
 
-        System.out.print("Teclea opción: ");
+        System.out.print("Teclea opcion: ");
         int opcion = teclado.nextInt();
         while (!opcionValida(opcion))
         {
-            System.out.print("Opción incorrecta, Teclea opción: ");
+            System.out.print("Opcion incorrecta, Teclea opcion: ");
             opcion = teclado.nextInt();
         }
         teclado.nextLine();
@@ -89,7 +89,7 @@ public class IUConsola
     }
 
     /**
-     *  Devuelve true si la opción es correcta, false en otro caso
+     *  Devuelve true si la opcion es correcta, false en otro caso
      *
      */
     private boolean opcionValida(int opcion)
@@ -107,7 +107,7 @@ public class IUConsola
     }
 
     /**
-     * Muestra cuántos jugadores hay en un equipo
+     * Muestra cuantos jugadores hay en un equipo
      */
     private void jugadoresEnEquipo()
     {
@@ -131,7 +131,7 @@ public class IUConsola
     private void aleros()
     {
 
-        System.out.println("\nRelación de aleros: ");
+        System.out.println("\nRelacion de aleros: ");
         for (String jugador: map.obtenerAleros())
         {
             System.out.println(jugador);
