@@ -129,23 +129,21 @@ public class MapEquipos
     {
         HashSet<String> jugadores = new HashSet<String>();
         Set<Map.Entry<String, ArrayList<Jugador>>> entradas = mapEquipos.entrySet();
-        Iterator itMapa = entradas.iterator();
+        Iterator<Map.Entry<String, ArrayList<Jugador>>> itMapa = entradas.iterator();
 
-        while(itMapa.hasNext()){
+        while(itMapa.hasNext()){            
             
-            //System.out.println(itMapa.next());
+            Iterator<Jugador> itLista = itMapa.next().getValue().iterator();
             
-            Entry<String,ArrayList<Jugador>> entrada = itMapa.next();
-
-            /*Iterator itLista = itMapa.next().getValue().iterator();
             while(itLista.hasNext()){
+                
                 Jugador jugador = itLista.next();
                 if(jugador.getEdad() < edad){
                     jugadores.add(jugador.getNombre());
-                    jugador.remove();
+                    itLista.remove();
                 }
 
-            }*/
+            }
 
         }
 
@@ -161,8 +159,15 @@ public class MapEquipos
 
     public String  toString()
     {
-       
-        return "";
+       StringBuilder sb = new StringBuilder();
+       Set<Map.Entry<String, ArrayList<Jugador>>> entradas = mapEquipos.entrySet();
+       for(Map.Entry<String, ArrayList<Jugador>> entrada : entradas){
+           sb.append("Nombre Equipo: ").append(entrada.getKey()).append('\n');
+           for(Jugador jugador : entrada.getValue()){
+               sb.append(jugador.toString()).append('\n');
+           }
+       }
+       return sb.toString();
         
     }
     
@@ -179,8 +184,14 @@ public class MapEquipos
      */
     private Jugador obtenerJugador(String[] datosJugador)
     {
-        return new Jugador("MARC GASOL", 1, 1, 1991, 2.02, Posicion.ALERO);
-        
+        return new Jugador(
+            datosJugador[0],
+            Integer.parseInt(datosJugador[1]),
+            Integer.parseInt(datosJugador[2]),
+            Integer.parseInt(datosJugador[3]),
+            Double.parseDouble(datosJugador[4]),
+            Posicion.valueOf(datosJugador[5])
+        );
     }
 
     /**

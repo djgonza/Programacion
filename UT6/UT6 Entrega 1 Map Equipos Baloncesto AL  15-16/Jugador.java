@@ -68,6 +68,7 @@ public class Jugador
      */
     public String getNombre()
     {   
+        nombre = nombre.toUpperCase();
         String nombreFormat = 
             nombre.substring(0,1) + 
             nombre.substring(1, nombre.indexOf(" ")).toLowerCase();
