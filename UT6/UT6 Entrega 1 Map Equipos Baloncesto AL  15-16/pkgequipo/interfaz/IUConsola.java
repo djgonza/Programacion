@@ -1,4 +1,4 @@
-
+package pkgequipo.interfaz;
 /**
  * Interfaz de texto
  *  
@@ -6,6 +6,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.HashSet;
+import pkgequipos.modelo.MapEquipos;
 
 public class IUConsola
 {

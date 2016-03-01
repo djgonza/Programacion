@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=romano
+comment0.target=void\ aniadirRomano(java.lang.String)
+comment0.text=\r\n\ A\u00F1adir\ un\ romano.\ Se\ a\u00F1ade\ la\ clave\ que\ es\ \r\n\ su\ valor\ ar\u00E1bigo\ y\ el\ valor\ asociado\ que\ es\r\n\ el\ n\u00BA\ romano\r\n\ \r\n\ @param\ \ romano\ el\ n\u00BA\ romano\ se\ a\u00F1ade\ como\ \r\n\ \ \ \ \ \ \ \ \ \ valor\ asociado.\r\n\ \r\n
+comment1.params=romanos
+comment1.target=void\ aniadirRomanos(java.lang.String[])
+comment1.text=\r\n\ A\u00F1adir\ varios\ romanos.\ \ \r\n\ \r\n\ @param\ \ el\ array\ con\ los\ n\u00BAs\ romanos\r\n\ \r\n
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment2.text=\r\n\ representaci\u00F3n\ \ textual\ del\ map\r\n\r\n
+comment3.params=
+comment3.target=void\ escribirListaArabigos()
+comment3.text=\r\n\ Mostar\ la\ lista\ de\ ar\u00E1bigos\ \ \ \r\n\ Salida\ gr\u00E1fica\ con\ JOptionPane\r\n
+numComments=4

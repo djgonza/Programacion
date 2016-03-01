@@ -1,8 +1,9 @@
-
+import pkgequipos.modelo.MapEquipos;
+import pkgequipo.interfaz.IUConsola;
 /**
  *  Punto de entrada a la aplicacion 
  *  
- *  
+ *  java -jar equiposbaloncesto.jar
  */
 public class AppMapEquipos
 {

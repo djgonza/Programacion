@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.params=map
-comment0.target=IUConsola(MapEquipos)
+comment0.target=IUConsola(pkgequipos.modelo.MapEquipos)
 comment0.text=\r\n\ Constructor\ de\ la\ clase\ IUConsola\r\n
 comment1.params=
 comment1.target=void\ iniciar()

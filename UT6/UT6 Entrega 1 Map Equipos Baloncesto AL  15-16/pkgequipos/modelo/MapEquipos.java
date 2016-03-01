@@ -1,4 +1,4 @@
-
+package pkgequipos.modelo;
 /**
  * Un objeto de esta clase mantiene una 
  * coleccion map de equipos de baloncesto.

@@ -1,3 +1,5 @@
+package pkgequipos.modelo;
+
 public enum Posicion
 {
     BASE, 
