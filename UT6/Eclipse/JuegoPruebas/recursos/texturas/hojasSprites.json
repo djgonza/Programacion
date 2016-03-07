@@ -1,0 +1,7 @@
+{
+	"suelo": {
+		"ancho": 320,
+		"alto": 320,
+		"ruta": "recursos/texturas/suelo.png"
+	}
+}

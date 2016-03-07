@@ -5,9 +5,11 @@
 		<item value="true" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="true" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
 			<item value="D:\GitHub\Programacion\UT6"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="D:\GitHub\Programitas\Juego2D\proyectoEclipse.zip"/>
 			<item value="D:\GitHub\Programacion\UT6\ECL Repaso UT6 Curso AL.zip"/>
 		</list>
 	</section>

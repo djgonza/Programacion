@@ -1,0 +1,67 @@
+{
+	"frames": [{
+			"sprites": [0],
+			"tipo": 0
+		}, {
+			"sprites": [1],
+			"tipo": 0
+		}, {
+			"sprites": [2],
+			"tipo": 0
+		}, {
+			"sprites": [3],
+			"tipo": 0
+		}, {
+			"sprites": [4],
+			"tipo": 0
+		}, {
+			"sprites": [5],
+			"tipo": 0
+		}, {
+			"sprites": [6],
+			"tipo": 0
+		}, {
+			"sprites": [7],
+			"tipo": 0
+		}, {
+			"sprites": [8],
+			"tipo": 0
+		}, {
+			"sprites": [9],
+			"tipo": 0
+		}, {
+			"sprites": [10],
+			"tipo": 0
+		}, {
+			"sprites": [11],
+			"tipo": 0
+		}, {
+			"sprites": [12],
+			"tipo": 0
+		}, {
+			"sprites": [13],
+			"tipo": 0
+		}, {
+			"sprites": [14],
+			"tipo": 0
+		}, {
+			"sprites": [15],
+			"tipo": 0
+		}, {
+			"sprites": [16],
+			"tipo": 0
+		}, {
+			"sprites": [17],
+			"tipo": 0
+		}, {
+			"sprites": [18],
+			"tipo": 0
+		}, {
+			"sprites": [19],
+			"tipo": 0
+		}, {
+			"sprites": [0, 1, 2],
+			"tipo": 0
+		}
+	]
+}
