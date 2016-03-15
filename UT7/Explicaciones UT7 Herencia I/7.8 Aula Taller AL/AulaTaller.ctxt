@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=nombre\ pupitres\ ordenadores
+comment0.target=AulaTaller(java.lang.String,\ int,\ int)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=void\ visualizar()
+comment1.text=\r\n\ \ \r\n\ \r\n\ @param\ \ \ \r\n\ \r\n
+numComments=2

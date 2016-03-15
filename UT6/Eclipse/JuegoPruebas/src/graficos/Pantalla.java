@@ -71,6 +71,8 @@ public class Pantalla extends Canvas {
 		// pintamos la imagen
 		g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
 		// contadores
+		g.setColor(new Color(0));
+		g.fillRect(ANCHO / 2, ALTO / 2, 32, 32);
 		g.drawString("APS: " + aps, 10, 20);
 		g.drawString("FPS: " + fps, 10, 40);
 		// limpiamos el jframe

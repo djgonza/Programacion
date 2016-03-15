@@ -1,0 +1,12 @@
+
+/**
+ * 
+ * 
+ * @author
+ * @version
+ */
+public class SobreMesa extends Ordenador {
+
+	private String descripcion;
+
+}

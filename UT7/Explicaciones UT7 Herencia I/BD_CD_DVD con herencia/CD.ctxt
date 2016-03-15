@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=elTitulo\ elArtista\ pistas\ duracion
+comment0.target=CD(java.lang.String,\ java.lang.String,\ int,\ int)
+comment0.text=\r\n\ Constructor\ de\ los\ objetos\ de\ la\ clase\ CD\r\n
+comment1.params=
+comment1.target=java.lang.String\ getArtista()
+comment1.text=\r\n\ Devuelve\ el\ artista\ del\ CD\r\n
+comment2.params=
+comment2.target=int\ getNumeroDePistas()
+comment2.text=\r\n\ Devuelve\ el\ numero\ de\ pistas\ del\ CD\r\n
+numComments=3

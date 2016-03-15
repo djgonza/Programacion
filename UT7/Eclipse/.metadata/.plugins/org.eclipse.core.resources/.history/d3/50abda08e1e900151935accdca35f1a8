@@ -1,0 +1,14 @@
+
+public class CuentaCorriente extends Cuenta {
+
+	
+	private double importeMinimo;
+	private double recargo;
+
+	public CuentaCorriente(String nombre, double importe, double importeMinimo, double recargo) {
+		super(nombre, importe);
+		this.importeMinimo = importeMinimo;
+		this.recargo = recargo;
+	}
+	
+}

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=codigo\ precio\ slogan\ descripcio
+comment0.target=SobreMesa(java.lang.String,\ double,\ java.lang.String,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getDescripcion()
+comment1.text=\r\n\ \ \r\n\ \r\n
+comment2.params=descripcion
+comment2.target=void\ setDescripcion(java.lang.String)
+comment2.text=\r\n\ \r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ \r\n
+numComments=4

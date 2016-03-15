@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=BaseDatos()
+comment0.text=\r\n\ Constructor,\ crea\ una\ base\ de\ datos\r\n\ vac\u00EDa\r\n
+comment1.params=elCD
+comment1.target=void\ addCD(CD)
+comment1.text=\r\n\ A\u00F1adir\ un\ CD\r\n\ @param\ elCD\ el\ CD\ a\ a\u00F1adir\r\n
+comment2.params=elDVD
+comment2.target=void\ addDVD(DVD)
+comment2.text=\r\n\ A\u00F1ade\ un\ DVD\r\n\ @param\ elDVD\ el\ DVD\ a\ a\u00F1adir\r\n
+comment3.params=
+comment3.target=void\ listar()
+comment3.text=\r\n\ Lista\ todos\ los\ CD\ y\ DVD\r\n\ \r\n
+numComments=4

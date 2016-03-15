@@ -1,0 +1,11 @@
+
+public class CuentaCorriente extends Cuenta {
+
+	private double importeMinimo;
+
+	public CuentaCorriente(String nombre, double importe, double importeMinimo) {
+		super(nombre, importe);
+		this.importeMinimo = importeMinimo;
+	}
+
+}

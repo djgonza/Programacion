@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=nombre
+comment0.target=Tienda(java.lang.String)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=ord
+comment1.target=void\ addOrdenador(Ordenador)
+comment1.text=\r\n\ \ \r\n
+comment2.params=
+comment2.target=int\ cuantosPortatiles()
+comment2.text=\r\n\ \r\n
+comment3.params=
+comment3.target=java.lang.String\ masBarato()
+comment3.text=\r\n\ \r\n
+comment4.params=
+comment4.target=void\ borrarMasBarato()
+comment4.text=\r\n\ \r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ \r\n
+numComments=6

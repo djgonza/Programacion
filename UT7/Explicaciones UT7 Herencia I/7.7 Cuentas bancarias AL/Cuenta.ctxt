@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=nombre\ importe
+comment0.target=Cuenta(java.lang.String,\ double)
+comment0.text=\r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ accesor\ para\ el\ nombre\ del\ cliente\r\n
+comment2.params=nombre
+comment2.target=void\ setNombre(java.lang.String)
+comment2.text=\r\n\ mutador\ para\ el\ nombre\ del\ cliente\r\n
+comment3.params=
+comment3.target=double\ getImporte()
+comment3.text=\r\n\ accesor\ para\ el\ importe\r\n
+comment4.params=cantidad
+comment4.target=void\ ingresar(double)
+comment4.text=\r\n\ a\u00F1ade\ cantidad\ al\ importe\r\n
+comment5.params=cantidad
+comment5.target=void\ reintegrar(double)
+comment5.text=\r\n\ reintegra\ (saca)\ cantidad\ de\ importe\r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\ \r\n\ Representaci\u00F3n\ textual\ de\ la\ cuenta\r\n
+numComments=7

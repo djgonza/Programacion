@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=elTitulo\ duracion
+comment0.target=Articulo(java.lang.String,\ int)
+comment0.text=\r\n\ Inicializar\ los\ atributos\ del\ art\u00EDculo\r\n
+comment1.params=comentario
+comment1.target=void\ setComentario(java.lang.String)
+comment1.text=\r\n\ Introducir\ un\ comentario\ del\ art\u00EDculo\r\n
+comment2.params=
+comment2.target=java.lang.String\ getComentario()
+comment2.text=\r\n\ Devolver\ el\ comentario\ del\ art\u00EDculo\r\n
+comment3.params=hay
+comment3.target=void\ setHayCopia(boolean)
+comment3.text=\r\n\ Establecer\ el\ flag\ que\ indica\ si\ se\ tiene\ una\ copia\ o\ no\r\n
+comment4.params=
+comment4.target=boolean\ getHayCopia()
+comment4.text=\r\n\ Devolver\ el\ flag\ que\ indica\ si\ se\ tiene\ una\ copia\ o\ no\r\n
+comment5.params=
+comment5.target=void\ print()
+comment5.text=\r\n\ Escribir\ detalles\ sobre\ el\ art\u00EDculo\r\n
+numComments=6

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=BaseDatos()
+comment0.text=\r\n\ Construir\ una\ base\ de\ datos\ vac\u00EDa\r\n
+comment1.params=elArticulo
+comment1.target=void\ addArticulo(Articulo)
+comment1.text=\r\n\ A\u00F1adir\ un\ art\u00EDculo\ a\ la\ base\ da\ datos\r\n
+comment2.params=
+comment2.target=void\ listar()
+comment2.text=\r\n\ Imprimir\ una\ lista\ de\ tods\ los\ articulos\ almacenados,\ CD\ y\ Videos\r\n
+numComments=3

@@ -1,0 +1,18 @@
+
+/**
+ * 
+ * 
+ * @author
+ * @version
+ */
+public class Portatil extends Ordenador
+{
+
+	/**
+	 * Constructor
+	 */
+	public Portatil() {
+
+	}
+
+}

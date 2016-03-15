@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=PersonaConConstructoresSobrecargados()
+comment0.text=\r\n\ Constructor\ \ por\ defecto,\ es\ el\ constructor\ sin\ par\u00E1meteros\r\n
+comment1.params=nombre\ edad
+comment1.target=PersonaConConstructoresSobrecargados(java.lang.String,\ int)
+comment1.text=\r\n\ Constructor\ \ \r\n
+comment2.params=nombre\ edad\ sueldo
+comment2.target=PersonaConConstructoresSobrecargados(java.lang.String,\ int,\ double)
+comment2.text=\r\n\ Constructor\ \ \r\n
+numComments=3

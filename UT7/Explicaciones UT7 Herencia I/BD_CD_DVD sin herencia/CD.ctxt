@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=elTitulo\ telArtista\ pistas\ duracione
+comment0.target=CD(java.lang.String,\ java.lang.String,\ int,\ int)
+comment0.text=\r\n\ Constructor\ del\ CD\r\n
+comment1.params=comentario
+comment1.target=void\ setComentario(java.lang.String)
+comment1.text=\r\n\ establecer\ comentario\ para\ el\ CD\r\n\ @param\ comentario\ el\ comentario\ del\ CD\r\n
+comment2.params=
+comment2.target=java.lang.String\ getComentario()
+comment2.text=\r\n\ @return\ el\ comentario\r\n
+comment3.params=loTengo
+comment3.target=void\ setPropiedad(boolean)
+comment3.text=\r\n\ Establecer\ el\ flag\ que\ indica\ si\ lo\ tengo\ o\ no\r\n\ @param\ loTengo\ a\ true\ si\ lo\ poseo\r\n
+comment4.params=
+comment4.target=boolean\ getPropiedad()
+comment4.text=\r\n\ @return\ true\ sil\ tengo\ el\ CD\r\n
+comment5.params=
+comment5.target=void\ print()
+comment5.text=\r\n\ \ Escribir\ detalles\ del\ CD.\r\n
+numComments=6

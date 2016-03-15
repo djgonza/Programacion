@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=nombre\ pupitres
+comment0.target=Aula(java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ \ accesor\ para\ el\ nombre\r\n
+comment2.params=
+comment2.target=int\ getPupitres()
+comment2.text=\r\n\ \ accesor\ para\ los\ pupitres\r\n
+comment3.params=nombre
+comment3.target=void\ setNombre(java.lang.String)
+comment3.text=\r\n\ \ mutador\ para\ el\ nombre\r\n
+comment4.params=pupitres
+comment4.target=void\ setPupitres(int)
+comment4.text=\r\n\ \ mutador\ para\ los\ pupitres\r\n
+comment5.params=
+comment5.target=void\ mostrar()
+comment5.text=\r\n\ \r\n
+numComments=6

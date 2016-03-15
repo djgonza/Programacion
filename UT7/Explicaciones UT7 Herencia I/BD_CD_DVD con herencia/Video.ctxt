@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=elTitulo\ elFormato\ duracion
+comment0.target=Video(java.lang.String,\ java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ de\ objetos\ de\ la\ clase\ Video\r\n
+comment1.params=
+comment1.target=java.lang.String\ getFormato()
+comment1.text=\r\n\ Devolver\ el\ formato\ del\ v\u00EDdeo\r\n
+numComments=2
