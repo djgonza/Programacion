@@ -27,7 +27,7 @@ public class SobreMesa extends Ordenador {
 		// TODO Auto-generated method stub
 		String temp = super.toString();
 
-		return temp += "Descripción " + descripcion;
+		return temp += "Descripciï¿½n " + descripcion;
 	}
 
 }

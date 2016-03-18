@@ -9,7 +9,9 @@ public class Portatil extends Ordenador {
 
 	private double peso;
 
-	public Portatil(String codigo, double precio, String slogan, double peso) {
+	public Portatil(String codigo, double precio, String slogan,
+			double peso) {
+
 		super(codigo, precio, slogan);
 		this.peso = peso;
 	}

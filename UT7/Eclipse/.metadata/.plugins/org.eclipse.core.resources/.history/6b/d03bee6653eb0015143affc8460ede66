@@ -1,0 +1,67 @@
+import java.util.ArrayList;
+
+/**
+ * 
+ * 
+ * @author
+ * @version
+ */
+public class Tienda {
+	private ArrayList<Ordenador> ordenadores;
+	private String nombre;
+
+	/**
+	 * Constructor
+	 */
+	public Tienda(String nombre) {
+
+		this.nombre = nombre;
+		ordenadores = new ArrayList<>();
+
+	}
+
+	/**
+	 *  
+	 */
+	public void addOrdenador(Ordenador ord) {
+
+		ordenadores.add(ord);
+
+	}
+
+	/**
+	 * 
+	 */
+	public int cuantosPortatiles() {
+		int contador = 0;
+		for (Ordenador ordenador : ordenadores) {
+			if(ordenador instanceof Portatil)
+				contador++;
+
+		}
+		return contador;
+
+	}
+
+	/**
+	 * 
+	 */
+	public String masBarato() {
+
+	}
+
+	/**
+	 * 
+	 */
+	public void borrarMasBarato() {
+
+	}
+
+	/**
+	 * 
+	 */
+	public String toString() {
+
+	}
+
+}

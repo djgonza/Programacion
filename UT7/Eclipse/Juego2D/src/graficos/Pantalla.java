@@ -15,12 +15,22 @@ public class Pantalla extends Canvas {
 
 	private static final long serialVersionUID = 1L;
 
+	// definimos la pantalla
 	private JFrame pantalla;
-	private static final int ANCHO = 1024;
-	private static final int ALTO = 768;
+	public static final int ANCHO = 1024;
+	public static final int ALTO = 768;
+
+	// definimos la zona a pintar
+	/*
+	 * alterando estos valores cambiamos la resolucion de la pantalla
+	 */
+	public static final int ANCHO_ZONA_PINTAR = 512;
+	public static final int ALTO_ZONA_PINTAR = 384;
 
 	private BufferedImage imagen;
 	public int[] pixeles;
+
+	private int fps;
 
 	public Pantalla() {
 
@@ -37,8 +47,10 @@ public class Pantalla extends Canvas {
 		pantalla.setVisible(true);
 		requestFocus();
 
-		this.imagen = new BufferedImage(ANCHO, ALTO, BufferedImage.TYPE_INT_RGB);
-		this.pixeles = ((DataBufferInt) imagen.getRaster().getDataBuffer()).getData();
+		this.imagen = new BufferedImage(ANCHO_ZONA_PINTAR,
+				ALTO_ZONA_PINTAR, BufferedImage.TYPE_INT_ARGB);
+		this.pixeles = ((DataBufferInt) imagen.getRaster().getDataBuffer())
+				.getData();
 
 	}
 
@@ -53,11 +65,15 @@ public class Pantalla extends Canvas {
 
 		// contexto para dibujar
 		Graphics g = buffer.getDrawGraphics();
-		// pintamos la imagen
+		// pintamos la imagen a pantalla completa
 		g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+		// pintamos la imagen
+		// g.drawImage(imagen, 0, 0, ANCHO_ZONA_PINTAR, ALTO_ZONA_PINTAR, this);
 		// personaje
 		g.setColor(Color.white);
 		g.fillRect(getWidth() / 2, getHeight() / 2, 32, 32);
+		// mostrar fps
+		g.drawString("FPS: " + fps, 10, 20);
 		// limpiamos el jframe
 		g.dispose();
 		// mostramos el hilo
@@ -67,7 +83,7 @@ public class Pantalla extends Canvas {
 
 	public void limpiar() {
 		for (int i = 0; i < pixeles.length; i++) {
-			pixeles[i] = 0;
+			pixeles[i] = Color.black.getRGB();
 		}
 	}
 
@@ -84,7 +100,8 @@ public class Pantalla extends Canvas {
 		for (int y = 0; y < ancho; y++) {
 			for (int x = 0; x < ancho; x++) {
 				int indicePixeles = ((columna + x) + (fila + y) * ANCHO);
-				if (indicePixeles > 0 && indicePixeles < this.pixeles.length)
+				if (indicePixeles > 0
+						&& indicePixeles < this.pixeles.length)
 					this.pixeles[indicePixeles] = pixeles[x + y * ancho];
 			}
 		}
@@ -97,6 +114,10 @@ public class Pantalla extends Canvas {
 
 	public static int getAlto() {
 		return ALTO;
+	}
+
+	public void setFps(int fps) {
+		this.fps = fps;
 	}
 
 }
