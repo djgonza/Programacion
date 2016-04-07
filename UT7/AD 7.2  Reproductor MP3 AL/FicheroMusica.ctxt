@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=titulo\ tama\u00F1o\ duracion
+comment0.target=FicheroMusica(java.lang.String,\ int,\ int)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ FicheroMusica\r\n
+comment1.params=
+comment1.target=int\ getDuracion()
+comment1.text=\r\n\ \ devuelve\ la\ duraci\u00F3n\ en\ segundos\ \ \r\n
+comment2.params=
+comment2.target=void\ display()
+comment2.text=\r\n\ Muestra\ los\ datos\ del\ fichero\ de\ m\u00FAsica\r\n\ La\ duraci\u00F3n\ se\ muestra\ en\ formato\ \ XX\:XX\ \ (minutos,\ segundos)\r\n
+numComments=3

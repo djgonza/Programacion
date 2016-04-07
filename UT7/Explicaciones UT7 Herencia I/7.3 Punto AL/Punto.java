@@ -4,18 +4,18 @@
  */
 public class Punto
 {
-     
+
     private int x;
     private int y;
 
     /**
      * Constructor  
      */
-    public Punto(int x, int y)
+    public Punto()
     {
-        this.x = x;
-        this.y = y;
-         
+        this.x = 0;
+        this.y = 0;
+
     }
 
     /**
@@ -24,36 +24,68 @@ public class Punto
      */
     public int getX()
     {
-         return x;
+        return x;
     }
-    
+
     /**
      *  
      * 
      */
     public int getY()
     {
-         return y;
+        return y;
     }
-    
+
     /**
      *  
      * 
      */
     public void setX(int x)
     {
-         this.x = x;
+        this.x = x;
     }
-    
+
     /**
      *  
      * 
      */
     public void setY(int y)
     {
-         this.y = y;
+        this.y = y;
     }
-    
+
+    /**
+     *  
+     */
+    public boolean equals(Object obj)
+    {
+        if(obj == null)
+        {
+            return false;
+        }
+
+        if(obj == this)
+        {
+            return true;
+        }
+
+        if(this.getClass() != obj.getClass())
+        {
+            return false;
+        }
+
+        Punto otro = (Punto) obj;
+        return this.x == otro.getX() && this.y == otro.getY();
+
+        //         if(obj = null || this.getClass() != obj.getClass() )
+        //             return false;
+        //         if(obj == this)
+        //             return true
+        // 
+        //         return this.x == (Punto) otro.getX() && this.y == (Punto) otro.getY();
+
+    }
+
     /**
      * 
      */
@@ -61,17 +93,5 @@ public class Punto
     {
         return x + "," + y;
     }
-    
-    /**
-     *  
-     */
-    public static void main(String[] args)
-    {
-        Punto a = new Punto(3, 5);
-        Punto3D b = new Punto3D();
-        b= (Punto3D) a;
-
-    }
-
 
 }

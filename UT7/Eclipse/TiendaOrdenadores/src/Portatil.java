@@ -9,10 +9,9 @@ public class Portatil extends Ordenador {
 
 	private double peso;
 
-	public Portatil(String codigo, double precio, String slogan,
-			double peso) {
+	public Portatil(String codigo, double precio, double peso) {
 
-		super(codigo, precio, slogan);
+		super(codigo, precio);
 		this.peso = peso;
 	}
 
@@ -24,12 +23,22 @@ public class Portatil extends Ordenador {
 		this.peso = peso;
 	}
 
+	public String getSlogan() {
+		return "Ideal para viajes";
+
+	}
+
+	public double calcularDescuento() {
+		return super.getPrecio() * 0.02;
+
+	}
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
 		String temp = super.toString();
 
-		temp += "Peso = " + peso;
+		temp += " Peso = " + peso;
 
 		return temp;
 

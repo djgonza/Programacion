@@ -1,0 +1,19 @@
+/**
+ * Clase CocheEconomico 
+ * 
+ * @author 
+ * @version 
+ */
+ 
+public class CocheEconomico  
+{
+           // sin atributos, solo los heredados
+          public CocheEconomico(  )
+          {
+               
+          }
+  
+         
+}
+
+

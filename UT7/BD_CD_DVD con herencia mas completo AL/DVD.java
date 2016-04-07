@@ -1,0 +1,36 @@
+/**
+ * La clase Video representa a un objeto Video. Se puede almacenar
+ *  y recuperar la información sobre un vídeo.
+ */
+public class DVD extends Articulo  
+{
+    private String director;
+
+    /**
+     * Constructor de objetos de la clase Video
+     */
+    public DVD(String elTitulo, String elDirector, int duracion)
+    {
+        super(elTitulo, duracion);
+        director = elDirector;
+    }
+
+    /**
+     * Devolver el director del vídeo
+     */
+    public String getDirector()
+    {
+        return director;
+    }
+    
+    /**
+     * Escribir detalles sobre el CD
+     * Redefinir print()
+     */
+    public String toString()
+    {
+        return super.toString() + 
+        "Director    " + director;
+    }
+   
+}

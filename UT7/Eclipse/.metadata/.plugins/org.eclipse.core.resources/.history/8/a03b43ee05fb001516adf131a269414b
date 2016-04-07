@@ -1,0 +1,117 @@
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+/**
+ * Clase GestorFiguras
+ * 
+ * 
+ */
+
+public class GestorFiguras {
+
+	private ArrayList<Figura> figuras; // la colecci�n de figuras
+
+	/**
+	 * Constructor de la clase GestorFiguras
+	 */
+	public GestorFiguras() {
+		figuras = new ArrayList<>();
+
+	}
+
+	/**
+	 * 
+	 * @param f
+	 *            una nueva figura a a�adir
+	 * 
+	 */
+	public void addFigura(Figura f) {
+		if (!figuras.contains(f))
+			figuras.add(f);
+
+	}
+
+	public void testMovible() {
+		Movible[] figMovible = new Movible[5];
+		figMovible[0] = new Circulo(3, 5, Color.BLACK, 7);
+		figMovible[1] = new Cuadrado(3, 5, Color.BLACK, 7);
+		figMovible[1].moverHorizontal(10);
+		System.out.println(figMovible[1].toString());
+	}
+
+	/**
+	 * 
+	 * Mostrar todas las figuras
+	 */
+	public void listarFiguras() {
+
+		this.listarFiguras(figuras);
+	}
+
+	/**
+	 * 
+	 */
+	private void listarFiguras(List<Figura> figuras) {
+
+		for (Figura figura : figuras) {
+			System.out.println(figura.toString() + '\n');
+
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @return la figura de mayor �rea
+	 */
+	public Figura mayorArea() {
+
+		Figura aDevolver = null;
+		double area = 0.0;
+		for (Figura figura : figuras) {
+			double areaCalculada = figura.calcularArea();
+			if (areaCalculada > area) {
+				area = areaCalculada;
+				aDevolver = figura;
+			}
+		}
+		return aDevolver;
+
+	}
+
+	/**
+	 * 
+	 * @param color
+	 *            el color de la figura a borrar
+	 * 
+	 */
+	public void borrarDeColor(Color color) {
+
+		Iterator<Figura> it = figuras.iterator();
+		while (it.hasNext()) {
+			Figura aux = it.next();
+			if (aux.getColor().equals(color))
+				it.remove();
+		}
+	}
+
+	/**
+	 * 
+	 * @param f
+	 *            la figura con la que comparar, se borrar las que son iguales a
+	 *            ella
+	 * 
+	 */
+	public void borrarIguales(Figura f) {
+		Iterator<Figura> it = figuras.iterator();
+		while (it.hasNext()) {
+			Figura aux = it.next();
+			if (aux.equals(f))
+				it.remove();
+		}
+
+	}
+
+}

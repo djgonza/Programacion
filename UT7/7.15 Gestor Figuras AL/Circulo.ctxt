@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=x\ y\ r
+comment0.target=Circulo(int,\ int,\ double)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Circulo\r\n\ @param\ x\ la\ coordenada\ x\ del\ centro\ del\ c\u00EDrculo\r\n\ @param\ y\ la\ coordenada\ y\ del\ centro\ del\ c\u00EDrculo\r\n\ @param\ r\ el\ radio\ del\ c\u00EDrculo\r\n
+comment1.params=
+comment1.target=double\ getRadio()
+comment1.text=\r\n\ \r\n\ @return\ el\ valor\ del\ radio\ \ \ \ \ \r\n
+comment2.params=
+comment2.target=double\ area()
+comment2.text=\r\n\ @return\ el\ \u00E1rea\ del\ c\u00EDrculo\r\n\ @override\ \ \ \ \ \r\n
+comment3.params=
+comment3.target=double\ perimetro()
+comment3.text=\r\n\ @param\ \ el\ per\u00EDmetro\r\n\ @override\ \ \ \ \ \r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ \r\n\ \ Representaci\u00F3n\ textual\ del\ c\u00EDrculo\r\n\ \ \ \ \r\n
+comment5.params=obj
+comment5.target=boolean\ equals(java.lang.Object)
+comment5.text=\r\n\ Redefinimos\ equals\ \r\n\ @override\r\n
+numComments=6

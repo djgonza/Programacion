@@ -1,0 +1,22 @@
+
+/**
+ * clase CocheDeportivo
+ * 
+ * @author
+ * @version
+ */
+
+public class CocheDeportivo extends Coche {
+	// sin atributos, solo los heredados
+
+	public CocheDeportivo() {
+
+	}
+
+	@Override
+	public void avanza() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

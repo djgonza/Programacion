@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.params=x\ y\ l1\ l2\ l3
+comment0.target=Triangulo(int,\ int,\ double,\ double,\ double)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Tri\u00E1ngulo\r\n\ @param\ x\ la\ coordenada\ x\ del\ centro\ del\ tri\u00E1ngulo\r\n\ @param\ y\ la\ coordenada\ y\ del\ centro\ del\ tri\u00E1ngulo\r\n\ @param\ l1\ un\ lado\ del\ c\u00EDrculo\r\n\ @param\ l2\ un\ lado\ del\ c\u00EDrculo\r\n\ @param\ l2\ un\ lado\ del\ c\u00EDrculo\r\n
+comment1.params=
+comment1.target=double\ getLado1()
+comment1.text=\r\n\ \ \r\n\ @return\ el\ primer\ lado\ \ \ \ \r\n
+comment2.params=
+comment2.target=double\ getLado2()
+comment2.text=\r\n\ \ \ \ \r\n\ @return\ el\ lado2\r\n
+comment3.params=
+comment3.target=double\ getLado3()
+comment3.text=\r\n\ \ \r\n\ @return\ el\ tercer\ lado\r\n
+comment4.params=
+comment4.target=double\ area()
+comment4.text=\r\n\ @return\ el\ \u00E1rea\ del\ tri\u00E1ngulo\r\n\ @override\ \ \ \ \ \r\n
+comment5.params=
+comment5.target=double\ perimetro()
+comment5.text=\r\n\ \ @return\ el\ per\u00EDmetro\ del\ tri\u00E1ngulo\r\n\ @override\ \ \ \ \ \r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\r\n\ \r\n\ @param\ \ \r\n\ @return\ \ \ \ \ \r\n
+comment7.params=obj
+comment7.target=boolean\ equals(java.lang.Object)
+comment7.text=\r\n\ Redefinimos\ equals\ \r\n\ @override\r\n
+numComments=8

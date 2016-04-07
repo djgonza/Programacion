@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=titulo\ tama\u00F1o
+comment0.target=FicheroImagen(java.lang.String,\ int)
+comment0.text=\r\n\ \r\n\ \r\n\ @param\ \r\n\ @return\t\t\r\n
+comment1.params=
+comment1.target=void\ display()
+numComments=2

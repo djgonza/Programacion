@@ -30,13 +30,11 @@ public class DemoTienda {
 	 * 
 	 */
 	public void addOrdenadores() {
-		Portatil p1 = new Portatil("P1", 799, "Ideal para viajes", 1.5);
-		Portatil p2 = new Portatil("P2", 599, "Ideal para viajes", 2);
-		Portatil p3 = new Portatil("P3", 499, "Ideal para viajes", 2.200);
-		SobreMesa s1 = new SobreMesa("s1", 799, "La mejor oferta",
-				"Intel Core i5 2,5 GHz");
-		SobreMesa s2 = new SobreMesa("s2", 1300, "Oferta semanal",
-				"Intel Core i7 2600");
+		Portatil p1 = new Portatil("P1", 799, 1.5);
+		Portatil p2 = new Portatil("P2", 599, 2);
+		Portatil p3 = new Portatil("P3", 499, 2.200);
+		SobreMesa s1 = new SobreMesa("s1", 799, "Intel Core i5 2,5 GHz");
+		SobreMesa s2 = new SobreMesa("s2", 1300, "Intel Core i7 2600");
 		tienda.addOrdenador(p1);
 		tienda.addOrdenador(p2);
 		tienda.addOrdenador(p3);

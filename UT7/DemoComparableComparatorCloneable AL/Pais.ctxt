@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=nombre\ superficie\ habitantes
+comment0.target=Pais(java.lang.String,\ double,\ int)
+comment0.text=\r\n\ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ \r\n
+comment2.params=
+comment2.target=double\ getSuperficie()
+comment2.text=\r\n\ \r\n
+comment3.params=superficie
+comment3.target=void\ setSuperficie(double)
+comment3.text=\r\n\ \r\n
+comment4.params=
+comment4.target=int\ getHabitantes()
+comment4.text=\r\n\ \r\n
+comment5.params=habitantes
+comment5.target=void\ setHabitantes(int)
+comment5.text=\r\n\ \r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\r\n\ \r\n
+numComments=7

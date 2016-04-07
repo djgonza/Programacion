@@ -1,0 +1,22 @@
+
+/**
+ *  clase CocheDeportivo 
+ * 
+ * @author 
+ * @version 
+ */
+ 
+public class CocheDeportivo  
+{
+          //sin atributos, solo los heredados
+
+          public CocheDeportivo( )
+          {
+               
+          }  
+          
+          
+          
+         
+}
+      

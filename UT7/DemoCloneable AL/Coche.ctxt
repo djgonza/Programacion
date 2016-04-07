@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=modelo
+comment0.target=Coche(java.lang.String)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getModelo()
+comment1.text=\r\n\ \ \r\n
+comment2.params=obj
+comment2.target=boolean\ equals(java.lang.Object)
+comment2.text=\r\n\ Redefinici\u00F3n\ de\ equals()\r\n
+comment3.params=
+comment3.target=Coche\ clone()
+comment3.text=\r\n\ redefinici\u00F3n\ de\ clone\r\n
+numComments=4

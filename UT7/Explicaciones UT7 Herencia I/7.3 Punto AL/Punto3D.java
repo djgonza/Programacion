@@ -12,9 +12,46 @@ public class Punto3D  extends Punto
      */
     public Punto3D()
     {
-      super (3, 5);   
-      z = 0;
+        super();
+        z = 0;
+         
     }
+    
+    /**
+     *  
+     */
+    public void print()
+    {
+        System.out.println(getX() + " - " + getY() + " - " + z );
+
+    }
+    
+    /**
+     *  
+     */
+    public int getZ()
+    {
+        return z;
+
+    }
+
+    
+     /**
+     *  
+     */
+    public boolean equals(Object obj)
+    {
+        if(super.equals(obj))
+        {
+            Punto3D otro = (Punto3D) obj;
+            return this.z == otro.getZ();
+        }
+        return false;
+        
+        
+
+    }
+
 
     
 }

@@ -1,0 +1,10 @@
+/**
+ * Clase CocheEconomico
+ * 
+ * @author
+ * @version
+ */
+
+public class CocheEconomico extends Coche {
+
+}

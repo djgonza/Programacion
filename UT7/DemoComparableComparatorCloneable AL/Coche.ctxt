@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=velocidad
+comment0.target=Coche(int)
+comment0.text=\r\n\ \r\n
+comment1.params=
+comment1.target=int\ getVelocidad()
+comment1.text=\r\n\ \r\n
+comment2.params=velocidad
+comment2.target=void\ setVelocidad(int)
+comment2.text=\r\n\ \r\n
+comment3.params=
+comment3.target=Coche\ clone()
+comment3.text=\r\n\ redefinici\u00F3n\ de\ clone\ \ \r\n
+comment4.params=otro
+comment4.target=int\ compareTo(Coche)
+comment4.text=\r\n\ \r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ \r\n
+numComments=6

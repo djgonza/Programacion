@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=nombre\ nota
+comment0.target=Alumno(java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ \ \r\n\ \r\n
+comment2.params=
+comment2.target=int\ getNota()
+comment2.text=\r\n\ \ \r\n\ \r\n
+comment3.params=obj
+comment3.target=boolean\ equals(java.lang.Object)
+comment3.text=\r\n\ Redefinici\u00F3n\ de\ equals()\r\n
+comment4.params=
+comment4.target=int\ hashCode()
+comment4.text=\r\n\ Redefinici\u00F3n\ de\ hashCode\r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ \ \r\n\ \r\n
+comment6.params=
+comment6.target=void\ print()
+comment6.text=\r\n\ \r\n
+numComments=7

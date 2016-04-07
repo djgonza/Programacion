@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=x\ y
-comment0.target=Punto(int,\ int)
+comment0.params=
+comment0.target=Punto()
 comment0.text=\r\n\ Constructor\ \ \r\n
 comment1.params=
 comment1.target=int\ getX()
@@ -14,10 +14,10 @@ comment3.text=\r\n\ \ \r\n\ \r\n
 comment4.params=y
 comment4.target=void\ setY(int)
 comment4.text=\r\n\ \ \r\n\ \r\n
-comment5.params=
-comment5.target=java.lang.String\ toString()
-comment5.text=\r\n\ \r\n
-comment6.params=args
-comment6.target=void\ main(java.lang.String[])
-comment6.text=\r\n\ \ \r\n
+comment5.params=obj
+comment5.target=boolean\ equals(java.lang.Object)
+comment5.text=\r\n\ \ \r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\r\n\ \r\n
 numComments=7

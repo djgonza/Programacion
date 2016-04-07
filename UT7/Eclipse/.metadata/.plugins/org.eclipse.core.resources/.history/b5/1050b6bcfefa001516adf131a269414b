@@ -1,0 +1,7 @@
+
+public interface Movible {
+
+	void moverHorizontal();
+	void moverVertical();
+
+}

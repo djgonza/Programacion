@@ -1,0 +1,18 @@
+
+/**
+ *  Representa a un taxi
+ */
+ 
+public class Taxi  
+{
+        
+
+        
+          public Taxi( )
+          {
+                 
+          }
+  
+         
+          
+}

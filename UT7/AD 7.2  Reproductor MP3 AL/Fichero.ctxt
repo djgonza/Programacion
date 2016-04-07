@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=titulo\ tama\u00F1o
+comment0.target=Fichero(java.lang.String,\ int)
+comment0.text=\r\n\ \r\n
+comment1.params=
+comment1.target=int\ getTama\u00F1o()
+comment1.text=\r\n\ \ \ \ \r\n
+comment2.params=
+comment2.target=java.lang.String\ getTitulo()
+comment2.text=\r\n\ \ \ \ \r\n
+comment3.params=
+comment3.target=void\ display()
+comment3.text=\r\n\ \ \ \ \r\n
+comment4.params=otro
+comment4.target=int\ compareTo(Fichero)
+comment4.text=\r\n\ \ \r\n
+comment5.params=obj
+comment5.target=boolean\ equals(java.lang.Object)
+comment5.text=\r\n\ \ \r\n
+numComments=6

@@ -1,0 +1,23 @@
+import java.awt.Point;
+
+/**
+ * Representa a un taxi
+ */
+
+public class Taxi extends Coche {
+
+	private int numeroPlazas;
+
+	public Taxi(String conductor, String tipo, String color,
+			Point posicion) {
+		super(conductor, tipo, color, posicion);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void avanza() {
+		// TODO Auto-generated method stub
+
+	}
+
+}
