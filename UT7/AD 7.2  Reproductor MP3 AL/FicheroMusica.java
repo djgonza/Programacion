@@ -32,6 +32,8 @@ public class FicheroMusica  extends Fichero
      */
     public void display()
     {
+        super.display();
+        System.out.println("Duracion "  + duracion/60 + ": " + duracion%60);
 
     }
 }

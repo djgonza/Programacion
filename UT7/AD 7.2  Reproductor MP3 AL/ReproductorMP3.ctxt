@@ -29,6 +29,6 @@ comment7.text=\r\n\ \ ordena\ la\ lista\ de\ ficheros\ por\ tama\u00F1o\r\n
 comment8.params=
 comment8.target=void\ ordenarPorTitulo()
 comment8.text=\r\n\ \ ordena\ la\ lista\ de\ ficheros\ por\ t\u00EDtulo\ de\ fichero\r\n\ \ \r\n
-comment9.params=f1\ f2
+comment9.params=fichero1\ fichero2
 comment9.target=int\ compare(Fichero,\ Fichero)
 numComments=11

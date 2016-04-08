@@ -3,16 +3,18 @@
  * clase FicheroJPG  
  *  
  */
-public class FicheroJPG  
+public class FicheroJPG  extends FicheroImagen
 {
 
-    
+    private Compresion compresion;
 
     /**
      * Constructor de la clase FicheroJPG
      */
     public FicheroJPG(String titulo, int tamaño, Compresion compresion)
     {
+        super(titulo, tamaño);
+        this.compresion = compresion;
        
     }
 
@@ -29,6 +31,8 @@ public class FicheroJPG
      */
     public void display()
     {
+        super.display();
+        System.out.println("Compresion " + compresion.name());
         
     }
 }
