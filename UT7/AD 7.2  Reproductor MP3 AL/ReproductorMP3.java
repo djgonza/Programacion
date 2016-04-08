@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Collections;
 import java.util.Comparator;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 /**
  * Clase ReproductorMP3 
  *  
@@ -80,7 +82,10 @@ public class ReproductorMP3
                 tiempo += ((FicheroMusica) fichero).getDuracion();
             }
         }
-        System.out.println("Total duración " + tiempo / 3600+":"+(tiempo%3600)/60+":"+(tiempo%3600)%60);
+        LocalTime tem = LocalTime.ofSecondOfDay(tiempo);
+        DateTimeFormatter formateador = DateTimeFormatter.ofPattern("HH:mm:ss");
+        System.out.println(tem.format(formateador));
+        //         System.out.println("Total duración " + tiempo / 3600+":"+(tiempo%3600)/60+":"+(tiempo%3600)%60);
 
     }
 
@@ -154,7 +159,7 @@ public class ReproductorMP3
             if(fichero instanceof FicheroJPG )
             {
                 fichero.display(); 
-                
+
             }
         }
     }
