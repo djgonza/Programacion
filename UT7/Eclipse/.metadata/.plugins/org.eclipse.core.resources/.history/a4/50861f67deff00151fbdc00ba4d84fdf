@@ -1,0 +1,13 @@
+
+public class Aula implements Comparable<Aula> {
+
+	private int superficie;
+	private String nombre;
+
+	@Override
+	public int compareTo(Aula aux) {
+		
+		return Math.signum(this.superficie - aux.get
+	}
+
+}
