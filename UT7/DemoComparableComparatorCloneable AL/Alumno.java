@@ -55,8 +55,6 @@ public class Alumno
        this.coche = c;
     }
 
-    
-
     /**
      * Redefinición de equals()
      */
