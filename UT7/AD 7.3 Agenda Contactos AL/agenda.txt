@@ -1,0 +1,14 @@
+1:Blanca López:948123456:29:3:1970
+2:Beltrán Iriarte:948456677:Empresa 01 D.A.
+1:Pepa Rus:675435672:15:4:1970
+1:Pablo Burgui:678897543:12:7:1980
+2:David Alsúa:948223344:Empresa 02 S.L.
+1:Blanca López:948123456:26:3:1970
+2:Beltrán Iriarte:948456677:Empresa 01 D.A.
+2:Berta Ruiz:616789654:Empresa 04 S.A.
+1:Juan García:948112333:29:3:1989
+1:Marisa Esteban:689123456:5:11:1981
+1:Isabel Ortiz:948131313:31:12:1990
+2:Juan García:948888888:Empresa XXX
+2:Juan García:655432126:Empresa JJJ
+1:Belinda Bosch:675231987:1:1:1980

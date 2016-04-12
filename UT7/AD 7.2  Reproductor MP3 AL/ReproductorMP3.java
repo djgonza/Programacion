@@ -163,4 +163,18 @@ public class ReproductorMP3
             }
         }
     }
+
+    public void ordenarPorTituloDescendente() {
+        ficheros.sort(Collections.reverseOrder());
+    }
+
+    public void ordenarPorTamañoDescendente(){
+        Collections.sort(ficheros, new Comparator<Fichero>(){
+                public int compare(Fichero fichero1, Fichero fichero2){
+                    return (int) Math.signum(fichero1.getTamaño() - fichero2.getTamaño());
+
+                }
+
+            });
+    }
 }
