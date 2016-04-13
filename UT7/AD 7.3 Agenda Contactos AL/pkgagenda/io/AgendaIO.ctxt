@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=agenda
+comment0.target=void\ cargar(pkgagenda.modelo.AgendaContactos)
+comment0.text=\r\n\ \ \r\n
+comment1.params=linea
+comment1.target=pkgagenda.modelo.Contacto\ parsearLinea(java.lang.String)
+comment1.text=\r\n\ \ \r\n
+numComments=2

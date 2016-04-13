@@ -1,5 +1,10 @@
 
 import java.util.List;
+import pkgagenda.modelo.AgendaContactos;
+import pkgagenda.modelo.Contacto;
+import pkgagenda.modelo.ContactoPersonal;
+import pkgagenda.modelo.ContactoProfesional;
+import pkgagenda.modelo.Fecha;
 
 /**
  * Demo de la agenda
