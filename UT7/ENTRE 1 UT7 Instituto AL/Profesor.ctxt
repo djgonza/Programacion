@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=id\ nombre\ fechaNacimiento\ depto\ dia
+comment0.target=Profesor(java.lang.String,\ java.lang.String,\ java.time.LocalDate,\ java.lang.String,\ Dia)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Profesor\r\n
+comment1.params=
+comment1.target=java.lang.String\ utilizarOrdenador()
+comment1.text=\r\n\ Un\ profesor\ utiliza\ un\ ordenador\ para\ poner\ notas\r\n\ \r\n\r\n
+comment2.params=
+comment2.target=Dia\ getDiaConferencia()
+comment2.text=\r\n\ \ Devuelve\ el\ d\u00EDa\ que\ da\ la\ conferencia\ el\ profesor\r\n\r\n\ \r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ \ Redefinici\u00F3n\ del\ m\u00E9todo\ toString()\r\n\r\n\ \r\n
+numComments=4

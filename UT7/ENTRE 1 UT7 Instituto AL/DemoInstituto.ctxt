@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DemoInstituto()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ DemoInstituto\r\n
+comment1.params=
+comment1.target=void\ altaPersonas()
+comment1.text=\r\n\ Alta\ personas\ en\ el\ instituto\r\n\ \r\n\ \ \ \ \ \r\n
+comment2.params=
+comment2.target=void\ mostrarInstituto()
+comment2.text=\r\n\ \ Mostrar\ las\ personas\ del\ instituo\ ordenadas\ de\ mayor\ a\ menor\ edad\r\n
+comment3.params=
+comment3.target=void\ demoQuienDaConferencias()
+comment3.text=\r\n\ \ Mostrar\ profesores\ que\ dan\ conferencias\ un\ determinado\r\n\ \ d\u00EDa\ de\ la\ semana\r\n\r\n\ \r\n
+comment4.params=
+comment4.target=void\ demoTotalEstudiantes()
+comment4.text=\r\n\ \ Demo\ cuantosEstudiantes()\r\n\r\n\ \r\n
+comment5.params=edad
+comment5.target=void\ demoBorrarEstudiantes(int)
+comment5.text=\r\n\ \ Demo\ borrarEstudiantes()\r\n\r\n\ \r\n
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+comment6.text=\r\n\ \ Punto\ entrada\ a\ la\ aplicaci\u00F3n\r\n
+numComments=7

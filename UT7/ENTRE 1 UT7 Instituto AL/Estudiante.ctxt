@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=id\ nombre\ fechaNacimiento
+comment0.target=Estudiante(java.lang.String,\ java.lang.String,\ java.time.LocalDate)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Estudiante\r\n\ Simularemos\ la\ nota\ generando\ un\ aleatorio\ entre\ 1\ y\ 1o\ (con\ Math.random())\r\n
+comment1.params=
+comment1.target=int\ getNota()
+comment1.text=\r\n\ Accesor\ para\ la\ nota\r\n
+comment2.params=
+comment2.target=java.lang.String\ utilizarOrdenador()
+comment2.text=\r\n\ Un\ estudiante\ utiliza\ un\ ordenador\ para\ hacer\ pr\u00E1cticas\r\n\ \r\n\r\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\r\n\ Redefinici\u00F3n\ del\ m\u00E9todo\ toString()\r\n
+numComments=4

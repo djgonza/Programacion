@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=FrecuenciaCoordenadas()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ FrecuenciaCoordenadas\r\n
+comment1.params=c
+comment1.target=void\ addCoordenada(Coordenada)
+comment1.text=\r\n\ \ A\u00F1ade\ una\ nueva\ \ coordenada\ al\ map.\ Si\ ya\ existe\ se\ incrementa\ su\ frecuencia,\r\n\ \ si\ no\ existe\ se\ crea\ una\ nueva\ entrada\ en\ el\ map\ (con\ la\ frecuencia\ 1)\r\n
+comment2.params=
+comment2.target=void\ mostrarCoordenadas()
+comment2.text=\r\n\ \ Mostrar\ cada\ \ coordenada\ junto\ con\ su\ frecuencia\r\n
+comment3.params=
+comment3.target=java.util.Set\ obtenerConjuntoOrdenado()
+comment3.text=\r\n\ \ Obtiene\ un\ conjunto\ ordenado\ (TreeSet)\ con\ \ todas\ las\ coordenadas\ diferentes\ \r\n\ \ que\ han\ aparecido\ \ de\ mayor\ a\ menor\ valor\ de\ coordenada\r\n\ \ Usa\ un\ constructor\ adecuado\ de\ la\ clase\ TreeSet\r\n\ \ \r\n\ \ \r\n
+comment4.params=
+comment4.target=java.util.List\ coordenadasFrecuenciaMaxima()
+comment4.text=\r\n\ \ Calcula\ y\ devuelve\ una\ colecci\u00F3n\ List\ (ArrayList)\ \r\n\ \ con\ \ las\ \ coordenadas\ de\ frecuencia\ m\u00E1xima\r\n\ \ \r\n\ \ Haz\ un\ solo\ recorrido\ del\ map\ con\ el\ conjunto\ de\ entradas\r\n
+comment5.params=
+comment5.target=void\ leerCoordenadasDeFichero()
+comment5.text=\r\n\ \ Lee\ datos\ del\ fichero\ \ coordenadas.txt\ \r\n\ \ y\ a\ partir\ de\ esos\ datos\ se\ a\u00F1aden\ las\ coordenadas\ al\ map\r\n
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+comment6.text=\r\n\ \ \ Punto\ de\ entrada\ a\ la\ aplicaci\u00F3n\ -\ C\u00F3digo\ de\ prueba\r\n
+numComments=7

@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.params=nombre
+comment0.target=Instituto(java.lang.String)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Instituto\r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ \ Accesor\ para\ el\ nombre\ del\ isntituo\r\n\r\n\ \r\n
+comment2.params=p
+comment2.target=void\ altaPersona(Persona)
+comment2.text=\r\n\ A\u00F1adir\ una\ nueva\ persona\ al\ instituto.\r\n\ Solo\ se\ a\u00F1ade\ si\ no\ est\u00E1\r\n\ \r\n\ @param\ \ p\ la\ persona\ a\ a\u00F1adir\r\n\ \ \ \r\n
+comment3.params=
+comment3.target=int\ cuantosEstudiantes()
+comment3.text=\r\n\ \ Devuelve\ el\ n\u00BA\ de\ estudiante\ en\ el\ instituto\r\n\ \ \ \r\n\ \ \ \r\n
+comment4.params=
+comment4.target=void\ mostrar()
+comment4.text=\r\n\ \ Muestra\ todas\ la\ personas\ \ ordenadas\ de\ mayor\ a\ menor\ edad\r\n\ \ Sin\ modificar\ la\ colecci\u00F3n\ original\r\n\ \ \ \r\n
+comment5.params=p1\ p2
+comment5.target=int\ compare(Persona,\ Persona)
+comment6.params=d
+comment6.target=java.util.List\ quienDaConferenciasEn(Dia)
+comment6.text=\r\n\ \ Profesores\ que\ dan\ conferencias\ un\ determinado\ d\u00EDa\ de\ la\ semana\r\n\ \ La\ lista\ de\ profesores\ se\ devuelve\ ordenada\ por\ nombre\r\n\ \r\n
+comment7.params=edad
+comment7.target=java.util.List\ borrarEstudiantes(int)
+comment7.text=\r\n\ \ Borra\ los\ estudiantes\ de\ edad\ menor\ a\ la\ indicada\r\n\ y\ devuelve\ los\ borrados\ en\ una\ lista\r\n\ \r\n
+numComments=8

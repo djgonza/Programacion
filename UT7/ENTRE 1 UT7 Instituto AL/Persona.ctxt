@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=id\ nombre\ fechaNacimiento
+comment0.target=Persona(java.lang.String,\ java.lang.String,\ java.time.LocalDate)
+comment0.text=\r\n\ Constructor\ de\ persona\r\n\ \ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getId()
+comment1.text=\r\n\ Accesor\ para\ el\ id\ \ de\ la\ persona\r\n
+comment2.params=
+comment2.target=java.lang.String\ getNombre()
+comment2.text=\r\n\ Accesor\ para\ el\ nombre\ de\ la\ persona\r\n
+comment3.params=
+comment3.target=java.time.LocalDate\ getFechaNacimiento()
+comment3.text=\r\n\ Accesor\ para\ la\ fecha\ de\ nacimiento\r\n
+comment4.params=obj
+comment4.target=boolean\ equals(java.lang.Object)
+comment4.text=\r\n\ \ Redefinici\u00F3n\ del\ m\u00F3todo\ equals()\r\n\r\n\ Dos\ personas\ son\ iguales\ si\ son\ del\ mismo\ tipo\ y\ tienen\ el\ mismo\ identificador\r\n
+comment5.params=
+comment5.target=int\ hashCode()
+comment5.text=\r\n\ \r\n\ \ Redefinici\u00F3n\ de\ hashCode()\r\n\ @override\ \ \ \ \r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment6.text=\r\n\ Devuelve\ una\ representaci\u00F3n\ de\ la\ persona\ (ver\ figura)\r\n
+numComments=7
