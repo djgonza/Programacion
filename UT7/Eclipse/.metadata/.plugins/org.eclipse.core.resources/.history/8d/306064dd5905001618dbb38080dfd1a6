@@ -82,20 +82,10 @@ public class FrecuenciaCoordenadas {
 	public List<Coordenada> coordenadasFrecuenciaMaxima() {
 
 		List<Coordenada> temp = new ArrayList<>();
-		int mayor = 0;
 
 		for (Entry<Coordenada, Contador> el : map.entrySet()) {
-			int valor = el.getValue().getValor();
-			if (valor > mayor) {
-				temp.clear();
-				mayor = valor;
+			if (el.getValue().getValor() > 1)
 				temp.add(el.getKey());
-			} else {
-				if (valor == mayor) {
-					temp.add(el.getKey());
-				}
-			}
-
 		}
 
 		temp.sort(Comparator.reverseOrder());

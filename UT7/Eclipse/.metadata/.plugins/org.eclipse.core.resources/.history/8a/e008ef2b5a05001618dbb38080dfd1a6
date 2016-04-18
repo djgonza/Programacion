@@ -89,10 +89,10 @@ public class FrecuenciaCoordenadas {
 			if (valor > mayor) {
 				temp.clear();
 				mayor = valor;
-				temp.add(el.getKey());
 			} else {
 				if (valor == mayor) {
 					temp.add(el.getKey());
+
 				}
 			}
 

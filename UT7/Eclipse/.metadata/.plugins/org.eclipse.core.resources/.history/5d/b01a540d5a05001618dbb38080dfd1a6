@@ -86,16 +86,16 @@ public class FrecuenciaCoordenadas {
 
 		for (Entry<Coordenada, Contador> el : map.entrySet()) {
 			int valor = el.getValue().getValor();
-			if (valor > mayor) {
+			if (valor > mayor){
 				temp.clear();
 				mayor = valor;
-				temp.add(el.getKey());
-			} else {
-				if (valor == mayor) {
+			}else{
+				if (valor == mayor){
 					temp.add(el.getKey());
+					
 				}
 			}
-
+			
 		}
 
 		temp.sort(Comparator.reverseOrder());
