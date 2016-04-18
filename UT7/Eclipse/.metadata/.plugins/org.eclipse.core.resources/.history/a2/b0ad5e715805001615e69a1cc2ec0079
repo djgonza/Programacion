@@ -51,11 +51,9 @@ public class FrecuenciaCoordenadas {
 	 */
 	public void mostrarCoordenadas() {
 
-		System.out.println(
-				String.format("%20s %-20s", "Coordenada", "Frecuencia"));
+		System.out.println(String.format("%20s %-20s", "Coordenada", "Frecuencia"));
 		for (Entry<Coordenada, Contador> el : map.entrySet()) {
-			System.out.println(String.format("%20s : %-10s", el.getKey(),
-					el.getValue()));
+			System.out.println(String.format("%20s : %-10s", el.getKey(), el.getValue()));
 		}
 
 	}
@@ -104,15 +102,12 @@ public class FrecuenciaCoordenadas {
 			Scanner sc = new Scanner(f);
 			while (sc.hasNextLine()) {
 				String[] strCoordenadas = sc.nextLine().split(",");
-				Coordenada c = new Coordenada(
-						Integer.parseInt(strCoordenadas[0]),
-						Integer.parseInt(strCoordenadas[1]));
+				Coordenada c = new Coordenada(Integer.parseInt(strCoordenadas[0]), Integer.parseInt(strCoordenadas[1]));
 				addCoordenada(c);
 			}
 			sc.close();
 		} catch (IOException e) {
-			System.out.println(
-					"Error al procesar fichero " + e.getMessage());
+			System.out.println("Error al procesar fichero " + e.getMessage());
 		}
 
 	}
@@ -125,11 +120,9 @@ public class FrecuenciaCoordenadas {
 		demo.leerCoordenadasDeFichero();
 		demo.mostrarCoordenadas();
 		System.out.println(
-				" \n\nCoordenadas con mayor frecuencia de aparición "
-						+ demo.coordenadasFrecuenciaMaxima().toString());
-		System.out.println(
-				"\n\nValores del TreeSet (en orden decreciente de coordenada)\n"
-						+ demo.obtenerConjuntoOrdenado().toString());
+				" \n\nCoordenadas con mayor frecuencia de aparición " + demo.coordenadasFrecuenciaMaxima().toString());
+		System.out.println("\n\nValores del TreeSet (en orden decreciente de coordenada)\n"
+				+ demo.obtenerConjuntoOrdenado().toString());
 	}
 
 }
