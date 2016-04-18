@@ -90,12 +90,10 @@ public class FrecuenciaCoordenadas {
 				temp.clear();
 				mayor = valor;
 				temp.add(el.getKey());
-			} else {
-				if (valor == mayor) {
-					temp.add(el.getKey());
-				}
+			} else if (valor == mayor) {
+				temp.add(el.getKey());
 			}
-
+			
 		}
 
 		temp.sort(Comparator.reverseOrder());
