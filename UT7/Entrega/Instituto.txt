@@ -1,0 +1,339 @@
+-------------------------------------------------------------------------------
+import java.time.LocalDate;
+
+/**
+ * Clase que representa a un estudiante Un estudiante es una persona que incluye
+ * además la nota media final obtenida en el curso
+ * 
+ */
+public class Estudiante extends Persona {
+
+	private int notaFinal;
+
+	/**
+	 * Constructor de la clase Estudiante Simularemos la nota generando un
+	 * aleatorio entre 1 y 1o (con Math.random())
+	 */
+	public Estudiante(String id, String nombre, LocalDate fechaNacimiento) {
+		super(id, nombre, fechaNacimiento);
+		this.notaFinal = (int) (Math.round(9) + 1);
+	}
+
+	public int getNotaFinal() {
+		return notaFinal;
+	}
+
+	public void setNotaFinal(int notaFinal) {
+		this.notaFinal = notaFinal;
+	}
+
+	/**
+	 * Redefinición del método toString()
+	 */
+	public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("Clase: " + this.getClass());
+		sb.append("\nUtiliza el ordenador para hacer prácticas");
+		sb.append(super.toString());
+		sb.append("\nNota: " + notaFinal);
+		return sb.toString();
+
+	}
+
+}
+-------------------------------------------------------------------------------
+
+/**
+ *  Representa a un instituto de formación profesional
+ *  en el que trabajan profesores y estudian alumnos.
+ * 
+ * 
+ */
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Instituto {
+	private String nombre;
+	private List<Persona> personas;
+
+	/**
+	 * Constructor de la clase Instituto
+	 */
+	public Instituto(String nombre) {
+		this.nombre = nombre;
+		this.personas = new ArrayList<>();
+
+	}
+
+	/**
+	 * Accesor para el nombre del instituto
+	 *
+	 * 
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	/**
+	 * Añadir una nueva persona al instituto. Solo se añade si no está
+	 * 
+	 * @param p
+	 *            la persona a añadir
+	 * 
+	 */
+	public void altaPersona(Persona p) {
+		if (!personas.contains(p))
+			personas.add(p);
+	}
+
+	/**
+	 * Devuelve el nº de estudiante en el instituto
+	 * 
+	 * 
+	 */
+	public int cuantosEstudiantes() {
+
+		int cont = 0;
+		for (Persona persona : personas) {
+			if (persona instanceof Estudiante)
+				cont++;
+		}
+		return cont;
+
+	}
+
+	/**
+	 * Muestra todas la personas ordenadas de mayor a menor edad Sin modificar
+	 * la colección original
+	 * 
+	 */
+	public void mostrar() {
+
+		ArrayList<Persona> temp = new ArrayList<>();
+		temp.addAll(personas);
+		temp.sort(new Comparator<Persona>() {
+
+			@Override
+			public int compare(Persona o1, Persona o2) {
+				return (int) Math.signum(o2.getEdad() - o1.getEdad());
+			}
+
+		});
+		System.out.println(temp);
+
+	}
+
+	/**
+	 * Profesores que dan conferencias un determinado día de la semana La lista
+	 * de profesores se devuelve ordenada por nombre
+	 * 
+	 */
+	public List<Profesor> quienDaConferenciasEn(Dia d) {
+
+		List<Profesor> temp = new LinkedList<>();
+		for (Persona persona : personas) {
+			if (persona instanceof Profesor)
+				temp.add((Profesor) persona);
+		}
+		return temp;
+	}
+
+	/**
+	 * Borra los estudiantes de edad menor a la indicada y devuelve los borrados
+	 * en una lista
+	 * 
+	 */
+	public List<Persona> borrarEstudiantes(int edad) {
+
+		List<Persona> temp = new ArrayList<>();
+
+		Iterator<Persona> it = personas.iterator();
+
+		while (it.hasNext()) {
+
+			Persona persona = it.next();
+
+			if (persona instanceof Estudiante) {
+				if (((Estudiante) persona).getEdad() < edad) {
+					temp.add(persona);
+					it.remove();
+				}
+			}
+
+		}
+
+		return temp;
+
+	}
+
+}
+-------------------------------------------------------------------------------
+
+/**
+ * Define una persona. 
+ * Toda persona tiene asociado un identificador, un nombre y una fecha de nacimiento
+ *  Es capaz además de usar un ordenador
+ *  
+ *  Es una clase de la que no se crearán instancias
+ *  
+ *  Toda persona puede compararse por su nombre, este será su orden natural
+ *  
+ * 
+ */
+
+import java.time.LocalDate;
+import java.time.Period;
+
+public abstract class Persona implements Comparable {
+
+	private String id;
+	private String nombre;
+	private LocalDate fechaNacimiento;
+
+	/**
+	 * Constructor de persona
+	 * 
+	 */
+	public Persona(String id, String nombre, LocalDate fechaNacimiento) {
+		this.id = id;
+		this.nombre = nombre;
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	/**
+	 * Accesor para el id de la persona
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * Accesor para el nombre de la persona
+	 */
+	public String getNombre() {
+		return nombre;
+	}
+
+	public int compareTo(Object obj) {
+
+		return this.nombre.compareTo(((Persona) obj).getNombre());
+
+	}
+
+	/**
+	 * Accesor para la fecha de nacimiento
+	 */
+	public LocalDate getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	/**
+	 * Accesor para la edad
+	 * 
+	 * @return edad
+	 */
+
+	public int getEdad() {
+
+		return Period.between(fechaNacimiento, LocalDate.now()).getYears();
+
+	}
+
+	/**
+	 * Redefinición del mótodo equals()
+	 *
+	 * Dos personas son iguales si son del mismo tipo y tienen el mismo
+	 * identificador
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Persona other = (Persona) obj;
+		if (nombre == null) {
+			if (other.nombre != null)
+				return false;
+		} else if (!nombre.equals(other.nombre))
+			return false;
+		return true;
+	}
+
+	/**
+	 * 
+	 * Redefinición de hashCode()
+	 * 
+	 * @override
+	 */
+	public int hashCode() {
+		return id.hashCode() + nombre.hashCode();
+	}
+
+	/**
+	 * Devuelve una representación de la persona (ver figura)
+	 */
+	public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("\nId: " + this.getId());
+		sb.append("  Nombre: " + this.getNombre());
+		sb.append("\nEdad: " + getEdad());
+		return sb.toString();
+	}
+
+}
+-------------------------------------------------------------------------------
+import java.time.LocalDate;
+
+/**
+ * Clase que representa a un profesor Un profesor es una persona que pertence a
+ * un departamento Un profesor además es conferenciante y da conferencias un
+ * determinado día
+ * 
+ */
+public class Profesor extends Persona implements Conferenciante {
+
+	private Dia daConferencias;
+	private String departamento;
+
+	/**
+	 * Constructor de la clase Profesor
+	 */
+	public Profesor(String id, String nombre, LocalDate fechaNacimiento, String departamento, Dia daConferencias) {
+		super(id, nombre, fechaNacimiento);
+		this.daConferencias = daConferencias;
+		this.departamento = departamento;
+	}
+
+	/**
+	 * Redefinición del método toString()
+	 *
+	 * 
+	 */
+	public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+
+		sb.append("Clase: " + this.getClass());
+		sb.append("\nEl profesor " + getNombre() + " utiliza el ordenador para poner notas");
+		sb.append(super.toString());
+		sb.append("\nDa conferencias el: " + daConferencias);
+		return sb.toString();
+
+	}
+
+	@Override
+	public Dia getDiaConferencia() {
+		return daConferencias;
+	}
+
+}
