@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.util.Collections;
 import java.util.Comparator;
-
+import java.util.Iterator;
 public class AgendaContactos  implements Visualizable
 {
     private Map<Character, List<Contacto>> agenda;
@@ -106,9 +106,13 @@ public class AgendaContactos  implements Visualizable
         for(Map.Entry<Character,List<Contacto>> entrada: tmp)
         {
 
-            aDevolver.addAll(localizarCumpleaños(entrada.getValue()));
+            //aDevolver.addAll(localizarCumpleaños(entrada.getValue()));
+            for(ContactoPersonal cp : localizarCumpleaños(entrada.getValue())){
+                System.out.println("ContactoPersonal");
+            }
 
         }
+        //System.out.println(aDevolver.size() + "Sizeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
         return aDevolver;
 
     }
@@ -122,16 +126,18 @@ public class AgendaContactos  implements Visualizable
      */
     private  List<ContactoPersonal> localizarCumpleaños(List<Contacto> contactosLetra)
     {
-        List<ContactoPersonal> aDevolver = new ArrayList<ContactoPersonal>();
-
+        List<ContactoPersonal> aDevolver = new ArrayList<>();
         for(Contacto c : contactosLetra){
             if(c instanceof ContactoPersonal){
                 ContactoPersonal cp = (ContactoPersonal) c;
-                if(cp.esCumpleaños())
+                if(cp.esCumpleaños()){
                     aDevolver.add(cp);
+                    //System.out.println("Es compleaños");
+                }
             }
 
         }
+        //System.out.println(aDevolver.size() + "Akiiiiiiiiiii!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
         return aDevolver;
     }
 
@@ -143,8 +149,19 @@ public class AgendaContactos  implements Visualizable
      */
     public String toString()
     {
-
-        return agenda.toString();
+        Set<Map.Entry<Character,List<Contacto>>> entradas = agenda.entrySet();
+        Iterator<Map.Entry<Character,List<Contacto>>> it = entradas.iterator();
+        StringBuilder st = new StringBuilder();
+        while(it.hasNext())
+        {
+            Map.Entry<Character,List<Contacto>> temp = it.next();
+            st.append(String.format("\n%20c", temp.getKey()));
+            for(Contacto cont : temp.getValue()){
+                st.append(String.format("\n%-20s", cont.toString()));
+            }
+        }
+        
+        return st.toString();
     }
 
     /**

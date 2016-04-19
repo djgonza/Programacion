@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=nombre\ telefono\ fecha
+comment0.target=ContactoPersonal(java.lang.String,\ java.lang.String,\ Fecha)
+comment0.text=\r\n\ Constructor\ de\ objetos\ de\ la\ clase\ ContactoPersonal\r\n
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment1.text=\r\n\ toString()\r\n\ \ \r\n
+comment2.params=
+comment2.target=java.lang.String\ getFirmaEmail()
+comment2.text=\r\n\ \ \r\n
+comment3.params=
+comment3.target=Fecha\ getFechaNacimiento()
+comment3.text=\r\n\ \ \r\n
+comment4.params=obj
+comment4.target=boolean\ equals(java.lang.Object)
+comment4.text=\r\n\ \ \r\n
+comment5.params=
+comment5.target=boolean\ esCumplea\u00F1os()
+comment5.text=\r\n\ M\u00E9todo\ que\ detecta\ si\ hoy\ es\ el\ cumplea\u00F1os\r\n\ del\ contacto\ personal\r\n\r\n\ \r\n\ @return\ \ \ true\ si\ lo\ es\r\n
+numComments=6

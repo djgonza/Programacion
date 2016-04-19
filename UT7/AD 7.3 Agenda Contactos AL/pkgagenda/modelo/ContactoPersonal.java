@@ -70,7 +70,12 @@ public class ContactoPersonal  extends Contacto
      */
     public boolean esCumpleaños()
     {
-        return LocalDate.now().getDayOfMonth() == fechaNacimiento.getMes() &&
+        
+        System.out.println(LocalDate.now().getMonthValue() + " : " +
+                            fechaNacimiento.getMes() + " : " + 
+                            LocalDate.now().getDayOfWeek().getValue() + " : " + 
+                            fechaNacimiento.getDia());
+        return LocalDate.now().getMonthValue() == fechaNacimiento.getMes() &&
         LocalDate.now().getDayOfWeek().getValue() == fechaNacimiento.getDia(); 
 
     }
