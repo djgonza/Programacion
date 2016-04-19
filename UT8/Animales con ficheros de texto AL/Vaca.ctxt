@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=nombre\ patas\ due\u00F1o
+comment0.target=Vaca(java.lang.String,\ int,\ Persona)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=java.lang.String\ emitirSonido()
+comment1.text=\r\n\ \ \r\n\ @override\ \ \ \ \ \r\n
+comment2.params=
+comment2.target=java.lang.String\ comer()
+comment2.text=\r\n\ \ \r\n\ @override\ \ \ \ \ \r\n
+numComments=3

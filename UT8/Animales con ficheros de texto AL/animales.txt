@@ -1,0 +1,8 @@
+﻿1,Max,4,juan,24,sofá
+2,caty,4,elena,21,zapato
+3,paca,4,ramón,65
+2,caty,4,elena,21,zapato
+2,manola,4,jesús,33,peluche
+2,caty,4,elena,21,zapato
+3,luisa,4,angel,43
+1,Max,4,juan,24,sofá

@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=importe
+comment0.target=Cuenta(double)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=double\ getImporte()
+comment1.text=\r\n\ Accesor\ para\ el\ importe\r\n
+comment2.params=cantidad
+comment2.target=void\ ingresar(double)
+comment2.text=\r\n\ \ A\u00F1adir\ una\ cantidad\r\n\ \ Si\ la\ cantidad\ es\ <\=\ 0\ se\ lanza\ y\ se\ avisa\ de\ la\ excepci\u00F3n\r\n\ \ IllegalArgumentException\r\n\ \ \r\n
+comment3.params=cantidad
+comment3.target=void\ sacar(double)
+comment3.text=\r\n\ \ Reintegra\ de\ la\ cuenta\ la\ cantidad\ indicada\r\n\ \ Si\ la\ cantidad\ es\ <\=\ 0\ se\ lanza\ y\ se\ avisa\ de\ la\ excepci\u00F3n\r\n\ \ IllegalArgumentException\r\n\ \ Si\ se\ quiera\ sacar\ m\u00E1s\ cantidad\ de\ la\ que\ hay\ se\ lanza\r\n\ \ la\ excepci\u00F3n\ personalizada\ SaldoInsuficienteException\r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ \r\n
+numComments=5

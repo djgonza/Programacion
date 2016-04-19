@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=a\ b\ cadena
+comment0.target=MasEjemplosFactorial(int,\ int,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ EjemploExcepciones\r\n
+comment1.params=
+comment1.target=int\ factorial1()
+comment1.text=\r\n\ Qu\u00E9\ estamos\ haciendo\ aqu\u00ED?\r\n\ Tipo\ de\ excepci\u00F3n\:\ \r\n
+comment2.params=
+comment2.target=void\ escribirLongitudCadena1()
+comment2.text=\r\n\ Qu\u00E9\ estamos\ haciendo\ aqu\u00ED?\r\n\ Tipo\ de\ excepci\u00F3n\:\r\n
+comment3.params=
+comment3.target=void\ escribirLongitudCadena2()
+comment3.text=\r\n\ Qu\u00E9\ estamos\ haciendo\ aqu\u00ED?\r\n\ Tipo\ de\ excepci\u00F3n\:\r\n
+comment4.params=
+comment4.target=void\ escribirLongitudCadena3()
+comment4.text=\r\n\ Qu\u00E9\ estamos\ haciendo\ aqu\u00ED?\r\n\ Tipo\ de\ excepci\u00F3n\:\r\n
+numComments=5

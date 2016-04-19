@@ -106,10 +106,10 @@ public class AgendaContactos  implements Visualizable
         for(Map.Entry<Character,List<Contacto>> entrada: tmp)
         {
 
-            //aDevolver.addAll(localizarCumpleaños(entrada.getValue()));
-            for(ContactoPersonal cp : localizarCumpleaños(entrada.getValue())){
-                System.out.println("ContactoPersonal");
-            }
+            aDevolver.addAll(localizarCumpleaños(entrada.getValue()));
+//             for(ContactoPersonal cp : localizarCumpleaños(entrada.getValue())){
+//                 System.out.println("ContactoPersonal");
+//             }
 
         }
         //System.out.println(aDevolver.size() + "Sizeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
@@ -126,13 +126,14 @@ public class AgendaContactos  implements Visualizable
      */
     private  List<ContactoPersonal> localizarCumpleaños(List<Contacto> contactosLetra)
     {
+        System.out.println(contactosLetra.toString());
         List<ContactoPersonal> aDevolver = new ArrayList<>();
         for(Contacto c : contactosLetra){
             if(c instanceof ContactoPersonal){
                 ContactoPersonal cp = (ContactoPersonal) c;
                 if(cp.esCumpleaños()){
                     aDevolver.add(cp);
-                    //System.out.println("Es compleaños");
+                    System.out.println("Es compleaños");
                 }
             }
 

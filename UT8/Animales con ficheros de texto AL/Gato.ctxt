@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=nombre\ patas\ due\u00F1o\ juguete
+comment0.target=Gato(java.lang.String,\ int,\ Persona,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getJuguete()
+comment1.text=\r\n\ @accesor\ para\ el\ juguete\ \ \r\n
+comment2.params=
+comment2.target=java.lang.String\ emitirSonido()
+comment2.text=\r\n\ \ m\ \ \r\n\ @override\ \ \ \ \ \r\n
+comment3.params=
+comment3.target=java.lang.String\ comer()
+comment3.text=\r\n\ \ \r\n\ @override\ \ \ \ \ \r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ \ @override\ \ \r\n
+numComments=5

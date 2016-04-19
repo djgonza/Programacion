@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=queNombre\ queEdad
+comment0.target=Persona(java.lang.String,\ int)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Persona\r\n
+comment1.params=
+comment1.target=java.lang.String\ getNombre()
+comment1.text=\r\n\ accesor\ para\ el\ nombre\r\n
+comment2.params=
+comment2.target=int\ getEdad()
+comment2.text=\r\n\ accesor\ para\ la\ edad\r\n
+comment3.params=obj
+comment3.target=boolean\ equals(java.lang.Object)
+comment3.text=\r\n\ @override\r\n
+comment4.params=
+comment4.target=int\ hashCode()
+comment4.text=\r\n\ @override\r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ @override\r\n
+numComments=6
