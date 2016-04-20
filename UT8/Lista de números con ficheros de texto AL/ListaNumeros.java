@@ -13,7 +13,7 @@ import java.util.InputMismatchException;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
-
+import java.io.FileNotFoundException;
 /**
  *  La clase guarda en una colección ArrayList una
  *  lista de números enteros
@@ -66,7 +66,27 @@ public class ListaNumeros
      */
     public void salvarEnFicheroDeTexto(String nombre) 
     {
-       
+        File f = null;
+        PrintWriter pw = null;
+
+        try {
+            f = new File(nombre);
+            pw = new PrintWriter(f);
+            for(Integer numero: lista)
+            {
+                pw.println(numero);
+            }
+
+        }
+        catch(FileNotFoundException e )
+        {
+            System.out.println("Fichero no encontrado");
+        }
+        finally
+        {
+            if(pw != null)
+                pw.close();
+        }
 
     }
 
@@ -83,7 +103,41 @@ public class ListaNumeros
      */
     public void leerFicheroDeTexto(String nombre)  
     {
-        
+        File f = null;
+        BufferedReader br = null;
+        try{
+            f = new File (nombre);
+            br = new BufferedReader(new FileReader(f));
+            String linea = br.readLine();
+            while(linea != null)
+            {
+                lista.add(Integer.parseInt(linea));
+
+                linea = br.readLine();
+            }
+        }
+        catch(FileNotFoundException e )
+        {
+            System.out.println("Fichero no encontrado");
+        }
+        catch(IOException e )
+        {
+            System.out.println("Fichero no encontrado");
+        }
+        finally
+
+        {
+            try{
+                if(br !=null)
+                    br.close();
+            }
+            catch(IOException e)
+            {
+               System.out.println("Error"); 
+            }
+
+        }
+
     }
 
     /**
@@ -99,7 +153,7 @@ public class ListaNumeros
      */
     public void leerFicheroDeTextoFileChooser()  
     {
-       
+
     }
 
     /**
@@ -138,7 +192,7 @@ public class ListaNumeros
      */
     public void leerFicheroDeTextoConScanner(String nombre)  
     {
-       
+
     }
 
     /**
@@ -161,8 +215,6 @@ public class ListaNumeros
     {
         System.out.println(this.toString());
     }
-
-    
 
     public static void main(String args[])
     {

@@ -48,6 +48,13 @@ public class Granja
      */
     public boolean estaAnimal(Animal a)
     {
+        for(int i = 0; i < total; i++)
+        {
+            if(animales[i].equals(a))
+                return true;
+
+        }
+        return false;
 
     }
 
@@ -58,7 +65,11 @@ public class Granja
      */
     public Animal getAnimal(int i)
     {
-
+        if(i < 0 || i >= total)
+        {
+            throw new IllegalArgumentException("Posición incorrecta");
+        }
+        return animales[i];
     }
 
     /**
@@ -121,9 +132,35 @@ public class Granja
      */
     public void cargarDeFicheroTexto(String nombre)
     {
-        File f = new File(nombre);
-        entrada = new BufferedReader(new FileReader(f));
+        File f = null;
+        BufferedReader entrada = null;
+        try{
+            f = new File(nombre);
+            entrada = new BufferedReader(new FileReader(f));
+            String linea = entrada.readLine();
+            while(linea != null)
+            { 
+                addAnimal(parsearLinea(linea));
+//                 animales[total] = parsearLinea(linea);
+//                 total++;
+                linea = entrada.readLine();
+            }
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.println("Fichero no encontrado");
 
+        }catch (IOException e){
+            System.out.println("Error de lectura");
+        }finally{
+            if(entrada != null){
+                try{
+                    entrada.close();    
+                }catch(IOException e){
+                    System.out.println("Error de lectura");
+                }
+            }
+        }
     }
 
     /**
@@ -138,12 +175,29 @@ public class Granja
     private Animal parsearLinea(String linea)
     {
         String[] datos = linea.split(",");
-        String nombre = datos[1];
-        int patas = Integer.parseInt(datos[2]);
-        String dueño = datos[3];
-        int  edad = Integer.parseInt(datos[4]);
+        System.out.println(datos[0]);
+        //int tipo = Integer.parseInt(datos[0]);
+        String nombre = datos[1].trim();
+        int patas = Integer.parseInt(datos[2].trim());
+        String dueño = datos[3].trim();
+        int  edad = Integer.parseInt(datos[4].trim());
         Persona p = new Persona(dueño, edad);
 
+        Animal animal = null;
+
+        if(datos[0].equals("1")){
+            animal = new Perro(nombre, patas, p, datos[5]);
+        }
+
+        if(datos[0].equals("2")){
+            animal = new Gato(nombre, patas, p, datos[5]);
+        }
+
+        if(datos[0].equals("3")){
+            animal = new Vaca(nombre, patas, p);
+        }
+
+        return animal;
     }
 
     /**
@@ -152,12 +206,15 @@ public class Granja
      *  
      *  Usa el método guardarLinea()
      */
-    public void salvarEnFicheroTexto(String nombre)
+    public void salvarEnFicheroTexto(String nombre) throws IOException
     {
         File f = new File(nombre);
         PrintWriter salida = new PrintWriter(new BufferedWriter(new FileWriter(f))); // abrir el fichero
 
-        
+        for(int i = 0; i < total; i++){
+            guardarLinea(animales[i], salida);
+        }
+        salida.close();
     }
 
     /**
@@ -166,26 +223,60 @@ public class Granja
      */
     private void guardarLinea(Animal a, PrintWriter salida)
     {
-
+        if(a instanceof Perro){
+            salida.print("1,");
+            salida.print(a.getNombre()+",");
+            salida.print(a.getNumeroPatas()+",");
+            salida.print(a.getDueño().getNombre()+",");
+            salida.print(a.getDueño().getEdad()+",");
+            salida.print(((Perro) a).getLugar()+",");
+            salida.println();
+        }else if(a instanceof Gato){
+            salida.print("2,");
+            salida.print(a.getNombre()+",");
+            salida.print(a.getNumeroPatas()+",");
+            salida.print(a.getDueño().getNombre()+",");
+            salida.print(a.getDueño().getEdad()+",");
+            salida.print(((Gato) a).getJuguete()+",");
+            salida.println();
+        }else{
+            salida.print("3,");
+            salida.print(a.getNombre()+",");
+            salida.print(a.getNumeroPatas()+",");
+            salida.print(a.getDueño().getNombre()+",");
+            salida.print(a.getDueño().getEdad());
+            salida.println();
+        }            
     }
 
     /**
      *  Guardar en un fichero el total de perros que hay en la granja
      *
      */
-    public void salvarTotalPerros(String nombre)
+    public void salvarTotalPerros(String nombre) throws IOException
     {
-
+        File f = new File(nombre);
+        PrintWriter salida = new PrintWriter(new BufferedWriter(new FileWriter(f))); // abrir el fichero
+        salida.println("Total Perros:" + cuantosPerros());
+        salida.close();
+        
     }
 
     /**
      *  Leer desde un fichero los datos de los animales
      *  con Scanner
      */
-    public void cargarDeFicheroTextoConScanner(String nombre)
+    public void cargarDeFicheroTextoConScanner(String nombre)throws FileNotFoundException
     {
         File f = new File(nombre);
         Scanner entrada = new Scanner(f);
+        while(entrada.hasNextLine())
+        {
+            String linea = entrada.nextLine();
+            Animal a = parsearLinea(linea);
+            addAnimal(a);
+        }
+        entrada.close();
 
     }
 }
