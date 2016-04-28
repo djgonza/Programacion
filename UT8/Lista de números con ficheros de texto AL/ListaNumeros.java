@@ -111,7 +111,15 @@ public class ListaNumeros
             String linea = br.readLine();
             while(linea != null)
             {
-                lista.add(Integer.parseInt(linea));
+                
+                try{
+                    lista.add(Integer.parseInt(linea));
+                }
+
+                catch(NumberFormatException e)
+                {
+                    System.out.println("Error al convertir el número");
+                }
 
                 linea = br.readLine();
             }
@@ -124,6 +132,7 @@ public class ListaNumeros
         {
             System.out.println("Fichero no encontrado");
         }
+
         finally
 
         {
@@ -133,7 +142,7 @@ public class ListaNumeros
             }
             catch(IOException e)
             {
-               System.out.println("Error"); 
+                System.out.println("Error"); 
             }
 
         }
@@ -153,6 +162,63 @@ public class ListaNumeros
      */
     public void leerFicheroDeTextoFileChooser()  
     {
+
+        File f = null;
+        BufferedReader br = null;
+        try{
+            f = obtenerFichero();
+            br = new BufferedReader(new FileReader(f));
+            String linea = br.readLine();
+            while(linea != null)
+            {
+                
+                try{
+                    lista.add(Integer.parseInt(linea));
+                }
+
+                catch(NumberFormatException e)
+                {
+                    System.out.println("Error al convertir el número");
+                }
+
+                linea = br.readLine();
+            }
+        }
+        catch(FileNotFoundException e )
+        {
+            System.out.println("Fichero no encontrado");
+        }
+        catch(IOException e )
+        {
+            System.out.println("Fichero no encontrado");
+        }
+         catch(NullPointerException e )
+        {
+            System.out.println("Error, se ha pulsado cancelar");
+        }
+
+        finally
+
+        {
+            try{
+                if(br !=null)
+                    br.close();
+            }
+            catch(IOException e)
+            {
+                System.out.println("Error"); 
+            }
+
+        }
+        
+        System.out.print(String.Format("%20d %-10s",
+                                        25, 
+                                        "Hola"));
+                                        
+                                        StringBuilder sb = new StringBuilder();
+                                        sb.append(String.Format("%20d %-10s",
+                                        25, 
+                                        "Hola"));
 
     }
 

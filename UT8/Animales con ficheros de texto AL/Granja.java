@@ -141,8 +141,8 @@ public class Granja
             while(linea != null)
             { 
                 addAnimal(parsearLinea(linea));
-//                 animales[total] = parsearLinea(linea);
-//                 total++;
+                //                 animales[total] = parsearLinea(linea);
+                //                 total++;
                 linea = entrada.readLine();
             }
         }
@@ -259,7 +259,7 @@ public class Granja
         PrintWriter salida = new PrintWriter(new BufferedWriter(new FileWriter(f))); // abrir el fichero
         salida.println("Total Perros:" + cuantosPerros());
         salida.close();
-        
+
     }
 
     /**

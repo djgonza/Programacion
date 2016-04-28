@@ -4,7 +4,7 @@
  */
 public class Cuenta
 {
-     
+
     private double importe;
 
     /**
@@ -12,9 +12,9 @@ public class Cuenta
      */
     public Cuenta(double importe)
     {
-         this.importe = importe;
+        this.importe = importe;
     }
-    
+
     /**
      * Accesor para el importe
      */
@@ -23,18 +23,20 @@ public class Cuenta
         return importe;
     }
 
-
     /**
      *  Añadir una cantidad
      *  Si la cantidad es <= 0 se lanza y se avisa de la excepción
      *  IllegalArgumentException
      *  
      */
-    public void ingresar(double cantidad)  
+    public void ingresar(double cantidad) throws IllegalArgumentException
     {
-        
+        if(cantidad <= 0)
+            throw new IllegalArgumentException("Argumento no valido ");
+        importe += cantidad;
+
     }
-    
+
     /**
      *  Reintegra de la cuenta la cantidad indicada
      *  Si la cantidad es <= 0 se lanza y se avisa de la excepción
@@ -42,11 +44,16 @@ public class Cuenta
      *  Si se quiera sacar más cantidad de la que hay se lanza
      *  la excepción personalizada SaldoInsuficienteException
      */
-    public void sacar(double cantidad)   
+    public void sacar(double cantidad)  throws IllegalArgumentException, SaldoInsuficienteException
     {
-          
+        if(cantidad <= 0)
+            throw new IllegalArgumentException("Argumento no valido");
+        if(cantidad > importe)
+            throw new SaldoInsuficienteException("Saldo insuficiente");
+        importe -= cantidad;
+
     }
-    
+
     /**
      * 
      */
