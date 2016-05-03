@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=codigo\ precio\ peso
+comment0.target=Portatil(java.lang.String,\ double,\ double)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=double\ getPeso()
+comment1.text=\r\n\ \ \r\n\ \r\n
+comment2.params=peso
+comment2.target=void\ setPeso(double)
+comment2.text=\r\n\ \r\n
+comment3.params=
+comment3.target=java.lang.String\ getSlogan()
+comment3.text=\r\n\ \ \r\n\ \r\n
+comment4.params=
+comment4.target=double\ calcularDescuento()
+comment4.text=\r\n\ \r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ \r\n
+numComments=6

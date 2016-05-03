@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=codigo\ precio\ descripcion
+comment0.target=SobreMesa(java.lang.String,\ double,\ java.lang.String)
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getSlogan()
+comment1.text=\r\n\ \ \r\n\ \r\n
+comment2.params=
+comment2.target=java.lang.String\ getDescripcion()
+comment2.text=\r\n\ \ \r\n\ \r\n
+comment3.params=descripcion
+comment3.target=void\ setDescripcion(java.lang.String)
+comment3.text=\r\n\ \r\n
+comment4.params=
+comment4.target=double\ calcularDescuento()
+comment4.text=\r\n\ \r\n
+comment5.params=
+comment5.target=java.lang.String\ toString()
+comment5.text=\r\n\ \r\n
+numComments=6
