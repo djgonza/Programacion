@@ -9,6 +9,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.Collections;
 /**
  *    Guarda en una lista una serie de nºs enteros
  */
@@ -129,7 +130,28 @@ public class ListaNumeros
      */
     public int leerDeFicheroV2(String nombre)
     {
-        return 0;
+        File f = null;
+        Scanner sc = null;
+        int cont = 0;
+        try {
+            f = new File(nombre);
+            sc = new Scanner(new FileReader(f));
+
+            while (sc.hasNext()){
+
+                cont += parsearLinea(sc.nextLine());
+
+            }
+
+        }catch(IOException e){
+            System.out.println("Error al leer el fichero");
+        }finally{
+            if(sc != null){
+                sc.close();
+            }
+        }
+
+        return cont;
     }
 
     /**
@@ -137,7 +159,7 @@ public class ListaNumeros
      */
     public int maximo()
     {
-        return 0;
+        return Collections.max(lista);
     }
 
     /**
@@ -146,7 +168,9 @@ public class ListaNumeros
      */
     public List<Integer> ordenarDescendente()
     {
-        return null;
+        List<Integer> retornar = new ArrayList<Integer>(lista);
+        Collections.sort(retornar, Collections.reverseOrder());
+        return retornar;
     }
 
     /**
@@ -156,9 +180,20 @@ public class ListaNumeros
      *  
      *  Se propagarán todas las posibles excepciones
      */
-    public void salvarEnFichero(String nombre)  
+    public void salvarEnFichero(String nombre) throws IOException
     {
+        File f = new File(nombre);
+        PrintWriter salida = new PrintWriter(new BufferedWriter(new FileWriter(f))); // abrir el fichero
 
+        StringBuilder sb = new StringBuilder();
+        for(int numero : lista){
+            sb.append(numero + ":");
+        }
+
+        salida.println(maximo());
+
+        salida.println(sb.toString());
+        salida.close();
     }
 
     /**
@@ -174,6 +209,22 @@ public class ListaNumeros
      */
     public static void main(String[] args)  
     {
+
+        ListaNumeros demo = new ListaNumeros();
+
+        System.out.println("Errores: " + demo.leerDeFicheroV1("numeros.txt"));
+        try{
+            demo.salvarEnFichero("resultado1.txt");
+        }catch (IOException e){
+            System.out.println("Error al scribir en el fichero");
+        }
+        demo.vaciarLista();
+        demo.leerDeFicheroV2("numeros.txt");
+        try{
+            demo.salvarEnFichero("resultado2.txt");
+        }catch (IOException e){
+            System.out.println("Error al scribir en el fichero");
+        }
 
     }
 }

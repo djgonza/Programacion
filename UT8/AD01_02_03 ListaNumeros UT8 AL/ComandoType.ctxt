@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=fichero
+comment0.target=ComandoType(java.lang.String)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ ComandoType\r\n
+comment1.params=
+comment1.target=void\ mostrarFichero()
+comment1.text=\r\n\ \ \r\n
+numComments=2
