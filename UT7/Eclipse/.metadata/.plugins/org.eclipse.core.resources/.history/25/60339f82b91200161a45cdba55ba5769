@@ -16,10 +16,10 @@ public class Matriz {
 	 * @throws MatrizExcepcion
 	 * 
 	 */
-	public Matriz(int filas, int columnas) throws MatrizExcepcion {
-
-		if (filas < 1 || columnas < 1)
-			throw new MatrizExcepcion("Argumentos Incorrectos");
+	public Matriz(int filas, int columnas) {
+		
+		if(filas < 1 || columnas < 1)
+				throw new MatrizException("Argumentos Incorectos");
 		matriz = new int[filas][columnas];
 	}
 
@@ -71,14 +71,9 @@ public class Matriz {
 	 * @return Matriz la nueva matriz suma
 	 * @throws IllegalArgumentException
 	 *             si la matriz recibida no es correcta
-	 * @throws MatrizExcepcion
 	 */
-	public Matriz sumar(Matriz otra)
-			throws IllegalArgumentException, MatrizExcepcion {
+	public Matriz sumar(Matriz otra) {
 
-		if (otra.getFilas() != getFilas()
-				|| otra.getColumnas() != getColumnas())
-			throw new IllegalArgumentException();
 		Matriz aDevolver = new Matriz(getFilas(), getColumnas());
 
 		for (int i = 0; i < matriz.length; i++) {
@@ -100,12 +95,7 @@ public class Matriz {
 	 * @throws IllegalArgumentException
 	 *             si la matriz recibida no es correcta
 	 */
-	public Matriz multiplicar(Matriz otra)
-			throws IllegalArgumentException, MatrizExcepcion {
-
-		if (otra.getFilas() != getFilas()
-				|| otra.getColumnas() != getColumnas())
-			throw new IllegalArgumentException();
+	public Matriz multiplicar(Matriz otra) {
 		Matriz aDevolver = new Matriz(getFilas(), getColumnas());
 
 		for (int i = 0; i < matriz.length; i++) {
@@ -122,8 +112,6 @@ public class Matriz {
 	 * @return String representación textual de la matriz
 	 */
 	public String toString() {
-
-		return matriz.toString();
 
 	}
 

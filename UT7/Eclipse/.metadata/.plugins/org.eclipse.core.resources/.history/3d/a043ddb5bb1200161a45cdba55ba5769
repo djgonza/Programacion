@@ -71,13 +71,11 @@ public class Matriz {
 	 * @return Matriz la nueva matriz suma
 	 * @throws IllegalArgumentException
 	 *             si la matriz recibida no es correcta
-	 * @throws MatrizExcepcion
+	 * @throws MatrizExcepcion 
 	 */
-	public Matriz sumar(Matriz otra)
-			throws IllegalArgumentException, MatrizExcepcion {
+	public Matriz sumar(Matriz otra)throws IllegalArgumentException, MatrizExcepcion {
 
-		if (otra.getFilas() != getFilas()
-				|| otra.getColumnas() != getColumnas())
+		if(otra.getFilas()!=getFilas() || otra.getColumnas() != getColumnas())
 			throw new IllegalArgumentException();
 		Matriz aDevolver = new Matriz(getFilas(), getColumnas());
 
@@ -100,11 +98,9 @@ public class Matriz {
 	 * @throws IllegalArgumentException
 	 *             si la matriz recibida no es correcta
 	 */
-	public Matriz multiplicar(Matriz otra)
-			throws IllegalArgumentException, MatrizExcepcion {
-
-		if (otra.getFilas() != getFilas()
-				|| otra.getColumnas() != getColumnas())
+	public Matriz multiplicar(Matriz otra)throws IllegalArgumentException, MatrizExcepcion {
+		
+		if(otra.getFilas()!=getFilas() || otra.getColumnas() != getColumnas())
 			throw new IllegalArgumentException();
 		Matriz aDevolver = new Matriz(getFilas(), getColumnas());
 
@@ -122,8 +118,6 @@ public class Matriz {
 	 * @return String representación textual de la matriz
 	 */
 	public String toString() {
-
-		return matriz.toString();
 
 	}
 

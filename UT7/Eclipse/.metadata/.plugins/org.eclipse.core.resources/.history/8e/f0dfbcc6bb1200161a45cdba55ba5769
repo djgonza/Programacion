@@ -123,8 +123,6 @@ public class Matriz {
 	 */
 	public String toString() {
 
-		return matriz.toString();
-
 	}
 
 	/**

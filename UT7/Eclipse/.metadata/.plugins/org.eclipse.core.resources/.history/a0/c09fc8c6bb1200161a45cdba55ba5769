@@ -122,8 +122,8 @@ public class Matriz {
 	 * @return String representación textual de la matriz
 	 */
 	public String toString() {
-
-		return matriz.toString();
+		
+		return this.toString();
 
 	}
 
