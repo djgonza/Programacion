@@ -60,6 +60,7 @@ public class Matriz {
 	 *            la columna
 	 */
 	public void setValor(int valor, int f, int c) {
+		// System.out.println(valor + " : " + f + " " + c);
 		matriz[f][c] = valor;
 	}
 
@@ -84,7 +85,7 @@ public class Matriz {
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz[0].length; j++) {
 				int valor = otra.getValor(i, j) + getValor(i, j);
-				aDevolver.setValor(valor, i, j);
+				aDevolver.setValor(valor, j, i);
 			}
 		}
 
@@ -123,7 +124,18 @@ public class Matriz {
 	 */
 	public String toString() {
 
-		return matriz.toString();
+		StringBuilder sb = new StringBuilder();
+
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				sb.append(matriz[i][j]);
+
+			}
+			sb.append('\n');
+
+		}
+
+		return sb.toString();
 
 	}
 

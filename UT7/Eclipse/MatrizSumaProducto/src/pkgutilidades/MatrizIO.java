@@ -7,8 +7,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 import pkgmodelo.Matriz;
+import pkgmodelo.MatrizExcepcion;
 
 public class MatrizIO {
 
@@ -31,24 +33,28 @@ public class MatrizIO {
 			f = new File(nombre);
 			br = new BufferedReader(new FileReader(f));
 			String linea = br.readLine();
-			String[] indices = linea.split(" ");
+			Scanner sc = new Scanner(linea);
 
-			arraydosd = new Matriz(Integer.parseInt(indices[0]),
-					Integer.parseInt(indices[1]));
+			arraydosd = new Matriz(sc.nextInt(), sc.nextInt());
+
+			linea = br.readLine();
 
 			int fila = 0;
 			while (linea != null) {
-				String[] valores = linea.split(" ");
 				int col = 0;
-				for (String valor : valores) {
+				sc = new Scanner(linea);
+				while (sc.hasNextInt()) {
 
-					arraydosd.setValor(Integer.parseInt(valor), fila, col);
+					arraydosd.setValor(sc.nextInt(), fila, col);
+
 					col++;
 
 				}
 
 				fila++;
 				linea = br.readLine();
+				sc.close();
+
 			}
 
 		} catch (FileNotFoundException e) {
@@ -57,7 +63,16 @@ public class MatrizIO {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} finally {
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MatrizExcepcion e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+
+		} finally
+
+		{
 			if (br != null) {
 				try {
 					br.close();
@@ -69,6 +84,7 @@ public class MatrizIO {
 
 		}
 		return arraydosd;
+
 	}
 
 	/**
@@ -82,7 +98,7 @@ public class MatrizIO {
 	 */
 	public static void salvarEnFichero(Matriz matriz, String nombre) {
 
-		File f = null;
+		File f = new File(nombre);
 		PrintWriter pw = null;
 		try {
 			pw = new PrintWriter(new FileWriter(f));
