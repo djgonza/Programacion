@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=
+comment0.target=GuiPanelesContenedores()
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=void\ crearGui()
+comment1.text=\r\n\ \r\n\ @param\ \ \ \r\n
+comment2.params=
+comment2.target=javax.swing.JPanel\ crearPanelNorte()
+comment2.text=\r\n\ Descripci\uFFFDn\ del\ m\uFFFDtodo\r\n\ @param\ \ \r\n\ @return\ \ \ \r\n
+comment3.params=
+comment3.target=javax.swing.JPanel\ crearPanelSur()
+comment4.params=
+comment4.target=javax.swing.JPanel\ crearPanelCentro()
+comment5.params=
+comment5.target=void\ mostrarGui()
+comment5.text=\r\n\ \r\n
+numComments=6

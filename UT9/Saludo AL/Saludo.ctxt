@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Saludo()
+comment0.text=\r\n\ Constructor\ de\ objetos\ de\ la\ clase\ Saludo\r\n
+comment1.params=aQuien
+comment1.target=void\ setNombre(java.lang.String)
+comment1.text=\r\n\ \r\n\ @param\ aQuien\ a\ qui\u00E9n\ se\ saluda\r\n\ \ \ \ \r\n
+comment2.params=
+comment2.target=java.lang.String\ saludar()
+comment2.text=\r\n\ Saludo\ normal\r\n\ \ \r\n
+comment3.params=
+comment3.target=java.lang.String\ saludarPersonalizado()
+comment3.text=\r\n\ Saludo\ personalizado\r\n\ \ \r\n
+numComments=4
