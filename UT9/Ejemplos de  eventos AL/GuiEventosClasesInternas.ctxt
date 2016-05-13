@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=GuiEventosClasesInternas()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Gui03\r\n
+comment1.params=
+comment1.target=void\ crearGui()
+comment1.text=\r\n\ \ \ \ \ \r\n
+comment2.params=
+comment2.target=void\ mostrarGui()
+comment2.text=\r\n\ \ \ \ \r\n
+comment3.params=
+comment3.target=void\ aceptar()
+comment3.text=\r\n\ Aceptar\r\n\r\n\ \r\n
+comment4.params=
+comment4.target=void\ salir()
+comment4.text=\r\n\ Salir\r\n\r\n\ \r\n
+comment5.params=
+comment5.target=void\ obtenerEdad()
+comment5.text=\r\n\ Obtener\ edad\r\n\r\n\ \r\n
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+comment6.text=\r\n\ \ \r\n
+numComments=7

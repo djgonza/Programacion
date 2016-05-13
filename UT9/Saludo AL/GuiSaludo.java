@@ -34,7 +34,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.MouseAdapter;
 import java.awt.event.ActionListener;
-public class GuiSaludo extends JFrame
+public class GuiSaludo extends JFrame implements ActionListener
 {
     // componentes que forman parte de la GUI
     private static final int ANCHO = 400;
@@ -139,7 +139,7 @@ public class GuiSaludo extends JFrame
         String[] colores = {"azul", "verde", "rojo", "amarillo"};
         cmbColor = new JComboBox<>(colores);
         panel.add(cmbColor);
-        
+
         //panel.add(new JButton("A"));
         //panel.add(new JButton("B"));
         panel.setPreferredSize(new Dimension(200, 50));
@@ -151,8 +151,14 @@ public class GuiSaludo extends JFrame
     {
         btnSaludo = new JButton("Saludar");
         btnSaludo.setToolTipText("Pulsa el botón para saludar");
+        btnSaludo.addActionListener(this);
+
         btnClear = new JButton("Limpiar");
+        btnClear.addActionListener(this);
+
         btnSalir = new JButton("Salir");
+        btnSalir.addActionListener(this);
+
         JPanel pnlSur = new JPanel();
         pnlSur.add(btnSaludo);
         pnlSur.add(btnClear);
@@ -209,6 +215,41 @@ public class GuiSaludo extends JFrame
         setLocationRelativeTo(null); //para centrar la ventana
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+
     }
+
+    public void actionPerformed(ActionEvent e)
+    {
+        if(e.getSource() == btnSaludo)
+            saludar();
+
+    }
+
+    private void saludar()
+    {
+        String nombre = txtNombre.getText();
+        if(nombre.equals(""))
+        {
+            lblSaludo.setText("Teclea nombre");
+            cogerFoco(txtNombre);
+        }
+        else
+        {
+            String strEdad = txtEdad.getText();
+            if(strEdad.equals(""))
+            {
+                lblSaludo.setText("Teclea edad");
+                cogerFoco(txtEdad);
+            }
+        }
+    }
+
+    private void cogerFoco(JTextField txt)
+    {
+        txt.requestFocus();
+        txt.selectAll();
+    }
+
 }
+
+

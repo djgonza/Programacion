@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=
+comment0.target=GuiAgenda()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ GuiAgenda\r\n
+comment1.params=
+comment1.target=void\ crearGui()
+comment1.text=\r\n\ \ \r\n
+comment2.params=
+comment2.target=javax.swing.JPanel\ crearPanelLetras()
+comment2.text=\r\n\ \ \r\n
+comment3.params=
+comment3.target=javax.swing.JMenuBar\ crearMenu()
+comment3.text=\r\n\ \ \r\n
+comment4.params=
+comment4.target=javax.swing.JPanel\ crearPanelBotones()
+comment4.text=\r\n\ \ \r\n
+comment5.params=
+comment5.target=void\ mostrarGui()
+comment5.text=\r\n\ \ \r\n
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+comment6.text=\r\n\ \ \r\n
+numComments=7
