@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=b
+comment0.target=PanelBombilla(Bombilla)
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ PanelBombilla\r\n
+comment1.params=
+comment1.target=void\ crearPanelSur()
+comment1.text=\r\n\ \ \r\n
+comment2.params=
+comment2.target=void\ crearPanelCentro()
+comment2.text=\r\n\ \ \r\n
+comment3.params=
+comment3.target=void\ actualizarPanel()
+comment3.text=\r\n\ \r\n\ Actualizamos\ la\ vista\ para\ que\ registre\ el\r\n\ cambio\ en\ el\ modelo\ ,\ la\ bombilla\r\n\ \ \ \ \ \ \r\n
+numComments=4

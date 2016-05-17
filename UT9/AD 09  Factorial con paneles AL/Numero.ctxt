@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=numero
+comment0.target=Numero(int)
+comment0.text=\ \r\n\r\n
+comment1.params=
+comment1.target=int\ getNumero()
+comment2.params=numero
+comment2.target=void\ setNumero(int)
+comment2.text=\r\n\ Mutador\ para\ el\ n\u00FAmero\r\n\ \ \r\n
+comment3.params=
+comment3.target=int\ factorial()
+comment3.text=\r\n\ Calcula\ y\ devuelve\ el\ factorial\ de\ numero\r\n
+comment4.params=
+comment4.target=boolean\ esPrimo()
+comment4.text=\r\n\ devuelve\ true\ si\ numero\ es\ primo,\ false\ en\ otro\ caso\r\n
+numComments=5

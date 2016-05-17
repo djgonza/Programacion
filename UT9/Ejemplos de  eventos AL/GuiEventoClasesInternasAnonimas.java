@@ -14,7 +14,7 @@ public class GuiEventoClasesInternasAnonimas extends JFrame
 {
     private JButton btnAceptar;
     private JButton btnSalir;
-     private JButton btnEdad;
+    private JButton btnEdad;
 
     /**
      * Constructor de la clase Gui03
@@ -26,7 +26,6 @@ public class GuiEventoClasesInternasAnonimas extends JFrame
         crearGui();
         mostrarGui();
 
-               
     }
 
     /**
@@ -38,23 +37,42 @@ public class GuiEventoClasesInternasAnonimas extends JFrame
 
         btnAceptar = new JButton("Aceptar");
         //registrar oyente
-       
+        btnAceptar.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    aceptar();
+                }
+            }
+        );
 
         this.getContentPane().add(btnAceptar);
 
         btnSalir = new JButton("Salir");
         //registrar oyente
-         
+        btnSalir.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    salir();
+                }
+            }
+        );
 
         this.getContentPane().add(btnSalir);
-        
         btnEdad = new JButton("Edad");
-        
-        
-        
-        
+        btnEdad.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    obtenerEdad();
+                }
+            }
+        );
+
         this.getContentPane().add(btnEdad);
     }
+
     /**
      *      
      */
@@ -75,7 +93,6 @@ public class GuiEventoClasesInternasAnonimas extends JFrame
         setLocation(x, y );
 
     }
-
 
     /**
      * Aceptar
@@ -135,5 +152,4 @@ public class GuiEventoClasesInternasAnonimas extends JFrame
         new GuiEventoClasesInternasAnonimas();
     }
 }
-
 

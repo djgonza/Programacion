@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=MaquinaEscribir()
+comment0.text=\r\n\ Constructor\ \ \r\n
+comment1.params=
+comment1.target=java.lang.String\ getTexto()
+comment1.text=\r\n\ Accesor\ para\ el\ texto\r\n
+comment2.params=car
+comment2.target=void\ a\u00F1adirCaracter(char)
+comment2.text=\r\n\ Mutador\ para\ el\ texto\r\n
+comment3.params=
+comment3.target=void\ clear()
+comment3.text=\r\n\ Limpia\ el\ texto\ escrito\r\n\ \r\n\ \r\n
+comment4.params=
+comment4.target=void\ borrarUltimo()
+comment4.text=\r\n\ Borrar\ el\ \u00FAltimo\ car\u00E1cter\ del\ texto\r\n\ \r\n\ \r\n
+numComments=5

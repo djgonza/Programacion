@@ -98,17 +98,41 @@ public class GuiSaludo extends JFrame implements ActionListener
         itemSaludar = new JMenuItem("Saludar");
         itemSaludar.setMnemonic('S');
         itemSaludar.setAccelerator(KeyStroke.getKeyStroke("ctrl S"));
+        itemSaludar.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    saludar();
+                }
+            }
+        );
         menuAccion.add(itemSaludar);
 
         itemLimpiar = new JMenuItem("Limpiar");
         itemLimpiar.setMnemonic('L');
         itemLimpiar.setAccelerator(KeyStroke.getKeyStroke("ctrl L"));
+        itemLimpiar.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    limpiar();
+                }
+            }
+        );
         menuAccion.add(itemLimpiar);
 
         menuAccion.add(new JSeparator());
         itemSalir = new JMenuItem("Salir");
         itemSalir.setMnemonic('r');
         itemSalir.setAccelerator(KeyStroke.getKeyStroke("ctrl R"));
+        itemSalir.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    salir();
+                }
+            }
+        );
         menuAccion.add(itemSalir);
 
         JMenu menuAyuda = new JMenu("Ayuda");
@@ -129,13 +153,16 @@ public class GuiSaludo extends JFrame implements ActionListener
 
         panel.add(new JLabel("Nombre"));
         txtNombre = new JTextField(15);
+        txtNombre.addActionListener(this);
         panel.add(txtNombre);
 
         panel.add(new JLabel("Edad"));
         txtEdad = new JTextField(5);
+        txtEdad.addActionListener(this);
         panel.add(txtEdad);
 
         panel.add(new JLabel("Color"));
+
         String[] colores = {"azul", "verde", "rojo", "amarillo"};
         cmbColor = new JComboBox<>(colores);
         panel.add(cmbColor);
@@ -191,15 +218,72 @@ public class GuiSaludo extends JFrame implements ActionListener
         panel.setLayout(new GridLayout(2, 2));
         rbtAmarillo = new JRadioButton("Amarillo");
         rbtAmarillo.setSelected(true);
+        rbtAmarillo.addActionListener(new OyenteAmarillo());
+
         rbtRojo = new JRadioButton("Rojo");
+        rbtRojo.addActionListener(new OyenteRojo());
+
         ButtonGroup grupoBotones = new ButtonGroup();
         grupoBotones.add(rbtAmarillo);
         grupoBotones.add(rbtRojo);
         panel.add(rbtAmarillo);
         panel.add(rbtRojo);
         cbxCursiva = new JCheckBox("Cursiva", false);
+        cbxCursiva.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent e)
+                {
+                    ponerCursiva();
+                }
+            });
         panel.add(cbxCursiva);
+
         return panel;
+    }
+
+    private class OyenteAmarillo implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            ponerColor(Color.YELLOW);
+        }
+
+    }
+
+    private class OyenteRojo implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            ponerColor(Color.RED);
+        }
+
+    }
+
+    /**
+     *  
+     */
+    public void ponerColor(Color c)
+    {
+        lblSaludo.setBackground(c);
+
+    }
+
+    /**
+     *  
+     */
+    public void ponerCursiva()
+    {
+        Font actual = lblSaludo.getFont();
+        Font nueva;
+        if(cbxCursiva.isSelected())
+        {
+            nueva = new Font(actual.getFamily(), actual.getStyle() + Font.ITALIC, actual.getSize());
+
+        }
+        else
+            nueva = new Font(actual.getFamily(), actual.getStyle() - Font.ITALIC, actual.getSize());
+        lblSaludo.setFont(nueva);
+
     }
 
     /**
@@ -220,8 +304,16 @@ public class GuiSaludo extends JFrame implements ActionListener
 
     public void actionPerformed(ActionEvent e)
     {
-        if(e.getSource() == btnSaludo)
+        if(e.getSource() == btnSaludo || e.getSource() == txtNombre || e.getSource() == txtEdad)
             saludar();
+        else if(e.getSource() == btnClear)
+        {
+            limpiar();
+        }
+        else if(e.getSource() == btnSalir)
+        {
+            salir();
+        }
 
     }
 
@@ -241,7 +333,31 @@ public class GuiSaludo extends JFrame implements ActionListener
                 lblSaludo.setText("Teclea edad");
                 cogerFoco(txtEdad);
             }
+            else
+            {
+
+                try {
+                    String color= (String)cmbColor.getSelectedItem();
+                    Saludo saludo = new Saludo(nombre, color, Integer.parseInt(strEdad));
+                    lblSaludo.setText(saludo.saludarPersonalizado());
+                }catch (NumberFormatException e) {
+                    lblSaludo.setText("Teclea edad correcta");
+                    cogerFoco(txtEdad);
+                }
+
+            }
         }
+    }
+
+    private void limpiar()
+    {
+        lblSaludo.setText("");
+        cogerFoco(txtNombre);
+    }
+
+    private void salir()
+    {
+        System.exit(0);
     }
 
     private void cogerFoco(JTextField txt)
@@ -251,5 +367,4 @@ public class GuiSaludo extends JFrame implements ActionListener
     }
 
 }
-
 

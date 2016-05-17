@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Semaforo()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ Semaforo\r\n
+comment1.params=
+comment1.target=java.awt.Color\ getColor()
+comment1.text=\r\n\ \ \r\n\ Obtener\ el\ color\ del\ sem\u00E1foro\r\n
+comment2.params=
+comment2.target=void\ avanzar()
+comment2.text=\r\n\ \r\n\ \ Actualizar\ color\ del\ sem\u00E1foro\r\n
+comment3.params=c
+comment3.target=void\ setColor(java.awt.Color)
+comment3.text=\r\n\ \r\n\ \ Cambiar\ el\ color\ \ \ \r\n
+comment4.params=
+comment4.target=java.lang.String\ toString()
+comment4.text=\r\n\ \ \ \r\n
+numComments=5

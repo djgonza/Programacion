@@ -34,16 +34,16 @@ public class GuiEventosClasesInternas extends JFrame
         this.getContentPane().setLayout(new FlowLayout());
 
         btnAceptar = new JButton("Aceptar");
-      
-        
+        btnAceptar.addActionListener(new OyenteAceptar());
+
         this.getContentPane().add(btnAceptar);
 
         btnSalir = new JButton("Salir");
-       
+        btnAceptar.addActionListener(new OyenteSalir());
         this.getContentPane().add(btnSalir);
 
         btnEdad = new JButton("Edad");
-        
+        btnAceptar.addActionListener(new OyenteEdad());
         this.getContentPane().add(btnEdad);
     }
 
@@ -59,39 +59,38 @@ public class GuiEventosClasesInternas extends JFrame
         setLocation(200, 200);
 
     }
-//     /**
-//      * clase interna
-//      */
-//     private class OyenteAceptar implements ActionListener
-//     {
-//         
-//         public void actionPerformed(ActionEvent e)
-//         {
-//             aceptar();
-//         }
-//         
-//        
-// 
-//     }
+    /**
+     * clase interna
+     */
+    private class OyenteAceptar implements ActionListener
+    {
 
-//     /**
-//      * clase interna
-//      */
-//     private class OyenteSalir implements ActionListener
-//     {
-//         public void actionPerformed(ActionEvent e)
-//         {
-//             salir();
-//         }
-//     }
+        public void actionPerformed(ActionEvent e)
+        {
+            aceptar();
+        }
 
-//     private class OyenteEdad implements ActionListener
-//     {
-//         public void actionPerformed(ActionEvent e)
-//         {
-//             obtenerEdad();
-//         }
-//     }
+
+    }
+
+    /**
+     * clase interna
+     */
+    private class OyenteSalir implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            salir();
+        }
+    }
+
+    private class OyenteEdad implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            obtenerEdad();
+        }
+    }
 
     /**
      * Aceptar
@@ -142,8 +141,8 @@ public class GuiEventosClasesInternas extends JFrame
         }
 
     }
-    
-       /**
+
+    /**
      *  
      */
     public static void main(String[] args)
