@@ -42,6 +42,7 @@ public class GuiMaquinaEscribir extends JFrame
      */
     private void crearGui()
     {
+        
         crearPanelLetras();
         crearCajaTexto();
     }
@@ -51,50 +52,56 @@ public class GuiMaquinaEscribir extends JFrame
      */
     public void crearCajaTexto()
     {
-        JPanel tmp = new JPanel();
-        tmp.setBorder(new TitledBorder("Texto"));
+        JPanel pnlTexto = new JPanel();
+        pnlTexto.setBorder(new TitledBorder("Texto"));
         
+        txtLetras = new JTextField(25);
+        txtLetras.setEditable(false);
+        pnlTexto.add(txtLetras);
+        
+        this.add(pnlTexto, BorderLayout.SOUTH);
     }
 
 
     private void crearPanelLetras()
     {
-        JPanel tmp = new JPanel();
-        tmp.setLayout(new GridLayout(4,7));
-        tmp.setBorder(new TitledBorder("Teclado"));
+        pnlTeclado = new JPanel();
+        pnlTeclado.setLayout(new GridLayout(4,7));
+        pnlTeclado.setBorder(new TitledBorder("Teclado"));
         String abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
+        
         for(Character c : abc.toCharArray())
         {
             JButton jb = new JButton("" + c);
             jb.addActionListener(new  ActionListener(){
                     public void actionPerformed(ActionEvent e)
                     {
-                        ((JButton) e.getSource()).getText();
+                        
+                        mostrarLetra(((JButton) e.getSource()).getText());
                     }
                 });
-            tmp.add(jb);
+            pnlTeclado.add(jb);
         }
 
         JButton jbEspacio = new JButton("Espacio");
         jbEspacio.addActionListener(new  ActionListener(){
                 public void actionPerformed(ActionEvent e)
                 {
-
+                    espaciar();
                 }
             });
-        tmp.add(jbEspacio);
+        pnlTeclado.add(jbEspacio);
 
         JButton jbSpr = new JButton("Suprimir");
         jbSpr.addActionListener(new  ActionListener(){
                 public void actionPerformed(ActionEvent e)
                 {
-
+                    borrarUltimo();
                 }
             });
-        tmp.add(jbSpr);
+        pnlTeclado.add(jbSpr);
         
-        this.add(tmp);
+        this.add(pnlTeclado, BorderLayout.CENTER);
 
     }
 
@@ -119,7 +126,18 @@ public class GuiMaquinaEscribir extends JFrame
      */
     private void mostrarLetra(String letra)
     {
-
+      maquina.añadirCaracter(letra.charAt(0));
+      txtLetras.setText(maquina.getTexto());
+    }
+    
+      /**
+     *  Boton espacio
+     *
+     * 
+     */
+    private void espaciar()
+    {
+        maquina.añadirCaracter(' ');
     }
 
     /**
@@ -129,6 +147,7 @@ public class GuiMaquinaEscribir extends JFrame
      */
     private void borrarUltimo()
     {
-
+        maquina.borrarUltimo();
+        txtLetras.setText(maquina.getTexto());
     }
 }

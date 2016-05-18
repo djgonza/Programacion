@@ -49,7 +49,8 @@ public class MaquinaEscribir
      */
     public void borrarUltimo()
     {
-         texto.substring(0, texto.length()-1);
+        if(!texto.isEmpty()) 
+            texto = texto.substring(0, texto.length()-1);
     }
     
 }
