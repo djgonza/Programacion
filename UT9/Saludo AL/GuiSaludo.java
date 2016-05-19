@@ -34,6 +34,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.MouseAdapter;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
+
 public class GuiSaludo extends JFrame implements ActionListener
 {
     // componentes que forman parte de la GUI
@@ -41,6 +43,7 @@ public class GuiSaludo extends JFrame implements ActionListener
     private static final int ALTO = 200;
     private static final int POS_X = 200;
     private static final int POS_Y = 200;
+    private EventosRaton er = new EventosRaton();
     private JMenuItem itemSaludar;
     private JMenuItem itemLimpiar;
     private JMenuItem itemSalir; 
@@ -173,12 +176,39 @@ public class GuiSaludo extends JFrame implements ActionListener
         return panel;
     }
 
+    private class MouseListeners extends MouseAdapter {
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+            btnSaludo.setBackground(new Color(0, 255, 0));
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e){
+            btnSaludo.setBackground(new Color(255, 255, 0));
+        }
+    }
+
     public JPanel crearPanelSur()
 
     {
         btnSaludo = new JButton("Saludar");
         btnSaludo.setToolTipText("Pulsa el botón para saludar");
         btnSaludo.addActionListener(this);
+        //btnSaludo.addMouseListener(er);
+        //btnSaludo.addMouseListener(new MouseListeners());
+
+        btnSaludo.addMouseListener(new MouseAdapter() {            
+                @Override
+                public void mouseEntered(MouseEvent e) {
+                    btnSaludo.setBackground(new Color(0, 255, 0));
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e){
+                    btnSaludo.setBackground(new Color(255, 255, 0));
+                }
+            });
 
         btnClear = new JButton("Limpiar");
         btnClear.addActionListener(this);
