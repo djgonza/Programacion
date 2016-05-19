@@ -195,18 +195,18 @@ public class GuiSaludo extends JFrame implements ActionListener
         btnSaludo = new JButton("Saludar");
         btnSaludo.setToolTipText("Pulsa el botón para saludar");
         btnSaludo.addActionListener(this);
-        //btnSaludo.addMouseListener(er);
+        btnSaludo.addMouseListener(er);
         //btnSaludo.addMouseListener(new MouseListeners());
 
         btnSaludo.addMouseListener(new MouseAdapter() {            
                 @Override
                 public void mouseEntered(MouseEvent e) {
-                    btnSaludo.setBackground(new Color(0, 255, 0));
+                    btnSaludo.setBackground(new Color(255,0,125));
                 }
 
                 @Override
                 public void mouseExited(MouseEvent e){
-                    btnSaludo.setBackground(new Color(255, 255, 0));
+                    btnSaludo.setBackground(null);
                 }
             });
 
