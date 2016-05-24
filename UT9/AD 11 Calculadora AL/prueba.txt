@@ -1,0 +1,4 @@
+Total numeros: 2
+Media: 4.0
+Minimo: 3
+Maximo: 5

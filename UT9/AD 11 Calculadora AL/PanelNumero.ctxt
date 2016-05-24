@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=g
+comment0.target=PanelNumero(GuiCalculadora)
+comment0.text=\r\n\ Constructor\ \r\n
+comment1.params=e
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment2.params=
+comment2.target=void\ limpiar()
+comment2.text=\r\n\ limpia\ la\ cahja\ de\ texto\ y\ coge\ el\ foco\r\n
+comment3.params=
+comment3.target=void\ cogerFoco()
+comment3.text=\r\n\ el\ foco\ va\ a\ la\ caja\ de\ texto\r\n
+comment4.params=
+comment4.target=int\ getNumero()
+comment4.text=\r\n\ devuelve\ el\ valor\ tecleado\ en\ la\ caja\ de\ texto\ \r\n\ propaga\ la\ excepci\u00F3n\ que\ se\ puede\ producir\r\n
+numComments=5

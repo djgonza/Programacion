@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=gui
+comment0.target=PanelResultado(GuiCalculadora)
+comment0.text=\r\n\ Constructor\ \r\n
+comment1.params=
+comment1.target=void\ limpiar()
+comment1.text=\r\n\ limpia\ las\ cajas\ de\ texto\ donde\ se\ han\ mostrado\ los\ resultados\r\n
+comment2.params=cant\ med\ min\ max
+comment2.target=void\ mostrar(int,\ double,\ int,\ int)
+comment2.text=\r\n\ muestra\ en\ las\ cajas\ de\ texto\ \ los\ resultados\r\n
+numComments=3

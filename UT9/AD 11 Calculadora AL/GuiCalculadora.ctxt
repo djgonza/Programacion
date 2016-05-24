@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=c
+comment0.target=GuiCalculadora(Calculadora)
+comment0.text=\r\n\ Constructor\ \r\n
+comment1.params=e
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment2.params=e
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=e
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment4.params=
+comment4.target=void\ salvar()
+comment4.text=\r\n\ salva\ los\ resultados\ en\ el\ fichero\r\n\ el\ modelo\ se\ encarga\ de\ la\ operaci\u00F3n\r\n
+comment5.params=
+comment5.target=void\ limpiar()
+comment5.text=\r\n\ limpia\ los\ paneles\ de\ resultado,\ el\ del\ n\u00FAmero\ y\ \r\n\ resetea\ la\ calculadora\r\n
+comment6.params=
+comment6.target=void\ actualizar()
+comment6.text=\r\n\ Actualiza\ la\ calculadora\ y\ muestra\ los\ resultados\ en\ el\ panel\ de\ resultados\r\n
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+comment7.text=\r\n\ \ \r\n
+numComments=8

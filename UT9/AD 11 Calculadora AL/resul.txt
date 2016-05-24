@@ -1,0 +1,4 @@
+Cantidad de números: 0
+Suma: 0.0
+Maximo: 0
+Mínimo: 0
