@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=CorrectorExamen()
+comment0.text=\r\n\ Constructor\ de\ la\ clase\ CorrectorExamen\r\n\ Todas\ las\ posibles\ excepciones\ se\ propagan\r\n
+comment1.params=
+comment1.target=double\ getValorCorrecta()
+comment1.text=\r\n\ \ accesor\ para\ el\ peso\ de\ la\ respuesta\ correcta\r\n
+comment2.params=
+comment2.target=double\ getValorIncorrecta()
+comment2.text=\r\n\ \ accesor\ para\ el\ peso\ de\ la\ respuesta\ incorrecta\r\n
+comment3.params=
+comment3.target=char[]\ getSolucion()
+comment3.text=\r\n\ \ accesor\ para\ las\ respuestas\ del\ test\r\n
+comment4.params=nombre
+comment4.target=void\ leerSolucion(java.lang.String)
+comment4.text=\r\n\ \ Lee\ del\ fichero\ de\ texto\ cuyo\ nombre\ se\ pasa\ como\ par\u00E1metro\ dos\r\n\ \ l\u00EDneas\:\r\n\ \ \ \ \ \ -\ en\ la\ primera\ se\ indica\ el\ valor\ de\ \ cada\ respuesta\ \ correcta\ \ \r\n\ \ \ \ \ \ \ y\ lo\ que\ se\ descontar\u00E1\ por\ cada\ incorrecta\ \r\n\ \ \ \ \ \ -\ en\ la\ segunda\ l\u00EDnea\ est\u00E1n\ las\ respuestas\ del\ examen\ \r\n\ \ \ \ \ \ \r\n\ \ \ Ejemplo\ \ \ \ \ \ \ \ \ 1\:\ -0.25\ \ \ \ \ \ \ \ \ \ 1\u00AA\ l\u00EDnea\ con\ separador\ \:\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ acbaaccbdd\ \ \ \ \ \ \ \ 2\u00AA\ l\u00EDnea\ sin\ separador\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ Asumimos\ la\ estructura\ del\ fichero\ sin\ errores\r\n\ \ \ \r\n\ \ \ Las\ respuestas\ le\u00EDdas\ se\ guardan\ en\ el\ array\ respuestas\r\n\ \ \r\n\ \ Usa\ la\ clase\ Scanner\ para\ leer\ el\ fichero\r\n\ \ \r\n\ \ Todas\ las\ posibles\ excepciones\ se\ propagan\r\n
+comment5.params=test
+comment5.target=double\ evaluarTest(char[])
+comment5.text=\r\n\ \ Dada\ un\ array\ con\ las\ respuestas\ que\ ha\ dado\ un\ alumno\ e\r\n\ \ al\ examen\ el\ m\u00E9todo\ comprueba\ los\ aciertos\ y\ errores\ \r\n\ \ y\ devuelve\ el\ valor\ obtenido\ en\ el\ test\r\n\ \ \r\n\ \ Las\ respuestas\ en\ blanco\ no\ contabilizan\r\n\ \ \r\n
+numComments=6

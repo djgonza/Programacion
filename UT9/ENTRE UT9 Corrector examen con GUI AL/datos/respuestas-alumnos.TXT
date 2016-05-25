@@ -1,0 +1,10 @@
+ALberto:a:c:b:a:a:c:c:b:d:d
+Elena:c:c:b:b:a:c: :b: :a
+Luis:a: :b: :a:c: :b:d: 
+Elisa:a:c:b:b:a:c:c:b:d:d
+Ana:a:c:b: :a:c:c:b:a:d
+Ignacio:a:c:b:a:a:c:c:b:d:d
+Javier:a: : :a:a:c:c:b:d:d
+Eduardo:c:c:b:a:a:c:d:b:d:a
+Pedro:c:c:b:a:a:a:c: :d:d
+Daniel: :c: :a:a: :c:b:d:d
