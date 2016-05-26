@@ -53,6 +53,8 @@ public class GuiExamen extends JFrame implements ActionListener {
 
     private Examen examen;
 
+    private Boolean ficheroLeido = false;
+
     public GuiExamen(String titulo, Examen examen) {
         super(titulo);
         crearGui();
@@ -238,6 +240,7 @@ public class GuiExamen extends JFrame implements ActionListener {
         llevarFoco();
         itmGuardar.setEnabled(true);
         itmLeer.setEnabled(false);
+        this.ficheroLeido = true;
     }
 
     /**
@@ -261,11 +264,25 @@ public class GuiExamen extends JFrame implements ActionListener {
      */
     private void verNota() {
         try {
-            areaTexto.setText("La nota de " + txtAlumno.getText() + " es " + examen.notaDe(txtAlumno.getText().toUpperCase()));
+            
+            if(!ficheroLeido){
+                areaTexto.setText("No se han leído todavía los datos del fichero \n Vaya a la opción leer del menú");
+                llevarFoco();
+            }else{
+                if(txtAlumno.getText().equals("")){
+                    areaTexto.setText("Teclee el nombre del alumno");
+                    llevarFoco();
+                }else{
+                    areaTexto.setText("La nota de " + txtAlumno.getText() + " es " + examen.notaDe(txtAlumno.getText().toUpperCase()));
+                    llevarFoco();
+                }
+
+            }
+           
         } catch (AlumnoNoExistenteException e) {
             llevarFoco();
-            areaTexto.setText("No se han leído todavía los datos del fichero \n Vaya a la opción leer del menú");
-        }
+            areaTexto.setText("El alumno no existe");
+        } 
     }
 
     /**
