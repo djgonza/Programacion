@@ -25,6 +25,8 @@ import javax.swing.KeyStroke;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
+import java.util.List;
+
 /**
  *  
  */
@@ -275,7 +277,11 @@ public class GuiExamen extends JFrame implements ActionListener {
         if (rbtAprobados.isSelected()) {
             areaTexto.setText("El numero de aprobados es " + examen.aprobados());
         } else {
-            areaTexto.setText(examen.toString());
+            List<String> alumnos = examen.ordenadosPorNota();
+            areaTexto.setText("");
+            for(String alumno : alumnos){
+                areaTexto.append(String.format("%10s - %-10.2f\n", alumno, examen.notaDe(alumno)));
+            }
         }
 
     }
