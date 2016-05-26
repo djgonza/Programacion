@@ -1,0 +1,10 @@
+        ALBERTO     10,00
+        IGNACIO     10,00
+          ELISA      8,75
+         JAVIER      8,00
+            ANA      7,75
+         DANIEL      7,00
+          PEDRO      6,50
+        EDUARDO      6,25
+           LUIS      6,00
+          ELENA      4,25

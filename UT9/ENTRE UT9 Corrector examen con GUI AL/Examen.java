@@ -26,7 +26,7 @@ import java.io.FileNotFoundException;
 public class Examen
 {
     private static final String FIC_ENTRADA = "datos/respuestas-alumnos.TXT";
-    private static final String FIC_SALIDA = "orden-nota.txt";
+    private static final String FIC_SALIDA = "datos/orden-nota.txt";
     private Map<String, Double> notas;
     private CorrectorExamen corrector;
 
