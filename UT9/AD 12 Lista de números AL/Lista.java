@@ -24,6 +24,16 @@ public class Lista
     public Lista() throws  IOException
     {
         lista = new ArrayList<Integer>();
+        addNumero(5);
+        addNumero(2);
+        addNumero(5);
+        addNumero(7);
+        addNumero(7);
+        addNumero(5);
+        addNumero(10);
+        addNumero(15);
+        addNumero(25);
+        addNumero(15);
 
     }
 
@@ -62,19 +72,6 @@ public class Lista
      */
     public void borrarRepetidos()
     {
-        //         Iterator it = lista.iterator();
-        //         while(it.hasNext()){
-        // 
-        //             int numero = (int)it.next();
-        // 
-        //             if(numero == (int) it.next())
-        //                 it.remove();
-        // 
-        //             /*while(lista.contains(numero)){
-        //             lista.remove(lista.get(numero));
-        //             }*/
-        // 
-        //         }
         for(int i = lista.size()-1; i >=0; i--)
         {
             for(int j = lista.size()-1; j >=0; j--)
@@ -83,17 +80,20 @@ public class Lista
                 {
                     lista.remove(j);
                 }
-                
+
             }
-            
+
         }
     }
+
     /**
      * Borra un nº de la lista dada la posición
      */
     public void borrarDePosicion(int pos)
     {
-        lista.remove(pos);
+        if(pos > 0 && pos <  lista.size()){
+            lista.remove(pos - 1);
+        }
     }
 
     /**
@@ -158,7 +158,7 @@ public class Lista
     {
         StringBuilder sb =  new StringBuilder();
         for (Integer i: lista)
-            sb.append(i + " - ");
+            sb.append(i + "\n");
         return sb.toString();
     }
 
@@ -179,12 +179,5 @@ public class Lista
         lst.addNumero(25);
         lst.addNumero(15);
 
-        System.out.println(lst);
-
-        lst.borrarRepetidos();
-
-        System.out.println(lst);
     }
-
 }
-

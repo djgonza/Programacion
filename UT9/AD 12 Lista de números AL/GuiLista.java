@@ -52,7 +52,7 @@ public class GuiLista extends  JFrame
      */
     private void actualizarAreaTexto()
     {
-
+        areaTexto.setText(lista.toString());
     }
 
     /** 
@@ -61,40 +61,88 @@ public class GuiLista extends  JFrame
 
     private void crearGui()
     {
-        
+
         this.add(panelNorte(), BorderLayout.NORTH);
         this.add(panelCentro(), BorderLayout.CENTER);
-        //         JFrame (BorderLayout )
-        //         ? JPanel (pnlNumero - FlowLayout – al norte)
-        //         ? JLabel (lbNumero )
-        //         ? JTextField (txtNumero )
-        //         ?JTextArea ( areaTexto – al centro) – 25 filas y 20 columnas, no editable
-        //         ?- JPanel (pnlBotones - FlowLayout – al sur)
-        //         ?- JButton (btnAñadir, btnBorrarRepetidos, btnBorrarDePosicion, btnSalvar )
+        this.add(panelSur(), BorderLayout.SOUTH);
+
+        crearOyentes();
 
     } 
-    
-      /**
+
+    /**
+     *  
+     */
+    public void crearOyentes()
+    {
+        btnAdd.addActionListener(new ActionListener () {
+                public void actionPerformed (ActionEvent e) {
+                    addNumero();
+                    actualizarAreaTexto();
+                    cogerFoco();
+                }
+            });
+        btnBorrarDePosicion.addActionListener(new ActionListener () {
+                public void actionPerformed (ActionEvent e) {
+                    borrarDePosicion();
+                    actualizarAreaTexto();
+                    cogerFoco();
+                }
+            });
+        btnBorrarRepetidos.addActionListener(new ActionListener () {
+                public void actionPerformed (ActionEvent e) {
+                    borrarRepetidos();
+                    actualizarAreaTexto();
+                    cogerFoco();
+                }
+            });
+        btnSalvar.addActionListener(new ActionListener () {
+                public void actionPerformed (ActionEvent e) {
+                    salvar();
+                    actualizarAreaTexto();
+                    cogerFoco();
+                }
+            });
+
+        txtNumero.addActionListener(new ActionListener () {
+                public void actionPerformed (ActionEvent e) {
+                    addNumero();
+                    actualizarAreaTexto();
+                    cogerFoco();
+                }
+            });
+    }
+
+    /**
      *  
      */
     private JPanel panelSur()
     {
         JPanel pnlBotones = new JPanel(new FlowLayout());
-        return null;
+        btnAdd = new JButton("Añadir");
+        btnBorrarDePosicion = new JButton("Borrar de Posicion");
+        btnBorrarRepetidos = new JButton("Borrar Repetidos");
+        btnSalvar = new JButton("Guardar");
+
+        pnlBotones.add(btnAdd);
+        pnlBotones.add(btnBorrarDePosicion);
+        pnlBotones.add(btnBorrarRepetidos);
+        pnlBotones.add(btnSalvar);
+
+        return pnlBotones;
     }
-    
+
     /**
      *  
      */
-    private JPanel panelCentro()
+    private JTextArea panelCentro()
     {
-        JPanel pnlAreaTexto = new JPanel();
+
         areaTexto = new JTextArea(25,20);
+        areaTexto.setBackground(new Color(0,225,0));
         areaTexto.setEditable(false);
-        
-        pnlAreaTexto.add(areaTexto);
-        
-        return pnlAreaTexto;
+
+        return areaTexto;
     }
 
     /**
@@ -104,8 +152,8 @@ public class GuiLista extends  JFrame
     {
         JPanel pnlNumero = new JPanel(new FlowLayout());
         lblNumero = new JLabel("Numero");
-        txtNumero = new JTextField(50);
-        
+        txtNumero = new JTextField(10);
+
         pnlNumero.add(lblNumero);
         pnlNumero.add(txtNumero);
 
@@ -124,12 +172,20 @@ public class GuiLista extends  JFrame
     }
 
     /**
-     * Se pide una posición al usuario con JOptionPane.showInputDialog() y se borra el nº que hay en esa posición de la lista
+     * Se pide una posición al usuario con JOptionPane.showInputDialog() y se borra el nº 
+     * que hay en esa posición de la lista
      * Habrá que actualizar el área de texto
      */
     private void borrarDePosicion() 
     { 
-
+        String valor = JOptionPane.showInputDialog(this, "Dame una posición");
+        if(valor != null){
+            try {
+                lista.borrarDePosicion(Integer.valueOf(valor));
+            }catch (NumberFormatException e){
+                JOptionPane.showMessageDialog(this, "Numero Incorrecto");
+            }
+        }
     } 
 
     /**
@@ -137,14 +193,19 @@ public class GuiLista extends  JFrame
      */
     private void salvar() 
     { 
+        try {
+            lista.salvarEnFichero();
+        }catch (IOException e) {
 
-    } 
+        } 
+    }
 
     /**
      * borrar los valores repetidos de la lista
      */
     private void borrarRepetidos() 
     {  
+        lista.borrarRepetidos();
     } 
 
     /**
@@ -153,7 +214,11 @@ public class GuiLista extends  JFrame
      */
     private void addNumero() 
     { 
-
+        try {
+            lista.addNumero(Integer.valueOf(txtNumero.getText()));
+        }catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Numero Incorrecto");
+        }
     } 
 
     /**
