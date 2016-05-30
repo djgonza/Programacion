@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.params=d
+comment0.target=GuiSinonimos(Diccionario)
+comment0.text=\nConstructor\ de\ la\ clase\ Gui04\n\n
+comment1.target=void\ crearGui()
+comment1.text=\n\n\n
+comment10.target=void\ siguiente()
+comment11.target=void\ cogerFoco()
+comment2.target=JPanel\ crearPanelPalabra()
+comment3.target=JPanel\ crearPanelSinonimos()
+comment4.target=void\ mostrarGui()
+comment4.text=\nMostrar\ la\ ventana\n\n
+comment5.params=e
+comment5.target=void\ actionPerformed(ActionEvent)
+comment6.target=void\ buscarPalabra()
+comment7.params=resultado
+comment7.target=void\ mostrarResultado(String)
+comment8.params=sinonimos
+comment8.target=void\ mostrarSinonimos(String[])
+comment9.target=void\ anterior()
+numComments=12
