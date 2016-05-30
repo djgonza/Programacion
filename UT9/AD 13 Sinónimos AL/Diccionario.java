@@ -38,7 +38,9 @@ public class Diccionario
     public Diccionario()  throws FileNotFoundException
     {
         diccionario = new TreeMap<>();
-        cargarDiccionario("datos.txt");
+        cargarDiccionario("prueba.txt");
+
+        //System.out.println(diccionario);
     }
 
     /**
@@ -53,20 +55,12 @@ public class Diccionario
     {
         File f = new File(nombre);
         Scanner sc = new Scanner(f);
-        System.out.println("pp");
         while(sc.hasNextLine())
         {
-            System.out.println("pp");
-            String[] linea = sc.nextLine().split(" ");
-            TreeSet<String> temp = new TreeSet<>();
-            for(int i = 1; i<linea.length; i++)
-            {
-                temp.add(linea[i]);
-            }
-            diccionario.put(linea[0], temp);
+            tratarLinea(sc.nextLine());
+
         }
         sc.close();
-        System.out.println(diccionario.toString());
     }
 
     /**
@@ -74,8 +68,15 @@ public class Diccionario
      *  y sus sinónimos
      *  @param linea la línea de texto a procesar
      */
-    private void tratarLinea(String linea)
+    private void tratarLinea(String Ulinea)
     {
+        String[] linea = Ulinea.split(" ");
+        TreeSet<String> temp = new TreeSet<>();
+        for(int i = 1; i<linea.length; i++)
+        {
+            temp.add(linea[i]);
+        }
+        diccionario.put(linea[0], temp);
 
     }
 
@@ -88,6 +89,8 @@ public class Diccionario
      */
     public boolean existePalabra(String palabra)
     {
+        if(diccionario.containsKey(palabra))
+            return true;
         return false;
 
     }
@@ -99,7 +102,12 @@ public class Diccionario
      */
     public int palabrasEnDiccionario()
     {
-        return 0;
+        int cont = 0;
+        for(String clave: diccionario.keySet())
+        {
+            cont += diccionario.get(clave).size()+1;
+        }
+        return cont;
     }
 
     /**
@@ -110,7 +118,7 @@ public class Diccionario
      */
     public int totalSinonimosDe(String palabra)
     {
-        return 0;
+        return diccionario.get(palabra).size();
     }
 
     /**
@@ -122,7 +130,12 @@ public class Diccionario
      */
     public Set<String> sinonimosDe(String palabra)
     {
-        return null;
+        Set<String> aux = new TreeSet<>();
+        for(String valor: diccionario.get(palabra))
+        {
+            aux.add(valor);
+        }
+        return aux;
 
     }
 

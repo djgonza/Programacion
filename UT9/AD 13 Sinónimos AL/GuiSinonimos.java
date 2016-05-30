@@ -3,11 +3,11 @@ import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.event.*;
 import java.io.*;
-
+import javax.swing.border.TitledBorder;
 /**
  * Gui para la aplicación de sinónimos
  */
-public class GuiSinonimos 
+public class GuiSinonimos extends JFrame
 {
     private JTextField txtPalabra;
     private JButton btnBuscar;
@@ -27,7 +27,7 @@ public class GuiSinonimos
     /**
      * Constructor de la clase Gui04
      */
-    public GuiSinonimos(Diccionario d)
+    public GuiSinonimos(Diccionario d) 
     {
 
         super("Diccionario de sinónimos ");
@@ -45,15 +45,45 @@ public class GuiSinonimos
      */
     private void crearGui()
     {
+        this.setJMenuBar(crearBarraMenu());
 
+        this.add(crearPanelPalabra(), BorderLayout.NORTH);
+        this.add(crearPanelSinonimos(), BorderLayout.CENTER);
+        lblTotal = new JLabel("Número de sinónimos");
+        lblTotal.setHorizontalAlignment(0);
+        lblTotal.setBackground(Color.pink);
+        lblTotal.setOpaque(true);
+        this.add(lblTotal, BorderLayout.SOUTH);
     }
+
     /**
      *  Crear y devolver la barra de menú 
      */
     private JMenuBar crearBarraMenu()
     {
+        JMenuBar barraMenu = new JMenuBar();
 
-        return null;
+        JMenu menuArchivo = new JMenu("Archivo");
+        JMenu menuColor = new JMenu("Color");
+        JMenu menuFuente = new JMenu("Fuente");
+
+        barraMenu.add(menuArchivo);
+        barraMenu.add(menuColor);
+        barraMenu.add(menuFuente);
+
+        itemBuscar = new  JMenuItem("Buscar");
+        itemSalvar = new  JMenuItem("Salvar");
+        itemSalir = new JMenuItem("Salir");
+
+        menuArchivo.add(itemBuscar);
+        menuArchivo.add(itemSalvar);
+        menuArchivo.addSeparator();
+        menuArchivo.add(itemSalir);
+
+        itemColor = new JMenuItem("Elegir Color");
+        menuColor.add(itemColor);
+
+        return barraMenu;
     }
 
     /**
@@ -61,17 +91,40 @@ public class GuiSinonimos
      */
     private JPanel crearPanelPalabra()
     {
+        JPanel pnlPalabra = new JPanel();
+        pnlPalabra.setLayout(new FlowLayout());
+        Border borde = new TitledBorder("Palabra");
+        pnlPalabra.setBorder(borde);
 
+        txtPalabra = new JTextField(20);
+        btnBuscar = new JButton("Buscar");
+        pnlPalabra.add(new JLabel("Palabra"));
+        pnlPalabra.add(txtPalabra);
+        pnlPalabra.add(btnBuscar);
+
+        return pnlPalabra;
     }
 
-    
     /**
      *   crear el panel que va al centro 
      */
     private JPanel crearPanelSinonimos()
     {
+        JPanel pnlSinonimos = new JPanel();
+        pnlSinonimos.setLayout(new BorderLayout());
+        Border borde = new TitledBorder("Sinónimos");
+        pnlSinonimos.setBorder(borde);
+
+        btnAnterior = new JButton("<<");
+        btnSiguiente = new JButton(">>");
+
+        pnlSinonimos.add(btnAnterior, BorderLayout.WEST);
+        pnlSinonimos.add(btnSiguiente, BorderLayout.EAST);
+
+        return pnlSinonimos;
 
     }
+
     /**
      * Busca la palabra tecleada en el diccionario
      * y muestra el total de sinónimos que tiene 
@@ -123,6 +176,7 @@ public class GuiSinonimos
     {
 
     }
+
     /**
      * terminar la aplicación
      */
